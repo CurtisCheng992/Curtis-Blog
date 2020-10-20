@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+
+logging:
+  level:
+    root: info
+    com.curtis.curtisblog: debug
+  file:
+    name: log/blog-dev.log
+
+mybatis:
+  type-aliases-package: com.curtis.curtisblog.entity
