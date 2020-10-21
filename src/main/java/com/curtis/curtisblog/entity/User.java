@@ -5,19 +5,22 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * 用户实体类
+ */
 public class User implements Serializable {
 
-    private Long id;
-    private String nickname;
-    private String username;
-    private String password;
-    private String email;
-    private String avatar;
-    private Integer type;
-    private Date createTime;
-    private Date updateTime;
+    private Long id; //用户id
+    private String nickname; //用户昵称
+    private String username; //用户名
+    private String password; //密码
+    private String email; //电子邮箱地址
+    private String avatar; //头像
+    private Integer type; //用户类型
+    private Date createTime; //创建时间
+    private Date updateTime; //修改时间
 
-    private List<Blog> blogs = new ArrayList<>();
+    private List<Blog> blogs = new ArrayList<>(); //发表的博客
 
     public User() {
     }

@@ -4,12 +4,15 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 博客标签的实体类
+ */
 public class Tag implements Serializable {
 
-    private Long id;
-    private String name;
+    private Long id; //标签的id
+    private String name; //标签名
 
-    private List<Blog> blogs = new ArrayList<>();
+    private List<Blog> blogs = new ArrayList<>(); //所属博客
 
     public Tag() {
     }

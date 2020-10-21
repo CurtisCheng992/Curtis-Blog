@@ -11,6 +11,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
+/**
+ * 切面AOP，获取请求的url、ip地址、方法名和参数，并写入日志
+ */
 @Aspect
 @Component
 public class LogAspect {

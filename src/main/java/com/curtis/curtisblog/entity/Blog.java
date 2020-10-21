@@ -25,13 +25,13 @@ public class Blog implements Serializable {
     private Date createTime; //创建时间
     private Date updateTime; //更新时间
 
-    private Type type;
+    private Type type; //博客的类型
 
-    private List<Tag> tags = new ArrayList<>();
+    private List<Tag> tags = new ArrayList<>(); //博客的标签
 
-    private User user;
+    private User user; //用户
 
-    private List<Comment> comments = new ArrayList<>();
+    private List<Comment> comments = new ArrayList<>(); //评论
 
     public Blog() {
     }

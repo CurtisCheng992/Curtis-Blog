@@ -14,3 +14,9 @@ logging:
 
 mybatis:
   type-aliases-package: com.curtis.curtisblog.entity
+
+pagehelper:                #分页插件
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params:

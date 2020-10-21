@@ -4,9 +4,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Created by limi on 2017/10/15.
+ * MD5加密工具类
  */
-public class MD5Utils {
+public class MD5Util {
 
     /**
      * MD5加密类
