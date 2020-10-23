@@ -20,7 +20,7 @@ public class TypeController {
     private ITypeService typeService;
 
     /**
-     * 分页显示类型
+     * 分页显示分类
      * @param pageNum
      * @param model
      * @return
@@ -42,6 +42,12 @@ public class TypeController {
         return "admin/types-input";
     }
 
+    /**
+     * 根据id编辑分类
+     * @param id
+     * @param model
+     * @return
+     */
     @GetMapping("/types/{id}/input")
     public String editInput(@PathVariable Long id, Model model){
         model.addAttribute("type",typeService.getTypeById(id));
@@ -49,7 +55,7 @@ public class TypeController {
     }
 
     /**
-     * 提交新增类型
+     * 提交新增分类
      * @return
      */
     @PostMapping("/types")
@@ -70,7 +76,7 @@ public class TypeController {
     }
 
     /**
-     * 更新类型
+     * 更新分类
      * @param type
      * @param id
      * @param attributes
@@ -94,6 +100,12 @@ public class TypeController {
         return "redirect:/admin/types";
     }
 
+    /**
+     * 根据id删除分类
+     * @param id
+     * @param attributes
+     * @return
+     */
     @GetMapping("/types/{id}/delete")
     public String delete(@PathVariable Long id,RedirectAttributes attributes){
          typeService.deleteTypeById(id);

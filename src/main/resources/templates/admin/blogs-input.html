@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>博客发布</title>
@@ -11,7 +11,7 @@
 <body>
 
     <!--导航-->
-    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <nav th:replace="admin/_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h2 class="ui header teal item">管理后台</h2>
@@ -162,7 +162,7 @@
     <br>
     <br>
     <!--底部footer-->
-    <footer class="ui inverted segment vertical m-padded-tb-massive">
+    <footer th:replace="admin/_fragments :: footer" class="ui inverted segment vertical m-padded-tb-massive">
         <div class="ui center aligned container">
             <div class="ui divided inverted stackable grid">
                 <div class="three wide column">

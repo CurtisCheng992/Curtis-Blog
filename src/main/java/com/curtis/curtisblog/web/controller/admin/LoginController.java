@@ -19,11 +19,23 @@ public class LoginController {
     @Autowired
     private IUserService userService;
 
+    /**
+     * 跳转到后台管理员登录页面
+     * @return
+     */
     @GetMapping()
     public String loginPage(){ //跳转到登录页面
         return "admin/login";
     }
 
+    /**
+     * 用户登录
+     * @param username
+     * @param password
+     * @param session
+     * @param attributes
+     * @return
+     */
     @PostMapping("/login")
     public String login(@RequestParam("username") String username,//用户登录
                           @RequestParam("password") String password,
@@ -40,6 +52,11 @@ public class LoginController {
         }
     }
 
+    /**
+     * 注销用户
+     * @param session
+     * @return
+     */
     @GetMapping("/logout")
     public String logout(HttpSession session){
         session.removeAttribute("user");

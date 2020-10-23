@@ -26,6 +26,13 @@ public class BlogController {
     @Autowired
     private ITypeService typeService;
 
+    /**
+     * 分页查询博客信息
+     * @param pageNum
+     * @param blogQuery
+     * @param model
+     * @return
+     */
     @GetMapping("/blogs")
     public String blogs(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
                         BlogQuery blogQuery, Model model){
@@ -35,6 +42,13 @@ public class BlogController {
         return "admin/blogs";
     }
 
+    /**
+     * 根据查询条件分页查询博客信息
+     * @param pageNum
+     * @param blogQuery
+     * @param model
+     * @return
+     */
     @PostMapping("/blogs/search")
     public String search(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
                          BlogQuery blogQuery, Model model){

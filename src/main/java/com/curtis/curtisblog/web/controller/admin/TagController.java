@@ -94,6 +94,12 @@ public class TagController {
         return "redirect:/admin/tags";
     }
 
+    /**
+     * 根据id删除标签
+     * @param id
+     * @param attributes
+     * @return
+     */
     @GetMapping("/tags/{id}/delete")
     public String delete(@PathVariable Long id,RedirectAttributes attributes){
          tagService.deleteTagById(id);
