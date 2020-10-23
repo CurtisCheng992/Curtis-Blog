@@ -2,6 +2,7 @@ package com.curtis.curtisblog.web.controller.admin;
 
 import com.curtis.curtisblog.entity.Blog;
 import com.curtis.curtisblog.service.IBlogService;
+import com.curtis.curtisblog.service.ITagService;
 import com.curtis.curtisblog.service.ITypeService;
 import com.curtis.curtisblog.vo.BlogQuery;
 import com.github.pagehelper.PageInfo;
@@ -20,11 +21,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/admin")
 public class BlogController {
 
+    private static final String INPUT = "admin/blogs-input";
+    private static final String LIST = "admin/blogs";
+    private static final String REDIRECT_LIST = "redirect:/admin/blogs";
+
     @Autowired
     private IBlogService blogService;
 
     @Autowired
     private ITypeService typeService;
+
+    @Autowired
+    private ITagService tagService;
 
     /**
      * 分页查询博客信息
@@ -39,7 +47,7 @@ public class BlogController {
         model.addAttribute("types",typeService.listAllType());
         PageInfo<Blog> blogPageInfo = blogService.getBlogPage(pageNum, 5, blogQuery);
         model.addAttribute("pageInfo",blogPageInfo);
-        return "admin/blogs";
+        return LIST;
     }
 
     /**
@@ -55,5 +63,13 @@ public class BlogController {
         PageInfo<Blog> blogPageInfo = blogService.getBlogPage(pageNum, 5, blogQuery);
         model.addAttribute("pageInfo",blogPageInfo);
         return "admin/blogs :: blogList";
+    }
+
+    @GetMapping("/blogs/input")
+    public String input(Model model){
+        model.addAttribute("types",typeService.listAllType());
+        model.addAttribute("tags",tagService.listAllTag());
+        model.addAttribute("blog",new Blog());
+        return INPUT;
     }
 }
