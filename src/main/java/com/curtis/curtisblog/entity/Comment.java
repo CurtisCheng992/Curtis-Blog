@@ -1,5 +1,9 @@
 package com.curtis.curtisblog.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,6 +12,9 @@ import java.util.List;
 /**
  * 评论的实体类
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Comment implements Serializable {
 
     private Long id; //评论id
@@ -22,9 +29,6 @@ public class Comment implements Serializable {
     private List<Comment> replyComments = new ArrayList<>(); //回复评论
 
     private Comment parentComment; //父评论
-
-    public Comment() {
-    }
 
     public Long getId() {
         return id;

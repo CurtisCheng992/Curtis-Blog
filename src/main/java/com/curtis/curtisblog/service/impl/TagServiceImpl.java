@@ -46,6 +46,8 @@ public class TagServiceImpl implements ITagService {
      * @param name
      * @return
      */
+    @Transactional
+    @Override
     public Tag getTagByName(String name){
         return tagMapper.findTagByName(name);
     }
@@ -54,6 +56,8 @@ public class TagServiceImpl implements ITagService {
      * 查询所有标签
      * @return
      */
+    @Transactional
+    @Override
     public List<Tag> listAllTag(){
         return tagMapper.listAll();
     }

@@ -1,5 +1,9 @@
 package com.curtis.curtisblog.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,15 +11,15 @@ import java.util.List;
 /**
  * 博客标签的实体类
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Tag implements Serializable {
 
     private Long id; //标签的id
     private String name; //标签名
 
     private List<Blog> blogs = new ArrayList<>(); //所属博客
-
-    public Tag() {
-    }
 
     public Long getId() {
         return id;

@@ -46,6 +46,8 @@ public class TypeServiceImpl implements ITypeService {
      * @param name
      * @return
      */
+    @Transactional
+    @Override
     public Type getTypeByName(String name){
         return typeMapper.findTypeByName(name);
     }
@@ -54,6 +56,8 @@ public class TypeServiceImpl implements ITypeService {
      * 查询所有类型
      * @return
      */
+    @Transactional
+    @Override
     public List<Type> listAllType(){
         return typeMapper.listAll();
     }

@@ -1,5 +1,9 @@
 package com.curtis.curtisblog.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,6 +12,9 @@ import java.util.List;
 /**
  * 博客的实体类
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Blog implements Serializable {
 
     private Long id; //编号
@@ -32,9 +39,6 @@ public class Blog implements Serializable {
     private User user; //用户
 
     private List<Comment> comments = new ArrayList<>(); //评论
-
-    public Blog() {
-    }
 
     public Blog(Long id, String title, String content, String firstPicture, String flag, Integer views, boolean appreciation, boolean shareStatement, boolean commentTable, boolean published, boolean recommend, Date createTime, Date updateTime) {
         this.id = id;

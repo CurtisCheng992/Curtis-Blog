@@ -1,5 +1,9 @@
 package com.curtis.curtisblog.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,6 +12,9 @@ import java.util.List;
 /**
  * 用户实体类
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements Serializable {
 
     private Long id; //用户id
@@ -21,9 +28,6 @@ public class User implements Serializable {
     private Date updateTime; //修改时间
 
     private List<Blog> blogs = new ArrayList<>(); //发表的博客
-
-    public User() {
-    }
 
     public Long getId() {
         return id;

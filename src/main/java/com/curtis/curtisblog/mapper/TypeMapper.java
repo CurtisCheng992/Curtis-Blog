@@ -12,9 +12,22 @@ import java.util.List;
 public interface TypeMapper {
 
     /**
+     * 查询所有类型
+     * @return
+     */
+    @Select("select * from t_type")
+    @Results(id = "typeMap",
+            value = {
+                @Result(id = true,column = "id",property = "id"),
+                @Result(column = "name",property = "name"),
+            })
+    List<Type> listAll() ;
+
+    /**
      * 保存类型
      */
     @Insert("insert into t_type(id,name) values(#{id},#{name})")
+    @SelectKey(keyColumn = "id",keyProperty = "id",resultType = Long.class,before = false,statement = {"select last_insert_id()"})
     void saveType(Type type);
 
     /**
@@ -23,17 +36,17 @@ public interface TypeMapper {
      * @return
      */
     @Select("select * from t_type where id = #{id}")
+    @ResultMap("typeMap")
     Type findTypeById(Long id);
 
-    @Select("select * from t_type where name = #{name}")
-    Type findTypeByName(String name);
-
     /**
-     * 查询所有类型
+     * 根据类型名查询类型
+     * @param name
      * @return
      */
-    @Select("select * from t_type")
-    List<Type> listAll() ;
+    @Select("select * from t_type where name = #{name}")
+    @ResultMap("typeMap")
+    Type findTypeByName(String name);
 
     /**
      * 删除类型
