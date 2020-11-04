@@ -38,6 +38,13 @@ public interface ITagService {
     List<Tag> listAllTag();
 
     /**
+     * 根据多个id查询标签
+     * @param ids
+     * @return
+     */
+    List<Tag> listTagsByIds(String ids);
+
+    /**
      * 分页查询标签
      * @return
      */

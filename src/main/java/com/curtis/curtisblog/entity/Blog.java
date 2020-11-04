@@ -40,6 +40,8 @@ public class Blog implements Serializable {
 
     private List<Comment> comments = new ArrayList<>(); //评论
 
+    private String tagIds;
+
     public Blog(Long id, String title, String content, String firstPicture, String flag, Integer views, boolean appreciation, boolean shareStatement, boolean commentTable, boolean published, boolean recommend, Date createTime, Date updateTime) {
         this.id = id;
         this.title = title;
@@ -190,6 +192,14 @@ public class Blog implements Serializable {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
     }
 
     @Override

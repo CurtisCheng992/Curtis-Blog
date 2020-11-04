@@ -1,6 +1,7 @@
 package com.curtis.curtisblog.web.controller.admin;
 
 import com.curtis.curtisblog.entity.Blog;
+import com.curtis.curtisblog.entity.User;
 import com.curtis.curtisblog.service.IBlogService;
 import com.curtis.curtisblog.service.ITagService;
 import com.curtis.curtisblog.service.ITypeService;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * 博客的控制器
@@ -71,5 +75,20 @@ public class BlogController {
         model.addAttribute("tags",tagService.listAllTag());
         model.addAttribute("blog",new Blog());
         return INPUT;
+    }
+
+    @PostMapping("/blogs")
+    public String post(Blog blog, RedirectAttributes attributes, HttpSession session){
+        blog.setUser((User) session.getAttribute("user"));
+        blog.setType(typeService.getTypeById(blog.getType().getId()));
+        blog.setTags(tagService.listTagsByIds(blog.getTagIds()));
+        blogService.saveBlog(blog);
+        Blog b = blogService.getBlog(blog.getId());
+        if (b == null){
+            attributes.addFlashAttribute("message","操作失败！");
+        }else {
+            attributes.addFlashAttribute("message","操作成功！");
+        }
+        return REDIRECT_LIST;
     }
 }

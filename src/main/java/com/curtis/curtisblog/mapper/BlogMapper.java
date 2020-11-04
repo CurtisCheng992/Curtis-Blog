@@ -65,7 +65,7 @@ public interface BlogMapper {
      * 保存博客
      * @param blog
      */
-    @Insert("insert into t_blog values(#{id},#{appreciation},#{commentTable},#{content},{createTime},#{firstPicture},#{flag},#{published},#{recommend},#{shareStatement},#{title},#{updateTime},#{views},#{type.id},#{user.id})")
+    @Insert("insert into t_blog values(#{id},#{appreciation},#{commentTable},#{content},#{createTime},#{firstPicture},#{flag},#{published},#{recommend},#{shareStatement},#{title},#{updateTime},#{views},#{type.id},#{user.id})")
     @SelectKey(keyColumn = "id",keyProperty = "id",before = false,resultType = Long.class,statement = "select last_insert_id()")
     void saveBlog(Blog blog);
 

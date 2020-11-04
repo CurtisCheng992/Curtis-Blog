@@ -1,15 +1,18 @@
 package com.curtis.curtisblog.service.impl;
 
+import com.curtis.curtisblog.NotFoundException;
 import com.curtis.curtisblog.entity.Blog;
 import com.curtis.curtisblog.mapper.BlogMapper;
 import com.curtis.curtisblog.service.IBlogService;
 import com.curtis.curtisblog.vo.BlogQuery;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,7 +29,6 @@ public class BlogServiceImpl implements IBlogService {
      * @param id
      * @return
      */
-    @Transactional
     @Override
     public Blog getBlog(Long id) {
         return blogMapper.findBlogById(id);
@@ -39,7 +41,6 @@ public class BlogServiceImpl implements IBlogService {
      * @param blogQuery
      * @return
      */
-    @Transactional
     @Override
     public PageInfo<Blog> getBlogPage(int pageNum, int pageSize, BlogQuery blogQuery) {
         PageHelper.startPage(pageNum,pageSize);
@@ -55,6 +56,9 @@ public class BlogServiceImpl implements IBlogService {
     @Transactional
     @Override
     public void saveBlog(Blog blog) {
+        blog.setCreateTime(new Date());
+        blog.setUpdateTime(new Date());
+        blog.setViews(0);
         blogMapper.saveBlog(blog);
     }
 
@@ -65,7 +69,12 @@ public class BlogServiceImpl implements IBlogService {
     @Transactional
     @Override
     public void updateBlog(Blog blog) {
-        blogMapper.updateBlog(blog);
+        Blog b = blogMapper.findBlogById(blog.getId());
+        if (b == null){
+            throw new NotFoundException("该博客不存在！");
+        }
+        BeanUtils.copyProperties(b,blog);
+        blogMapper.updateBlog(b);
     }
 
     /**

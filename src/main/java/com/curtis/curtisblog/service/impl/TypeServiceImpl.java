@@ -35,7 +35,6 @@ public class TypeServiceImpl implements ITypeService {
      * @param id
      * @return
      */
-    @Transactional
     @Override
     public Type getTypeById(Long id) {
         return typeMapper.findTypeById(id);
@@ -46,7 +45,6 @@ public class TypeServiceImpl implements ITypeService {
      * @param name
      * @return
      */
-    @Transactional
     @Override
     public Type getTypeByName(String name){
         return typeMapper.findTypeByName(name);
@@ -56,7 +54,6 @@ public class TypeServiceImpl implements ITypeService {
      * 查询所有类型
      * @return
      */
-    @Transactional
     @Override
     public List<Type> listAllType(){
         return typeMapper.listAll();
@@ -66,7 +63,6 @@ public class TypeServiceImpl implements ITypeService {
      * 分页查询类型
      * @return
      */
-    @Transactional
     @Override
     public PageInfo<Type> getTypePage(int pageNum, int pageSize) {
         PageHelper.startPage(pageNum,pageSize);
