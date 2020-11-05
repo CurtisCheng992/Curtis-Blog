@@ -7,6 +7,7 @@ import com.curtis.curtisblog.mapper.BlogMapper;
 import com.curtis.curtisblog.mapper.BlogTagsMapper;
 import com.curtis.curtisblog.mapper.TagMapper;
 import com.curtis.curtisblog.service.IBlogService;
+import com.curtis.curtisblog.utils.MarkdownUtils;
 import com.curtis.curtisblog.utils.MyBeanUtils;
 import com.curtis.curtisblog.vo.BlogQuery;
 import com.github.pagehelper.PageHelper;
@@ -41,6 +42,24 @@ public class BlogServiceImpl implements IBlogService {
     public Blog getBlog(Long id) {
         Blog blog = blogMapper.findBlogById(id);
         return blog;
+    }
+
+    /**
+     * 根据id查询一条博客信息
+     * @param id
+     * @return
+     */
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog = blogMapper.findBlogById(id);
+        if (blog == null){
+            throw new NotFoundException("该博客不存在！");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        return b;
     }
 
     /**

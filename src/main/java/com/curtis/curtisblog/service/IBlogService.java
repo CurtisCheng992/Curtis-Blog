@@ -19,6 +19,13 @@ public interface IBlogService {
     Blog getBlog(Long id);
 
     /**
+     * 获取并转换博客内容
+     * @param id
+     * @return
+     */
+    Blog getAndConvert(Long id);
+
+    /**
      * 根据查询条件查询博客的分页信息
      * @param pageNum
      * @param pageSize

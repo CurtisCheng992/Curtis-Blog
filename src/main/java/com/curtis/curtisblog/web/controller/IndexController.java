@@ -4,11 +4,13 @@ import com.curtis.curtisblog.service.IBlogService;
 import com.curtis.curtisblog.service.ITagService;
 import com.curtis.curtisblog.service.ITypeService;
 import com.curtis.curtisblog.vo.BlogQuery;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.relational.core.sql.In;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -58,8 +60,9 @@ public class IndexController {
      * 跳转到博客页面
      * @return
      */
-    @GetMapping("/blog")
-    public String blog(){
+    @GetMapping("/blog/{id}")
+    public String blog(@PathVariable Long id, Model model){
+        model.addAttribute("blog",this.blogService.getAndConvert(id));
         return "blog";
     }
 
