@@ -9,6 +9,7 @@ import org.springframework.data.relational.core.sql.In;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -42,6 +43,15 @@ public class IndexController {
         model.addAttribute("tags",this.tagService.listTagTop(topTagSize));
         model.addAttribute("recommendBlogs",this.blogService.listRecommendTopBlog(topRecommendBlogSize));
         return "index";
+    }
+
+    @PostMapping("/search")
+    public String search(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
+                         @RequestParam String query, Model model){
+        Integer pageSize = 10;
+        model.addAttribute("page",this.blogService.getBlogPageBySearch("%"+query+"%",pageNum,pageSize));
+        model.addAttribute("query",query);
+        return "search";
     }
 
     /**

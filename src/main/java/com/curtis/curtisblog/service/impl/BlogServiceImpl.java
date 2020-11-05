@@ -73,6 +73,21 @@ public class BlogServiceImpl implements IBlogService {
     }
 
     /**
+     * 查询博客的分页信息
+     * @param query
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    @Override
+    public PageInfo<Blog> getBlogPageBySearch(String query, int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum,pageSize);
+        List<Blog> blogs = this.blogMapper.findByQuery(query);
+        PageInfo<Blog> blogPageInfo = new PageInfo<>(blogs);
+        return blogPageInfo;
+    }
+
+    /**
      * 按照更新时间顺序查找推荐的前几的博客
      * @param size
      * @return

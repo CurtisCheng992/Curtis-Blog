@@ -88,6 +88,15 @@ public interface BlogMapper {
     List<Blog> findRecommendTopBlog(Integer size);
 
     /**
+     * 根据条件全局搜索博客
+     * @param query
+     * @return
+     */
+    @Select("select * from t_blog where title like #{query} or content like #{query}")
+    @ResultMap("blogMap")
+    List<Blog> findByQuery(String query);
+
+    /**
      * 保存博客
      * @param blog
      */

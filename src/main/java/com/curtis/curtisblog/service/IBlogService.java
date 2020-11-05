@@ -36,6 +36,15 @@ public interface IBlogService {
     PageInfo<Blog> getBlogPage(int pageNum, int pageSize);
 
     /**
+     * 查询博客的分页信息
+     * @param query
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageInfo<Blog> getBlogPageBySearch(String query,int pageNum, int pageSize);
+
+    /**
      * 按照更新时间顺序查找推荐的前几的博客
      * @param size
      * @return
