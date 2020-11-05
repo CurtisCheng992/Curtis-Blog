@@ -7,13 +7,11 @@ import com.curtis.curtisblog.service.ITagService;
 import com.curtis.curtisblog.service.ITypeService;
 import com.curtis.curtisblog.vo.BlogQuery;
 import com.github.pagehelper.PageInfo;
+import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
@@ -71,18 +69,33 @@ public class BlogController {
 
     @GetMapping("/blogs/input")
     public String input(Model model){
-        model.addAttribute("types",typeService.listAllType());
-        model.addAttribute("tags",tagService.listAllTag());
+        setTypeAndTag(model);
         model.addAttribute("blog",new Blog());
         return INPUT;
     }
 
+    @GetMapping("/blogs/{id}/input")
+    public String editInput(@PathVariable Long id, Model model){
+        setTypeAndTag(model);
+        Blog blog = blogService.getBlog(id);
+        blog.init();
+        model.addAttribute("blog", blog);
+        return INPUT;
+    }
+
     @PostMapping("/blogs")
-    public String post(Blog blog, RedirectAttributes attributes, HttpSession session){
+    public String save(Blog blog, RedirectAttributes attributes, HttpSession session){
         blog.setUser((User) session.getAttribute("user"));
-        blog.setType(typeService.getTypeById(blog.getType().getId()));
-        blog.setTags(tagService.listTagsByIds(blog.getTagIds()));
-        blogService.saveBlog(blog);
+        blog.setType(this.typeService.getTypeById(blog.getType().getId()));
+        blog.setTags(this.tagService.listTagsByIds(blog.getTagIds()));
+        if (ObjectUtils.isEmpty(blog.getId())){
+            //不含博客id，则为新增
+            this.blogService.saveBlog(blog);
+        }else{
+            //含有博客id，则为修改
+            this.blogService.updateBlog(blog);
+        }
+
         Blog b = blogService.getBlog(blog.getId());
         if (b == null){
             attributes.addFlashAttribute("message","操作失败！");
@@ -90,5 +103,10 @@ public class BlogController {
             attributes.addFlashAttribute("message","操作成功！");
         }
         return REDIRECT_LIST;
+    }
+
+    private void setTypeAndTag(Model model){
+        model.addAttribute("types",typeService.listAllType());
+        model.addAttribute("tags",tagService.listAllTag());
     }
 }

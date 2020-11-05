@@ -2,8 +2,12 @@ package com.curtis.curtisblog.service.impl;
 
 import com.curtis.curtisblog.NotFoundException;
 import com.curtis.curtisblog.entity.Blog;
+import com.curtis.curtisblog.entity.Tag;
 import com.curtis.curtisblog.mapper.BlogMapper;
+import com.curtis.curtisblog.mapper.BlogTagsMapper;
+import com.curtis.curtisblog.mapper.TagMapper;
 import com.curtis.curtisblog.service.IBlogService;
+import com.curtis.curtisblog.utils.MyBeanUtils;
 import com.curtis.curtisblog.vo.BlogQuery;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -12,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -24,6 +29,9 @@ public class BlogServiceImpl implements IBlogService {
     @Autowired
     private BlogMapper blogMapper;
 
+    @Autowired
+    private BlogTagsMapper blogTagsMapper;
+
     /**
      * 根据id查询博客
      * @param id
@@ -31,7 +39,8 @@ public class BlogServiceImpl implements IBlogService {
      */
     @Override
     public Blog getBlog(Long id) {
-        return blogMapper.findBlogById(id);
+        Blog blog = blogMapper.findBlogById(id);
+        return blog;
     }
 
     /**
@@ -50,7 +59,7 @@ public class BlogServiceImpl implements IBlogService {
     }
 
     /**
-     * 保存博客
+     * 新增博客
      * @param blog
      */
     @Transactional
@@ -59,7 +68,14 @@ public class BlogServiceImpl implements IBlogService {
         blog.setCreateTime(new Date());
         blog.setUpdateTime(new Date());
         blog.setViews(0);
-        blogMapper.saveBlog(blog);
+        //新增博客
+        this.blogMapper.saveBlog(blog);
+        //新增博客的标签到中间表
+        List<Tag> tags = blog.getTags();
+        for (Tag tag : tags) {
+            this.blogTagsMapper.insertBlogTags(blog.getId(),tag.getId());
+        }
+
     }
 
     /**
@@ -70,20 +86,37 @@ public class BlogServiceImpl implements IBlogService {
     @Override
     public void updateBlog(Blog blog) {
         Blog b = blogMapper.findBlogById(blog.getId());
+        List<Tag> newTagList = blog.getTags();
+        List<Tag> oldTagList = b.getTags();
         if (b == null){
             throw new NotFoundException("该博客不存在！");
         }
-        BeanUtils.copyProperties(b,blog);
+        BeanUtils.copyProperties(blog,b, MyBeanUtils.getNullPropertyNames(blog));
+        b.setUpdateTime(new Date());
+        //更新博客
         blogMapper.updateBlog(b);
+        //更新博客的标签 中间表; 先删除所有旧的，再插入所有新的
+        //删除所有旧的标签
+        for (Tag tag : oldTagList) {
+            this.blogTagsMapper.deleteBlogTags(blog.getId(),tag.getId());
+        }
+        //插入所有新的标签
+        for (Tag tag : newTagList) {
+           this.blogTagsMapper.insertBlogTags(blog.getId(),tag.getId());
+        }
     }
 
     /**
      * 删除博客
-     * @param id
+     * @param blogId
      */
     @Transactional
     @Override
-    public void deleteBlog(Long id) {
-        blogMapper.deleteBlog(id);
+    public void deleteBlog(Long blogId) {
+        Blog blog = blogMapper.findBlogById(blogId);
+        //删除博客对应的标签 中间表
+        this.blogTagsMapper.deleteAllByBlogId(blogId);
+        //删除博客
+        blogMapper.deleteBlog(blogId);
     }
 }

@@ -1,12 +1,10 @@
 package com.curtis.curtisblog;
 
 import com.curtis.curtisblog.entity.Blog;
-import com.curtis.curtisblog.entity.Type;
 import com.curtis.curtisblog.mapper.BlogMapper;
 import com.curtis.curtisblog.service.IBlogService;
 import com.curtis.curtisblog.vo.BlogQuery;
 import com.github.pagehelper.PageInfo;
-import lombok.ToString;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +52,14 @@ public class TestBlog {
         List<Blog> list = blogPageInfo.getList();
         for (Blog blog : list) {
             System.out.println(blog);
+        }
+    }
+
+    @Test
+    public void testListAllBlog(){
+        List<Blog> blogs = this.blogMapper.listAllBlog();
+        for (Blog blog : blogs) {
+            System.out.println(blog.getTags());
         }
     }
 }

@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5加密工具类
  */
-public class MD5Util {
+public class MD5Utils {
 
     /**
      * MD5加密类

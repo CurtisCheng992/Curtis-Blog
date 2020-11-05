@@ -36,8 +36,9 @@ public interface BlogMapper {
                 @Result(column = "type_id", property = "type",
                         one = @One(select = "com.curtis.curtisblog.mapper.TypeMapper.findTypeById",fetchType = FetchType.EAGER)),
                 @Result(column = "user_id", property = "user",
-                        one = @One(select = "com.curtis.curtisblog.mapper.UserMapper.findUserById",fetchType = FetchType.EAGER)
-                )
+                        one = @One(select = "com.curtis.curtisblog.mapper.UserMapper.findUserById",fetchType = FetchType.EAGER)),
+                @Result(column = "id", property = "tags",
+                        many = @Many(select = "com.curtis.curtisblog.mapper.BlogTagsMapper.findByBlogId",fetchType = FetchType.LAZY))
             })
     List<Blog> listAllBlog();
 
