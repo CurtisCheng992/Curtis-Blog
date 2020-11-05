@@ -34,7 +34,7 @@ public class TestBlogService {
 
     @Test
     public void testPage(){
-        PageInfo<Blog> blogPage = this.blogService.getBlogPage(2, 3, null);
+        PageInfo<Blog> blogPage = this.blogService.getBlogPageByQuery(2, 3, null);
         for (Blog blog : blogPage.getList()) {
             System.out.println("blog:"+blog);
             System.out.println("tags:"+blog.getTags());

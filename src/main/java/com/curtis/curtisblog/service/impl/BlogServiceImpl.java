@@ -51,11 +51,35 @@ public class BlogServiceImpl implements IBlogService {
      * @return
      */
     @Override
-    public PageInfo<Blog> getBlogPage(int pageNum, int pageSize, BlogQuery blogQuery) {
+    public PageInfo<Blog> getBlogPageByQuery(int pageNum, int pageSize, BlogQuery blogQuery) {
         PageHelper.startPage(pageNum,pageSize);
         List<Blog> blogs = blogMapper.listBlogBySearch(blogQuery);
         PageInfo<Blog> blogPageInfo = new PageInfo<>(blogs);
         return blogPageInfo;
+    }
+
+    /**
+     * 分页查询博客
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    @Override
+    public PageInfo<Blog> getBlogPage(int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum,pageSize);
+        List<Blog> blogs = blogMapper.listAllBlog();
+        PageInfo<Blog> blogPageInfo = new PageInfo<>(blogs);
+        return blogPageInfo;
+    }
+
+    /**
+     * 按照更新时间顺序查找推荐的前几的博客
+     * @param size
+     * @return
+     */
+    @Override
+    public List<Blog> listRecommendTopBlog(Integer size) {
+        return this.blogMapper.findRecommendTopBlog(size);
     }
 
     /**

@@ -1,14 +1,18 @@
 package com.curtis.curtisblog.service.impl;
 
+import com.curtis.curtisblog.entity.TopTypes;
 import com.curtis.curtisblog.entity.Type;
+import com.curtis.curtisblog.mapper.BlogMapper;
 import com.curtis.curtisblog.mapper.TypeMapper;
 import com.curtis.curtisblog.service.ITypeService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.relational.core.sql.In;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,6 +23,9 @@ public class TypeServiceImpl implements ITypeService {
 
     @Autowired
     private TypeMapper typeMapper;
+
+    @Autowired
+    private BlogMapper blogMapper;
 
     /**
      * 新增类型
@@ -57,6 +64,16 @@ public class TypeServiceImpl implements ITypeService {
     @Override
     public List<Type> listAllType(){
         return typeMapper.listAll();
+    }
+
+    /**
+     * 查询使用次数前几的博客分类
+     * @param size
+     * @return
+     */
+    @Override
+    public List<TopTypes> listTypeTop(Integer size) {
+        return this.blogMapper.findTopTypes(size);
     }
 
     /**

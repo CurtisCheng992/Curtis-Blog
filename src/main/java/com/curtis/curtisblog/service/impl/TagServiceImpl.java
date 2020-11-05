@@ -1,6 +1,8 @@
 package com.curtis.curtisblog.service.impl;
 
 import com.curtis.curtisblog.entity.Tag;
+import com.curtis.curtisblog.entity.TopTags;
+import com.curtis.curtisblog.mapper.BlogTagsMapper;
 import com.curtis.curtisblog.mapper.TagMapper;
 import com.curtis.curtisblog.service.ITagService;
 import com.github.pagehelper.PageHelper;
@@ -20,6 +22,9 @@ public class TagServiceImpl implements ITagService {
 
     @Autowired
     private TagMapper tagMapper;
+
+    @Autowired
+    private BlogTagsMapper blogTagsMapper;
 
     /**
      * 新增标签
@@ -86,6 +91,16 @@ public class TagServiceImpl implements ITagService {
         List<Tag> tags = tagMapper.listAll();
         PageInfo<Tag> tagPageInfo = new PageInfo<>(tags);
         return tagPageInfo;
+    }
+
+    /**
+     * 查询使用次数前几的博客标签
+     * @param size
+     * @return
+     */
+    @Override
+    public List<TopTags> listTagTop(Integer size) {
+        return this.blogTagsMapper.findTopTags(size);
     }
 
     /**

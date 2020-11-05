@@ -1,5 +1,6 @@
 package com.curtis.curtisblog.service;
 
+import com.curtis.curtisblog.entity.TopTypes;
 import com.curtis.curtisblog.entity.Type;
 import com.github.pagehelper.PageInfo;
 
@@ -36,6 +37,13 @@ public interface ITypeService {
      * @return
      */
     List<Type> listAllType();
+
+    /**
+     * 查询使用次数前几的博客分类
+     * @param size
+     * @return
+     */
+    List<TopTypes> listTypeTop(Integer size);
 
     /**
      * 分页查询类型

@@ -47,7 +47,7 @@ public class BlogController {
     public String blogs(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
                         BlogQuery blogQuery, Model model){
         model.addAttribute("types",typeService.listAllType());
-        PageInfo<Blog> blogPageInfo = blogService.getBlogPage(pageNum, 5, blogQuery);
+        PageInfo<Blog> blogPageInfo = blogService.getBlogPageByQuery(pageNum, 5, blogQuery);
         model.addAttribute("pageInfo",blogPageInfo);
         return LIST;
     }
@@ -62,7 +62,7 @@ public class BlogController {
     @PostMapping("/blogs/search")
     public String search(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
                          BlogQuery blogQuery, Model model){
-        PageInfo<Blog> blogPageInfo = blogService.getBlogPage(pageNum, 5, blogQuery);
+        PageInfo<Blog> blogPageInfo = blogService.getBlogPageByQuery(pageNum, 5, blogQuery);
         model.addAttribute("pageInfo",blogPageInfo);
         return "admin/blogs :: blogList";
     }

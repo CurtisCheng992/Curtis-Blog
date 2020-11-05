@@ -47,7 +47,7 @@ public class TestBlog {
     @Test
     public void testPageSearch(){
         BlogQuery blogQuery = new BlogQuery("456",1l,false);
-        PageInfo<Blog> blogPageInfo = blogService.getBlogPage(1, 5, blogQuery);
+        PageInfo<Blog> blogPageInfo = blogService.getBlogPageByQuery(1, 5, blogQuery);
         System.out.println("blogPageInfo: "+blogPageInfo);
         List<Blog> list = blogPageInfo.getList();
         for (Blog blog : list) {

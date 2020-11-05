@@ -1,6 +1,8 @@
 package com.curtis.curtisblog.service;
 
 import com.curtis.curtisblog.entity.Tag;
+import com.curtis.curtisblog.entity.TopTags;
+import com.curtis.curtisblog.entity.TopTypes;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
@@ -49,6 +51,13 @@ public interface ITagService {
      * @return
      */
     PageInfo<Tag> getTagPage(int pageNum, int pageSize);
+
+    /**
+     * 查询使用次数前几的博客标签
+     * @param size
+     * @return
+     */
+    List<TopTags> listTagTop(Integer size);
 
     /**
      * 根据id修改标签

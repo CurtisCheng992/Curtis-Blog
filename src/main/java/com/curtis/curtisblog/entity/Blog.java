@@ -42,6 +42,8 @@ public class Blog implements Serializable {
 
     private String tagIds;
 
+    private String description;
+
     public Blog(Long id, String title, String content, String firstPicture, String flag, Integer views, boolean appreciation, boolean shareStatement, boolean commentTable, boolean published, boolean recommend, Date createTime, Date updateTime) {
         this.id = id;
         this.title = title;
@@ -202,6 +204,14 @@ public class Blog implements Serializable {
         this.tagIds = tagIds;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public void init(){
         this.tagIds = tagsToIds(this.getTags());
     }
@@ -241,6 +251,12 @@ public class Blog implements Serializable {
                 ", recommend=" + recommend +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", user=" + user +
+                ", comments=" + comments +
+                ", tagIds='" + tagIds + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

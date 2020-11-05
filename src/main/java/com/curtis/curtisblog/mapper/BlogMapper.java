@@ -1,9 +1,11 @@
 package com.curtis.curtisblog.mapper;
 
 import com.curtis.curtisblog.entity.Blog;
+import com.curtis.curtisblog.entity.TopTypes;
 import com.curtis.curtisblog.vo.BlogQuery;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
+import org.springframework.data.relational.core.sql.In;
 
 import java.util.List;
 
@@ -33,6 +35,7 @@ public interface BlogMapper {
                 @Result(column = "title", property = "title"),
                 @Result(column = "update_time", property = "updateTime"),
                 @Result(column = "views", property = "views"),
+                @Result(column = "description", property = "description"),
                 @Result(column = "type_id", property = "type",
                         one = @One(select = "com.curtis.curtisblog.mapper.TypeMapper.findTypeById",fetchType = FetchType.EAGER)),
                 @Result(column = "user_id", property = "user",
@@ -61,12 +64,34 @@ public interface BlogMapper {
     @ResultMap("blogMap")
     Blog findBlogById(Long id);
 
+    /**
+     * 查询使用次数为前几的博客类型
+     * @param size
+     * @return
+     */
+    @Select("SELECT type_id,COUNT(1) AS frequency FROM t_blog GROUP BY type_id ORDER BY COUNT(1) DESC LIMIT 0,#{size}")
+    @Results(id = "topTypes",
+            value = {
+            @Result(column = "frequency",property = "frequency"),
+            @Result(column = "type_id",property = "type",
+                one = @One(select = "com.curtis.curtisblog.mapper.TypeMapper.findTypeById",fetchType = FetchType.EAGER))
+    })
+    List<TopTypes> findTopTypes(Integer size);
+
+    /**
+     * 按照更新时间顺序查找推荐的前几的博客
+     * @param size
+     * @return
+     */
+    @Select("SELECT * FROM t_blog WHERE recommend=b'1' ORDER BY update_time DESC LIMIT 0, #{size}")
+    @ResultMap("blogMap")
+    List<Blog> findRecommendTopBlog(Integer size);
 
     /**
      * 保存博客
      * @param blog
      */
-    @Insert("insert into t_blog values(#{id},#{appreciation},#{commentTable},#{content},#{createTime},#{firstPicture},#{flag},#{published},#{recommend},#{shareStatement},#{title},#{updateTime},#{views},#{type.id},#{user.id})")
+    @Insert("insert into t_blog values(#{id},#{appreciation},#{commentTable},#{content},#{createTime},#{firstPicture},#{flag},#{published},#{recommend},#{shareStatement},#{title},#{updateTime},#{views},#{type.id},#{user.id},#{description})")
     @SelectKey(keyColumn = "id",keyProperty = "id",before = false,resultType = Long.class,statement = "select last_insert_id()")
     void saveBlog(Blog blog);
 
@@ -75,7 +100,7 @@ public interface BlogMapper {
      * 更新博客
      * @param blog
      */
-    @Update("update t_blog set appreciation=#{appreciation},comment_table=#{commentTable},content=#{content},create_time=#{createTime},first_picture=#{firstPicture},flag=#{flag},published=#{published},recommend=#{recommend},share_statement=#{shareStatement},title=#{title},update_time=#{updateTime},views=#{views},type_id=#{type.id},user_id=#{user.id} where id=#{id}")
+    @Update("update t_blog set appreciation=#{appreciation},comment_table=#{commentTable},content=#{content},create_time=#{createTime},first_picture=#{firstPicture},flag=#{flag},published=#{published},recommend=#{recommend},share_statement=#{shareStatement},title=#{title},update_time=#{updateTime},views=#{views},type_id=#{type.id},user_id=#{user.id},description=#{description} where id=#{id}")
     void updateBlog(Blog blog);
 
 
