@@ -105,6 +105,13 @@ public class BlogController {
         return REDIRECT_LIST;
     }
 
+    @GetMapping("/blogs/{id}/delete")
+    public String delete(@PathVariable Long id, RedirectAttributes attributes){
+        this.blogService.deleteBlog(id);
+        attributes.addFlashAttribute("message","删除成功！");
+        return REDIRECT_LIST;
+    }
+
     private void setTypeAndTag(Model model){
         model.addAttribute("types",typeService.listAllType());
         model.addAttribute("tags",tagService.listAllTag());

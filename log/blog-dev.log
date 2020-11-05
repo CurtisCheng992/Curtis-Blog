@@ -2467,3 +2467,384 @@
 2020-11-05 10:38:36.631 DEBUG 8744 --- [http-nio-8080-exec-6] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
 2020-11-05 10:38:36.632 DEBUG 8744 --- [http-nio-8080-exec-6] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 20(Long)
 2020-11-05 10:38:36.632 DEBUG 8744 --- [http-nio-8080-exec-6] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 1
+2020-11-05 10:44:35.970  INFO 17316 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 17316 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-05 10:44:35.975 DEBUG 17316 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-05 10:44:35.976  INFO 17316 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-05 10:44:36.062  INFO 17316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-05 10:44:36.063  INFO 17316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-05 10:44:37.162  INFO 17316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 10:44:37.163  INFO 17316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-05 10:44:37.184  INFO 17316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 JDBC repository interfaces.
+2020-11-05 10:44:37.202  INFO 17316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 10:44:37.203  INFO 17316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-05 10:44:37.220  INFO 17316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2020-11-05 10:44:38.285  INFO 17316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-05 10:44:38.298  INFO 17316 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-05 10:44:38.299  INFO 17316 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-05 10:44:38.435  INFO 17316 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-05 10:44:38.435  INFO 17316 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2372 ms
+2020-11-05 10:44:39.291  INFO 17316 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-05 10:44:39.419  INFO 17316 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-05 10:44:40.194  INFO 17316 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-05 10:44:40.196  WARN 17316 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-05 10:44:40.344  INFO 17316 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-05 10:44:40.745  INFO 17316 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-05 10:44:40.790  INFO 17316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-05 10:44:40.805  INFO 17316 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 6.072 seconds (JVM running for 8.737)
+2020-11-05 10:45:58.047  INFO 17316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-05 10:45:58.048  INFO 17316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-05 10:45:58.066  INFO 17316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-11-05 10:46:02.483 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-11-05 10:46:02.506 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.m.U.findByUsernameAndPassword      : ==> Parameters: curtis(String), 6fd8358dd2c59de335efde0e1f92b1f1(String)
+2020-11-05 10:46:02.528 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-11-05 10:46:04.287 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:46:04.287 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:46:04.291 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:46:04.402 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:46:04.402 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:46:04.403 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:46:04.406 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:46:04.407 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:46:04.468 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:46:04.468 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:46:04.469 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:46:04.469 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:46:04.469 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:46:04.471 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:46:04.474 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:46:04.474 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:46:04.475 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:46:04.481 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:46:04.482 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:46:04.483 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:46:04.484 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
+2020-11-05 10:46:06.317 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:46:06.318 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:46:06.318 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:46:06.319 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?, ?
+2020-11-05 10:46:06.319 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer), 5(Integer)
+2020-11-05 10:46:06.322 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:46:06.322 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-05 10:46:06.323 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:46:06.323 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:46:06.323 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:46:06.324 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:46:06.325 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:46:06.326 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:46:06.326 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:46:06.327 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:46:06.328 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 14(Long)
+2020-11-05 10:46:06.328 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:46:06.330 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:46:06.330 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 8(Long)
+2020-11-05 10:46:06.331 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:46:06.332 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 4
+2020-11-05 10:50:30.994 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:50:30.996 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:50:31.000 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:50:31.004 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:50:31.004 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:50:31.005 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:50:31.006 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:50:31.007 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:50:31.011 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:50:31.012 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:50:31.013 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:50:31.014 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:50:31.014 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:50:31.015 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:50:31.019 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:50:31.019 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:50:31.020 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:50:31.030 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:50:31.031 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:50:31.032 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:50:31.032 DEBUG 17316 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
+2020-11-05 10:50:32.554 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:50:32.555 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:50:32.561 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:50:32.568 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.curtisblog.mapper.TagMapper.listAll  : ==>  Preparing: select * from t_tag
+2020-11-05 10:50:32.569 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.curtisblog.mapper.TagMapper.listAll  : ==> Parameters: 
+2020-11-05 10:50:32.572 DEBUG 17316 --- [http-nio-8080-exec-8] c.c.curtisblog.mapper.TagMapper.listAll  : <==      Total: 15
+2020-11-05 10:50:36.180 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:50:36.181 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:50:36.182 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:50:36.184 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:50:36.185 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:50:36.186 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:50:36.188 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:50:36.188 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:50:36.190 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:50:36.191 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:50:36.191 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:50:36.192 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:50:36.192 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:50:36.193 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:50:36.200 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:50:36.201 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:50:36.202 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:50:36.207 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:50:36.208 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:50:36.208 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:50:36.209 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
+2020-11-05 10:51:15.539 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:51:15.540 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:51:15.541 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:51:15.541 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.curtisblog.mapper.TagMapper.listAll  : ==>  Preparing: select * from t_tag
+2020-11-05 10:51:15.541 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.curtisblog.mapper.TagMapper.listAll  : ==> Parameters: 
+2020-11-05 10:51:15.543 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.curtisblog.mapper.TagMapper.listAll  : <==      Total: 15
+2020-11-05 10:51:15.545 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findBlogById     : ==>  Preparing: select * from t_blog where id = ?
+2020-11-05 10:51:15.545 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findBlogById     : ==> Parameters: 1(Long)
+2020-11-05 10:51:15.548 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:15.548 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:51:15.549 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:15.550 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:51:15.550 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:51:15.551 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:51:15.551 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findBlogById     : <==      Total: 1
+2020-11-05 10:51:15.552 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-05 10:51:15.552 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 1(Long)
+2020-11-05 10:51:15.553 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 0
+2020-11-05 10:51:21.677 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:51:21.677 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:51:21.679 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:51:21.682 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:51:21.682 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:51:21.683 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:51:21.684 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:51:21.685 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:51:21.686 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:21.687 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:51:21.687 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:21.688 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:51:21.688 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:51:21.689 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:51:21.690 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:21.691 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:51:21.691 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:21.698 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:21.699 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:51:21.699 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:21.699 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
+2020-11-05 10:51:23.318 DEBUG 17316 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:51:23.318 DEBUG 17316 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:51:23.319 DEBUG 17316 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:51:23.320 DEBUG 17316 --- [http-nio-8080-exec-5] c.c.curtisblog.mapper.TagMapper.listAll  : ==>  Preparing: select * from t_tag
+2020-11-05 10:51:23.321 DEBUG 17316 --- [http-nio-8080-exec-5] c.c.curtisblog.mapper.TagMapper.listAll  : ==> Parameters: 
+2020-11-05 10:51:23.322 DEBUG 17316 --- [http-nio-8080-exec-5] c.c.curtisblog.mapper.TagMapper.listAll  : <==      Total: 15
+2020-11-05 10:51:24.524 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:51:24.525 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:51:24.526 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:51:24.528 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:51:24.528 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:51:24.529 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:51:24.530 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:51:24.531 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:51:24.533 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:24.534 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:51:24.535 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:24.535 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:51:24.536 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:51:24.538 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:51:24.540 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:24.541 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:51:24.541 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:24.546 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:24.546 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:51:24.546 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:24.546 DEBUG 17316 --- [http-nio-8080-exec-1] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
+2020-11-05 10:51:25.639 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:51:25.640 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:51:25.641 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:51:25.642 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.curtisblog.mapper.TagMapper.listAll  : ==>  Preparing: select * from t_tag
+2020-11-05 10:51:25.643 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.curtisblog.mapper.TagMapper.listAll  : ==> Parameters: 
+2020-11-05 10:51:25.644 DEBUG 17316 --- [http-nio-8080-exec-7] c.c.curtisblog.mapper.TagMapper.listAll  : <==      Total: 15
+2020-11-05 10:51:28.037 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:51:28.038 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:51:28.039 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:51:28.040 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:51:28.041 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:51:28.042 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:51:28.044 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:51:28.044 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:51:28.047 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:28.048 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:51:28.048 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:28.049 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:51:28.049 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:51:28.050 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:51:28.052 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:28.052 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:51:28.053 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:28.059 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:51:28.059 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:51:28.059 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:51:28.060 DEBUG 17316 --- [http-nio-8080-exec-10] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
+2020-11-05 10:52:23.949 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:52:23.950 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:52:23.950 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:52:23.952 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:52:23.952 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:52:23.953 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:52:23.954 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:52:23.955 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:52:23.957 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:23.958 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:23.959 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:23.959 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:52:23.959 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:23.960 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:52:23.962 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:23.962 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:52:23.963 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:23.967 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:23.968 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:52:23.968 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:23.969 DEBUG 17316 --- [http-nio-8080-exec-6] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
+2020-11-05 10:52:32.566  INFO 11260 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 11260 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-05 10:52:32.572 DEBUG 11260 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-05 10:52:32.572  INFO 11260 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-05 10:52:32.673  INFO 11260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-05 10:52:32.674  INFO 11260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-05 10:52:33.705  INFO 11260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 10:52:33.707  INFO 11260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-05 10:52:33.728  INFO 11260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 JDBC repository interfaces.
+2020-11-05 10:52:33.746  INFO 11260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-05 10:52:33.747  INFO 11260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-05 10:52:33.767  INFO 11260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-11-05 10:52:34.862  INFO 11260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-05 10:52:34.872  INFO 11260 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-05 10:52:34.873  INFO 11260 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-05 10:52:34.983  INFO 11260 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-05 10:52:34.983  INFO 11260 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2309 ms
+2020-11-05 10:52:35.993  INFO 11260 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-05 10:52:36.111  INFO 11260 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-05 10:52:36.802  INFO 11260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-05 10:52:36.803  WARN 11260 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-05 10:52:36.926  INFO 11260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-05 10:52:37.277  INFO 11260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-05 10:52:37.315  INFO 11260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-05 10:52:37.326  INFO 11260 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 5.791 seconds (JVM running for 8.262)
+2020-11-05 10:52:39.206  INFO 11260 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-05 10:52:39.206  INFO 11260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-05 10:52:39.224  INFO 11260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-11-05 10:52:42.064 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-11-05 10:52:42.090 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.m.U.findByUsernameAndPassword      : ==> Parameters: curtis(String), 0192023a7bbd73250516f069df18b500(String)
+2020-11-05 10:52:42.113 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.m.U.findByUsernameAndPassword      : <==      Total: 0
+2020-11-05 10:52:47.361 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-11-05 10:52:47.361 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.m.U.findByUsernameAndPassword      : ==> Parameters: curtis(String), 6fd8358dd2c59de335efde0e1f92b1f1(String)
+2020-11-05 10:52:47.365 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-11-05 10:52:48.518 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:52:48.519 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:52:48.523 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:52:48.627 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:52:48.627 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:52:48.628 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:52:48.631 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:52:48.631 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:52:48.705 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:48.706 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:48.706 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:48.707 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:52:48.707 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:48.708 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:52:48.712 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:48.712 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:52:48.714 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:48.721 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:48.721 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:52:48.722 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:48.723 DEBUG 11260 --- [http-nio-8080-exec-10] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
+2020-11-05 10:52:49.761 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:52:49.761 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:52:49.762 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:52:49.762 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?, ?
+2020-11-05 10:52:49.762 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer), 5(Integer)
+2020-11-05 10:52:49.764 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:49.765 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-05 10:52:49.766 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:49.767 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:52:49.767 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:49.768 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:52:49.770 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:49.770 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:49.771 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:49.772 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:49.772 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 14(Long)
+2020-11-05 10:52:49.773 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:49.775 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:49.775 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 8(Long)
+2020-11-05 10:52:49.777 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:49.777 DEBUG 11260 --- [http-nio-8080-exec-3] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 4
+2020-11-05 10:52:52.119 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findBlogById     : ==>  Preparing: select * from t_blog where id = ?
+2020-11-05 10:52:52.120 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findBlogById     : ==> Parameters: 20(Long)
+2020-11-05 10:52:52.122 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:52.123 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 8(Long)
+2020-11-05 10:52:52.123 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:52.124 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:52:52.124 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:52.125 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:52:52.126 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findBlogById     : <==      Total: 1
+2020-11-05 10:52:52.129 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.m.B.deleteAllByBlogId              : ==>  Preparing: delete from t_blog_tags where blogs_id = ?
+2020-11-05 10:52:52.129 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.m.B.deleteAllByBlogId              : ==> Parameters: 20(Long)
+2020-11-05 10:52:52.130 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.m.B.deleteAllByBlogId              : <==    Updates: 1
+2020-11-05 10:52:52.131 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.deleteBlog       : ==>  Preparing: delete from t_blog where id = ?
+2020-11-05 10:52:52.131 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.deleteBlog       : ==> Parameters: 20(Long)
+2020-11-05 10:52:52.132 DEBUG 11260 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.deleteBlog       : <==    Updates: 1
+2020-11-05 10:52:52.156 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.listAll          : ==>  Preparing: select * from t_type
+2020-11-05 10:52:52.157 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.listAll          : ==> Parameters: 
+2020-11-05 10:52:52.159 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.listAll          : <==      Total: 17
+2020-11-05 10:52:52.162 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:52:52.162 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:52:52.163 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:52:52.164 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:52:52.165 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:52:52.167 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:52.168 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:52.169 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:52.171 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:52:52.172 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:52.174 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:52:52.175 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:52.176 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:52:52.176 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:52.184 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:52.185 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:52:52.185 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:52.186 DEBUG 11260 --- [http-nio-8080-exec-7] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
+2020-11-05 10:52:54.475 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:52:54.476 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:52:54.477 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:52:54.477 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?, ?
+2020-11-05 10:52:54.478 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer), 5(Integer)
+2020-11-05 10:52:54.484 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:54.484 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-05 10:52:54.485 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:54.485 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:52:54.486 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:54.486 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:52:54.490 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:54.491 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:52:54.491 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:54.493 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:52:54.493 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 14(Long)
+2020-11-05 10:52:54.494 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:52:54.494 DEBUG 11260 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 3
+2020-11-05 10:53:06.939 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1
+2020-11-05 10:53:06.940 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 
+2020-11-05 10:53:06.940 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-05 10:53:06.941 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 LIMIT ?
+2020-11-05 10:53:06.941 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 5(Integer)
+2020-11-05 10:53:06.943 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:53:06.944 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-05 10:53:06.944 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:53:06.944 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-05 10:53:06.944 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-05 10:53:06.945 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-05 10:53:06.947 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:53:06.948 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-05 10:53:06.948 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:53:06.952 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-05 10:53:06.953 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-05 10:53:06.953 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-05 10:53:06.953 DEBUG 11260 --- [http-nio-8080-exec-5] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 5
