@@ -40,6 +40,8 @@ public interface BlogMapper {
                         one = @One(select = "com.curtis.curtisblog.mapper.TypeMapper.findTypeById",fetchType = FetchType.EAGER)),
                 @Result(column = "user_id", property = "user",
                         one = @One(select = "com.curtis.curtisblog.mapper.UserMapper.findUserById",fetchType = FetchType.EAGER)),
+                @Result(column = "id", property = "comments",
+                        many = @Many(select = "com.curtis.curtisblog.mapper.CommentMapper.findByBlogId",fetchType = FetchType.LAZY)),
                 @Result(column = "id", property = "tags",
                         many = @Many(select = "com.curtis.curtisblog.mapper.BlogTagsMapper.findByBlogId",fetchType = FetchType.LAZY))
             })
@@ -120,4 +122,10 @@ public interface BlogMapper {
     @Delete("delete from t_blog where id = #{id}")
     void deleteBlog(Long id);
 
+    /**
+     * 根据博客id更新浏览次数
+     * @param id
+     */
+    @Update("update t_blog set views = views + 1 where id = #{id}")
+    void updateViews(Long id);
 }

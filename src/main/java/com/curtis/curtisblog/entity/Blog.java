@@ -3,6 +3,7 @@ package com.curtis.curtisblog.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Blog implements Serializable {
 
     private Long id; //编号
@@ -235,28 +237,5 @@ public class Blog implements Serializable {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", firstPicture='" + firstPicture + '\'' +
-                ", flag='" + flag + '\'' +
-                ", views=" + views +
-                ", appreciation=" + appreciation +
-                ", shareStatement=" + shareStatement +
-                ", commentTable=" + commentTable +
-                ", published=" + published +
-                ", recommend=" + recommend +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
-                ", type=" + type +
-                ", tags=" + tags +
-                ", user=" + user +
-                ", comments=" + comments +
-                ", tagIds='" + tagIds + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
+
 }

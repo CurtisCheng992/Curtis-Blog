@@ -3,6 +3,7 @@ package com.curtis.curtisblog.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Comment implements Serializable {
 
     private Long id; //评论id
@@ -29,6 +31,8 @@ public class Comment implements Serializable {
     private List<Comment> replyComments = new ArrayList<>(); //回复评论
 
     private Comment parentComment; //父评论
+
+    private boolean adminComment; //管理员评论
 
     public Long getId() {
         return id;
@@ -102,15 +106,12 @@ public class Comment implements Serializable {
         this.parentComment = parentComment;
     }
 
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", email='" + email + '\'' +
-                ", content='" + content + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", createTime=" + createTime +
-                '}';
+    public boolean isAdminComment() {
+        return adminComment;
     }
+
+    public void setAdminComment(boolean adminComment) {
+        this.adminComment = adminComment;
+    }
+
 }

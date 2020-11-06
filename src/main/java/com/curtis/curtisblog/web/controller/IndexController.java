@@ -47,6 +47,13 @@ public class IndexController {
         return "index";
     }
 
+    /**
+     * 简单的全局搜索
+     * @param pageNum
+     * @param query
+     * @param model
+     * @return
+     */
     @PostMapping("/search")
     public String search(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
                          @RequestParam String query, Model model){

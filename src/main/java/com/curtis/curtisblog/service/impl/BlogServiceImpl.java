@@ -49,6 +49,7 @@ public class BlogServiceImpl implements IBlogService {
      * @param id
      * @return
      */
+    @Transactional
     @Override
     public Blog getAndConvert(Long id) {
         Blog blog = blogMapper.findBlogById(id);
@@ -59,6 +60,7 @@ public class BlogServiceImpl implements IBlogService {
         BeanUtils.copyProperties(blog,b);
         String content = b.getContent();
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        this.blogMapper.updateViews(id);
         return b;
     }
 
