@@ -33,10 +33,10 @@
     </nav>
 
     <!--中间内容-->
-    <div class="m-container-small m-padded-tb-big animated fadeIn">
+    <div class="m-container-small m-padded-tb-big">
         <div class="ui container">
             <!--header-->
-            <div class="ui top attached segment">
+            <div class="ui top attached segment animated fadeInDown">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
                         <h3 class="ui header teal">分类</h3>
@@ -46,37 +46,37 @@
                     </div>
                 </div>
             </div>
+            <div class="ui attached segment m-padded-tb-large animated fadeInDown">
+                    <div class="ui labeled button m-margin-tb-tiny" th:each="topTypes : ${topTypes}">
+                        <a href="#" th:href="@{/types/{id}(id=${topTypes.type.id})}" class="ui basic button" th:classappend="${topTypes.type.id==activeTypeId} ? 'teal'" th:text="${topTypes.type.name}">思考与感悟</a>
+                        <div class="ui basic left pointing label" th:classappend="${topTypes.type.id==activeTypeId} ? 'teal'" th:text="${topTypes.frequency}">24</div>
+                    </div>
+                    <!--/*-->
+                    <div class="ui labeled button m-margin-tb-tiny">
+                        <a href="#" class="ui basic button">开发者手册</a>
+                        <div class="ui basic left pointing label">24</div>
+                    </div>
+                    <div class="ui labeled button m-margin-tb-tiny">
+                        <a href="#" class="ui basic button">开发者手册</a>
+                        <div class="ui basic left pointing label">24</div>
+                    </div>
+                    <div class="ui labeled button m-margin-tb-tiny">
+                        <a href="#" class="ui basic button">开发者手册</a>
+                        <div class="ui basic left pointing label">24</div>
+                    </div>
+                    <div class="ui labeled button m-margin-tb-tiny">
+                        <a href="#" class="ui basic button">开发者手册</a>
+                        <div class="ui basic left pointing label">24</div>
+                    </div>
+                    <div class="ui labeled button m-margin-tb-tiny">
+                        <a href="#" class="ui basic button">清单</a>
+                        <div class="ui basic left pointing label">24</div>
+                    </div>
+                    <!--*/-->
+                </div>
 
-            <div class="ui attached segment m-padded-tb-large">
-                <div class="ui labeled button m-margin-tb-tiny" th:each="topTypes : ${topTypes}">
-                    <a href="#" th:href="@{/types/{id}(id=${topTypes.type.id})}" class="ui basic button" th:classappend="${topTypes.type.id==activeTypeId} ? 'teal'" th:text="${topTypes.type.name}">思考与感悟</a>
-                    <div class="ui basic left pointing label" th:classappend="${topTypes.type.id==activeTypeId} ? 'teal'" th:text="${topTypes.frequency}">24</div>
-                </div>
-                <!--/*-->
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">开发者手册</a>
-                    <div class="ui basic left pointing label">24</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">开发者手册</a>
-                    <div class="ui basic left pointing label">24</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">开发者手册</a>
-                    <div class="ui basic left pointing label">24</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">开发者手册</a>
-                    <div class="ui basic left pointing label">24</div>
-                </div>
-                <div class="ui labeled button m-margin-tb-tiny">
-                    <a href="#" class="ui basic button">清单</a>
-                    <div class="ui basic left pointing label">24</div>
-                </div>
-                <!--*/-->
-            </div>
 
-            <div class="ui top attached teal segment">
+            <div class="ui top attached teal segment animated fadeInUp">
                 <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.list}">
                     <div class="ui middle aligned mobile reversed stackable grid">
                         <div class="eleven wide column">
@@ -300,25 +300,25 @@
                 </div>
                 <!--*/-->
             </div>
-
             <!--footer-->
-            <div class="ui bottom attached segment" th:if="${page.total}>1">
-                <div class="ui middle aligned two column grid">
-                    <div class="column">
-                        <a th:href="@{/}" class="ui mini teal basic button">首页</a>
-                        <a href="#" th:href="@{/(pageNum=${page.hasPreviousPage}?${page.prePage}:1)}" class="ui mini teal basic button">上一页</a>
-                        <a href="#" th:href="@{/(pageNum=${page.hasNextPage}?${page.nextPage}:${page.pages})}" class="ui mini teal basic button">下一页</a>
-                        <a th:href="@{/(pageNum=${page.pages})}" class="ui mini teal basic button">尾页</a>
-                    </div>
-                    <div class="right aligned column">
-                        <div class="ui middle m-inline-block">
-                            <p style="padding-left: 60px">当前第&nbsp;<b style="font-size: large"><span th:text="${page.pageNum}"></span></b>&nbsp;页，
-                                总&nbsp;<b style="font-size: large"><span th:text="${page.pages}"></span></b>&nbsp;页，
-                                共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${page.total}"></span></b>&nbsp;条记录</p>
+            <div class="ui bottom attached segment animated fadeInUp" th:if="${page.total}>1">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <a th:href="@{/}" class="ui mini teal basic button">首页</a>
+                            <a href="#" th:href="@{/(pageNum=${page.hasPreviousPage}?${page.prePage}:1)}" class="ui mini teal basic button">上一页</a>
+                            <a href="#" th:href="@{/(pageNum=${page.hasNextPage}?${page.nextPage}:${page.pages})}" class="ui mini teal basic button">下一页</a>
+                            <a th:href="@{/(pageNum=${page.pages})}" class="ui mini teal basic button">尾页</a>
+                        </div>
+                        <div class="right aligned column">
+                            <div class="ui middle m-inline-block">
+                                <p style="padding-left: 60px">当前第&nbsp;<b style="font-size: large"><span th:text="${page.pageNum}"></span></b>&nbsp;页，
+                                    总&nbsp;<b style="font-size: large"><span th:text="${page.pages}"></span></b>&nbsp;页，
+                                    共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${page.total}"></span></b>&nbsp;条记录</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
 
         </div>
     </div>

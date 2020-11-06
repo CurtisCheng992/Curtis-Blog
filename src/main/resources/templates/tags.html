@@ -33,10 +33,10 @@
     </nav>
 
     <!--中间内容-->
-    <div class="m-container-small m-padded-tb-big animated fadeIn">
+    <div class="m-container-small m-padded-tb-big">
         <div class="ui container">
             <!--header-->
-            <div class="ui top attached segment">
+            <div class="ui top attached segment animated fadeInDown">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
                         <h3 class="ui header teal">标签</h3>
@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <div class="ui attached segment m-padded-tb-large">
+            <div class="ui attached segment m-padded-tb-large animated fadeInDown">
                 <a href="#" th:href="@{/tags/{id}(id=${topTag.tag.id})}" class="ui basic left pointing large label m-margin-tb-tiny" th:classappend="${topTag.tag.id==activeTagId} ? 'teal'" th:each="topTag : ${topTags}">
                     <span th:text="${topTag.tag.name}">方法论</span> <div class="detail" th:text="${topTag.frequency}">23</div>
                 </a>
@@ -76,7 +76,7 @@
                 <!--*/-->
             </div>
 
-            <div class="ui top attached teal segment">
+            <div class="ui top attached teal segment animated fadeInUp">
                 <div class="ui padded vertical segment m-padded-tb-large" th:each="blogTag : ${blogTags.list}">
                     <div class="ui middle aligned mobile reversed stackable grid">
                         <div class="eleven wide column">
@@ -344,7 +344,7 @@
             </div>
 
             <!--footer-->
-            <div class="ui bottom attached segment" th:if="${blogTags.total}>1">
+            <div class="ui bottom attached segment animated fadeInUp" th:if="${blogTags.total}>1">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
                         <a th:href="@{/}" class="ui mini teal basic button">首页</a>
