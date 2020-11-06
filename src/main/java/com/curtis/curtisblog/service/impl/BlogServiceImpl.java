@@ -2,10 +2,10 @@ package com.curtis.curtisblog.service.impl;
 
 import com.curtis.curtisblog.NotFoundException;
 import com.curtis.curtisblog.entity.Blog;
+import com.curtis.curtisblog.entity.BlogTags;
 import com.curtis.curtisblog.entity.Tag;
 import com.curtis.curtisblog.mapper.BlogMapper;
 import com.curtis.curtisblog.mapper.BlogTagsMapper;
-import com.curtis.curtisblog.mapper.TagMapper;
 import com.curtis.curtisblog.service.IBlogService;
 import com.curtis.curtisblog.utils.MarkdownUtils;
 import com.curtis.curtisblog.utils.MyBeanUtils;
@@ -17,7 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -90,6 +89,21 @@ public class BlogServiceImpl implements IBlogService {
         PageHelper.startPage(pageNum,pageSize);
         List<Blog> blogs = blogMapper.listAllBlog();
         PageInfo<Blog> blogPageInfo = new PageInfo<>(blogs);
+        return blogPageInfo;
+    }
+
+    /**
+     * 根据标签id查询博客的分页信息
+     * @param tagId
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    @Override
+    public PageInfo<BlogTags> getBlogPageByTagId(Long tagId, int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum,pageSize);
+        List<BlogTags> blogs = blogTagsMapper.listBlogByTagId(tagId);
+        PageInfo<BlogTags> blogPageInfo = new PageInfo<>(blogs);
         return blogPageInfo;
     }
 

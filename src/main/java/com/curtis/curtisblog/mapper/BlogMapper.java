@@ -128,4 +128,5 @@ public interface BlogMapper {
      */
     @Update("update t_blog set views = views + 1 where id = #{id}")
     void updateViews(Long id);
+
 }

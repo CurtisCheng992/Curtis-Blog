@@ -1,5 +1,6 @@
 package com.curtis.curtisblog.mapper;
 
+import com.curtis.curtisblog.entity.BlogTags;
 import com.curtis.curtisblog.entity.Tag;
 import com.curtis.curtisblog.entity.TopTags;
 import org.apache.ibatis.annotations.*;
@@ -34,4 +35,13 @@ public interface BlogTagsMapper {
             })
     List<TopTags> findTopTags(Integer size);
 
+    @Results(id = "listBlogByTagId",
+            value = {
+                    @Result(column = "blogs_id",property = "blog",
+                        one = @One(select = "com.curtis.curtisblog.mapper.BlogMapper.findBlogById",fetchType = FetchType.EAGER)),
+                    @Result(column = "blogs_id",property = "tags",
+                        many = @Many(select = "com.curtis.curtisblog.mapper.BlogTagsMapper.findByBlogId",fetchType = FetchType.LAZY))
+            })
+    @Select("select blogs_id from t_blog_tags where tags_id = #{tagId}")
+    List<BlogTags> listBlogByTagId(Long tagId);
 }

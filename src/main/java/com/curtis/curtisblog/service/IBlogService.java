@@ -1,6 +1,7 @@
 package com.curtis.curtisblog.service;
 
 import com.curtis.curtisblog.entity.Blog;
+import com.curtis.curtisblog.entity.BlogTags;
 import com.curtis.curtisblog.vo.BlogQuery;
 import com.github.pagehelper.PageInfo;
 
@@ -41,6 +42,15 @@ public interface IBlogService {
      * @return
      */
     PageInfo<Blog> getBlogPage(int pageNum, int pageSize);
+
+    /**
+     * 根据标签id查询博客的分页信息
+     * @param tagId
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageInfo<BlogTags> getBlogPageByTagId(Long tagId, int pageNum, int pageSize);
 
     /**
      * 查询博客的分页信息
