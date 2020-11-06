@@ -20103,3 +20103,663 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2020-11-06 12:49:56.488  INFO 6564 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-06 12:49:56.489  INFO 6564 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-11-06 12:49:56.515  INFO 6564 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-06 13:14:58.489  INFO 1972 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 1972 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-06 13:14:58.493 DEBUG 1972 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-06 13:14:58.494  INFO 1972 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-06 13:14:58.574  INFO 1972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-06 13:14:58.574  INFO 1972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-06 13:14:59.560  INFO 1972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-06 13:14:59.561  INFO 1972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-06 13:14:59.581  INFO 1972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 JDBC repository interfaces.
+2020-11-06 13:14:59.600  INFO 1972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-06 13:14:59.601  INFO 1972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-06 13:14:59.617  INFO 1972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2020-11-06 13:15:00.565  INFO 1972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-06 13:15:00.576  INFO 1972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-06 13:15:00.576  INFO 1972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-06 13:15:00.694  INFO 1972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-06 13:15:00.695  INFO 1972 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2121 ms
+2020-11-06 13:15:01.562  INFO 1972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-06 13:15:01.681  INFO 1972 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-06 13:15:02.403  INFO 1972 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-06 13:15:02.404  WARN 1972 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-06 13:15:02.547  INFO 1972 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-06 13:15:02.923  INFO 1972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-06 13:15:02.966  INFO 1972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-06 13:15:02.980  INFO 1972 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 5.387 seconds (JVM running for 7.693)
+2020-11-06 13:15:27.626  INFO 1972 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-06 13:15:27.626  INFO 1972 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-06 13:15:27.658  INFO 1972 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2020-11-06 13:15:27.756  INFO 1972 --- [http-nio-8080-exec-1] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.IndexController.index', args=[1, {}]}
+2020-11-06 13:15:27.850 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.m.BlogMapper.listAllBlog_COUNT     : ==>  Preparing: SELECT count(0) FROM t_blog
+2020-11-06 13:15:27.884 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.m.BlogMapper.listAllBlog_COUNT     : ==> Parameters: 
+2020-11-06 13:15:27.914 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.m.BlogMapper.listAllBlog_COUNT     : <==      Total: 1
+2020-11-06 13:15:27.916 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.listAllBlog      : ==>  Preparing: select * from t_blog LIMIT ?
+2020-11-06 13:15:27.917 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.listAllBlog      : ==> Parameters: 10(Integer)
+2020-11-06 13:15:27.971 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:27.972 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:15:27.973 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:27.973 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:15:27.974 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:15:27.975 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:15:27.978 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:27.978 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-06 13:15:27.979 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:27.988 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:27.989 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-06 13:15:27.990 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:27.993 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:27.994 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-06 13:15:27.995 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:27.998 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:27.998 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 14(Long)
+2020-11-06 13:15:27.999 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.000 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.listAllBlog      : <==      Total: 8
+2020-11-06 13:15:28.007 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findTopTypes     : ==>  Preparing: SELECT type_id,COUNT(1) AS frequency FROM t_blog GROUP BY type_id ORDER BY COUNT(1) DESC LIMIT 0,?
+2020-11-06 13:15:28.008 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findTopTypes     : ==> Parameters: 6(Integer)
+2020-11-06 13:15:28.009 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:28.009 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:15:28.010 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.011 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:28.011 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-06 13:15:28.012 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.013 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:28.013 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 14(Long)
+2020-11-06 13:15:28.014 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.015 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:28.016 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-06 13:15:28.016 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.017 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:28.017 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-06 13:15:28.018 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.018 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findTopTypes     : <==      Total: 5
+2020-11-06 13:15:28.024 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==>  Preparing: SELECT tags_id,COUNT(1) AS frequency FROM t_blog_tags GROUP BY tags_id ORDER BY COUNT(1) DESC LIMIT 0,?
+2020-11-06 13:15:28.024 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==> Parameters: 10(Integer)
+2020-11-06 13:15:28.026 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:28.027 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 8(Long)
+2020-11-06 13:15:28.029 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:28.030 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:28.030 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 16(Long)
+2020-11-06 13:15:28.031 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:28.033 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:28.034 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 4(Long)
+2020-11-06 13:15:28.035 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:28.035 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:28.035 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 9(Long)
+2020-11-06 13:15:28.036 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:28.036 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:28.037 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 1(Long)
+2020-11-06 13:15:28.038 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:28.038 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:28.038 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 2(Long)
+2020-11-06 13:15:28.039 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:28.040 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:28.040 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 3(Long)
+2020-11-06 13:15:28.040 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:28.041 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogTagsMapper.findTopTags  : <==      Total: 7
+2020-11-06 13:15:28.042 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.m.BlogMapper.findRecommendTopBlog  : ==>  Preparing: SELECT * FROM t_blog WHERE recommend=b'1' ORDER BY update_time DESC LIMIT 0, ?
+2020-11-06 13:15:28.042 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.m.BlogMapper.findRecommendTopBlog  : ==> Parameters: 8(Integer)
+2020-11-06 13:15:28.045 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:28.045 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:15:28.046 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.047 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:15:28.047 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:15:28.048 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:15:28.051 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:28.051 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-06 13:15:28.052 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.055 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:28.055 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-06 13:15:28.056 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.058 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:28.058 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-06 13:15:28.059 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:28.060 DEBUG 1972 --- [http-nio-8080-exec-1] c.c.c.m.BlogMapper.findRecommendTopBlog  : <==      Total: 5
+2020-11-06 13:15:28.060  INFO 1972 --- [http-nio-8080-exec-1] com.curtis.curtisblog.aspect.LogAspect   : result : index
+2020-11-06 13:15:30.769  INFO 1972 --- [http-nio-8080-exec-4] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.TypeShowController.types', args=[1, -1, {}]}
+2020-11-06 13:15:30.774 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findTopTypes     : ==>  Preparing: SELECT type_id,COUNT(1) AS frequency FROM t_blog GROUP BY type_id ORDER BY COUNT(1) DESC LIMIT 0,?
+2020-11-06 13:15:30.775 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findTopTypes     : ==> Parameters: 10000(Integer)
+2020-11-06 13:15:30.776 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:30.776 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:15:30.776 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:30.777 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:30.777 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-06 13:15:30.778 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:30.779 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:30.779 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 14(Long)
+2020-11-06 13:15:30.779 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:30.780 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:30.780 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-06 13:15:30.781 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:30.782 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:30.782 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-06 13:15:30.783 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:30.783 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findTopTypes     : <==      Total: 5
+2020-11-06 13:15:30.818 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : ==>  Preparing: SELECT count(0) FROM t_blog WHERE 1 = 1 AND type_id = ?
+2020-11-06 13:15:30.819 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : ==> Parameters: 1(Long)
+2020-11-06 13:15:30.819 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.m.B.listBlogBySearch_COUNT         : <==      Total: 1
+2020-11-06 13:15:30.820 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : ==>  Preparing: select * from t_blog where 1=1 and type_id = ? LIMIT ?
+2020-11-06 13:15:30.821 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : ==> Parameters: 1(Long), 8(Integer)
+2020-11-06 13:15:30.823 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:30.824 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:15:30.824 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:15:30.825 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:15:30.825 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:15:30.825 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:15:30.833 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.m.BlogMapper.listBlogBySearch      : <==      Total: 3
+2020-11-06 13:15:30.833  INFO 1972 --- [http-nio-8080-exec-4] com.curtis.curtisblog.aspect.LogAspect   : result : types
+2020-11-06 13:15:32.081  INFO 1972 --- [http-nio-8080-exec-5] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.TagShowController.tags', args=[1, -1, {}]}
+2020-11-06 13:15:32.084 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==>  Preparing: SELECT tags_id,COUNT(1) AS frequency FROM t_blog_tags GROUP BY tags_id ORDER BY COUNT(1) DESC LIMIT 0,?
+2020-11-06 13:15:32.084 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==> Parameters: 10000(Integer)
+2020-11-06 13:15:32.085 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:32.085 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 16(Long)
+2020-11-06 13:15:32.086 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:32.086 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:32.086 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 8(Long)
+2020-11-06 13:15:32.087 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:32.087 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:32.087 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 9(Long)
+2020-11-06 13:15:32.087 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:32.088 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:32.089 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 1(Long)
+2020-11-06 13:15:32.089 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:32.090 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:32.090 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 2(Long)
+2020-11-06 13:15:32.091 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:32.091 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:32.092 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 3(Long)
+2020-11-06 13:15:32.092 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:32.093 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:15:32.093 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 4(Long)
+2020-11-06 13:15:32.093 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:15:32.093 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogTagsMapper.findTopTags  : <==      Total: 7
+2020-11-06 13:15:32.095 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.B.listBlogByTagId_COUNT          : ==>  Preparing: SELECT count(0) FROM t_blog_tags WHERE tags_id = ?
+2020-11-06 13:15:32.095 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.B.listBlogByTagId_COUNT          : ==> Parameters: 16(Long)
+2020-11-06 13:15:32.096 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.B.listBlogByTagId_COUNT          : <==      Total: 1
+2020-11-06 13:15:32.096 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.listBlogByTagId   : ==>  Preparing: select blogs_id from t_blog_tags where tags_id = ? LIMIT ?
+2020-11-06 13:15:32.097 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.listBlogByTagId   : ==> Parameters: 16(Long), 8(Integer)
+2020-11-06 13:15:32.099 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:15:32.099 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 6(Long)
+2020-11-06 13:15:32.101 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:32.102 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 25(Long)
+2020-11-06 13:15:32.103 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:15:32.103 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : ======>  Preparing: select * from t_user where id = ?
+2020-11-06 13:15:32.103 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : ======> Parameters: 1(Long)
+2020-11-06 13:15:32.104 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : <======      Total: 1
+2020-11-06 13:15:32.104 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:15:32.104 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:15:32.105 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 8(Long)
+2020-11-06 13:15:32.106 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:15:32.107 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 1(Long)
+2020-11-06 13:15:32.107 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:15:32.107 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:15:32.107 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.listBlogByTagId   : <==      Total: 2
+2020-11-06 13:15:32.108 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:15:32.108 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 6(Long)
+2020-11-06 13:15:32.110 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 5
+2020-11-06 13:15:32.111 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:15:32.111 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 6(Long)
+2020-11-06 13:15:32.112 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 0
+2020-11-06 13:15:32.112 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:15:32.112 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 6(Long)
+2020-11-06 13:15:32.113 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 5
+2020-11-06 13:15:32.116  INFO 1972 --- [http-nio-8080-exec-5] com.curtis.curtisblog.aspect.LogAspect   : result : tags
+2020-11-06 13:15:32.133 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:15:32.133 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 8(Long)
+2020-11-06 13:15:32.134 DEBUG 1972 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 2
+2020-11-06 13:15:33.369  INFO 1972 --- [http-nio-8080-exec-9] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.ArchiveShowController.archives', args=[{}]}
+2020-11-06 13:15:33.372 DEBUG 1972 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findGroupYear    : ==>  Preparing: select date_format(b.update_time,'%Y') as year from t_blog b group by year order by year desc
+2020-11-06 13:15:33.373 DEBUG 1972 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findGroupYear    : ==> Parameters: 
+2020-11-06 13:15:33.374 DEBUG 1972 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findGroupYear    : <==      Total: 1
+2020-11-06 13:15:33.375 DEBUG 1972 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findByYear       : ==>  Preparing: select * from t_blog b where date_format(b.update_time,'%Y') = ?
+2020-11-06 13:15:33.375 DEBUG 1972 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findByYear       : ==> Parameters: 2020(String)
+2020-11-06 13:15:33.377 DEBUG 1972 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findByYear       : <==      Total: 8
+2020-11-06 13:15:33.378 DEBUG 1972 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.countBlog        : ==>  Preparing: select count(*) from t_blog
+2020-11-06 13:15:33.378 DEBUG 1972 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.countBlog        : ==> Parameters: 
+2020-11-06 13:15:33.378 DEBUG 1972 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.countBlog        : <==      Total: 1
+2020-11-06 13:15:33.379  INFO 1972 --- [http-nio-8080-exec-9] com.curtis.curtisblog.aspect.LogAspect   : result : archives
+2020-11-06 13:17:04.085  INFO 1972 --- [http-nio-8080-exec-4] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.ArchiveShowController.archives', args=[{}]}
+2020-11-06 13:17:04.086 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findGroupYear    : ==>  Preparing: select date_format(b.update_time,'%Y') as year from t_blog b group by year order by year desc
+2020-11-06 13:17:04.087 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findGroupYear    : ==> Parameters: 
+2020-11-06 13:17:04.087 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findGroupYear    : <==      Total: 1
+2020-11-06 13:17:04.089 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findByYear       : ==>  Preparing: select * from t_blog b where date_format(b.update_time,'%Y') = ?
+2020-11-06 13:17:04.089 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findByYear       : ==> Parameters: 2020(String)
+2020-11-06 13:17:04.094 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findByYear       : <==      Total: 8
+2020-11-06 13:17:04.094 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.countBlog        : ==>  Preparing: select count(*) from t_blog
+2020-11-06 13:17:04.094 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.countBlog        : ==> Parameters: 
+2020-11-06 13:17:04.095 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.countBlog        : <==      Total: 1
+2020-11-06 13:17:04.095  INFO 1972 --- [http-nio-8080-exec-4] com.curtis.curtisblog.aspect.LogAspect   : result : archives
+2020-11-06 13:17:05.703  INFO 1972 --- [http-nio-8080-exec-8] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.ArchiveShowController.archives', args=[{}]}
+2020-11-06 13:17:05.704 DEBUG 1972 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.findGroupYear    : ==>  Preparing: select date_format(b.update_time,'%Y') as year from t_blog b group by year order by year desc
+2020-11-06 13:17:05.704 DEBUG 1972 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.findGroupYear    : ==> Parameters: 
+2020-11-06 13:17:05.705 DEBUG 1972 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.findGroupYear    : <==      Total: 1
+2020-11-06 13:17:05.706 DEBUG 1972 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.findByYear       : ==>  Preparing: select * from t_blog b where date_format(b.update_time,'%Y') = ?
+2020-11-06 13:17:05.706 DEBUG 1972 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.findByYear       : ==> Parameters: 2020(String)
+2020-11-06 13:17:05.707 DEBUG 1972 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.findByYear       : <==      Total: 8
+2020-11-06 13:17:05.708 DEBUG 1972 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.countBlog        : ==>  Preparing: select count(*) from t_blog
+2020-11-06 13:17:05.709 DEBUG 1972 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.countBlog        : ==> Parameters: 
+2020-11-06 13:17:05.710 DEBUG 1972 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.countBlog        : <==      Total: 1
+2020-11-06 13:17:05.710  INFO 1972 --- [http-nio-8080-exec-8] com.curtis.curtisblog.aspect.LogAspect   : result : archives
+2020-11-06 13:17:10.055  INFO 1972 --- [http-nio-8080-exec-7] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.ArchiveShowController.archives', args=[{}]}
+2020-11-06 13:17:10.056 DEBUG 1972 --- [http-nio-8080-exec-7] c.c.c.mapper.BlogMapper.findGroupYear    : ==>  Preparing: select date_format(b.update_time,'%Y') as year from t_blog b group by year order by year desc
+2020-11-06 13:17:10.056 DEBUG 1972 --- [http-nio-8080-exec-7] c.c.c.mapper.BlogMapper.findGroupYear    : ==> Parameters: 
+2020-11-06 13:17:10.057 DEBUG 1972 --- [http-nio-8080-exec-7] c.c.c.mapper.BlogMapper.findGroupYear    : <==      Total: 1
+2020-11-06 13:17:10.059 DEBUG 1972 --- [http-nio-8080-exec-7] c.c.c.mapper.BlogMapper.findByYear       : ==>  Preparing: select * from t_blog b where date_format(b.update_time,'%Y') = ?
+2020-11-06 13:17:10.059 DEBUG 1972 --- [http-nio-8080-exec-7] c.c.c.mapper.BlogMapper.findByYear       : ==> Parameters: 2020(String)
+2020-11-06 13:17:10.061 DEBUG 1972 --- [http-nio-8080-exec-7] c.c.c.mapper.BlogMapper.findByYear       : <==      Total: 8
+2020-11-06 13:17:10.062 DEBUG 1972 --- [http-nio-8080-exec-7] c.c.c.mapper.BlogMapper.countBlog        : ==>  Preparing: select count(*) from t_blog
+2020-11-06 13:17:10.062 DEBUG 1972 --- [http-nio-8080-exec-7] c.c.c.mapper.BlogMapper.countBlog        : ==> Parameters: 
+2020-11-06 13:17:10.063 DEBUG 1972 --- [http-nio-8080-exec-7] c.c.c.mapper.BlogMapper.countBlog        : <==      Total: 1
+2020-11-06 13:17:10.064  INFO 1972 --- [http-nio-8080-exec-7] com.curtis.curtisblog.aspect.LogAspect   : result : archives
+2020-11-06 13:18:19.841  INFO 1972 --- [http-nio-8080-exec-4] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.ArchiveShowController.archives', args=[{}]}
+2020-11-06 13:18:19.842 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findGroupYear    : ==>  Preparing: select date_format(b.update_time,'%Y') as year from t_blog b group by year order by year desc
+2020-11-06 13:18:19.842 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findGroupYear    : ==> Parameters: 
+2020-11-06 13:18:19.842 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findGroupYear    : <==      Total: 1
+2020-11-06 13:18:19.843 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findByYear       : ==>  Preparing: select * from t_blog b where date_format(b.update_time,'%Y') = ?
+2020-11-06 13:18:19.844 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findByYear       : ==> Parameters: 2020(String)
+2020-11-06 13:18:19.856 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findByYear       : <==      Total: 8
+2020-11-06 13:18:19.857 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.countBlog        : ==>  Preparing: select count(*) from t_blog
+2020-11-06 13:18:19.857 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.countBlog        : ==> Parameters: 
+2020-11-06 13:18:19.858 DEBUG 1972 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.countBlog        : <==      Total: 1
+2020-11-06 13:18:19.858  INFO 1972 --- [http-nio-8080-exec-4] com.curtis.curtisblog.aspect.LogAspect   : result : archives
+2020-11-06 13:21:14.902  INFO 8084 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 8084 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-06 13:21:14.905 DEBUG 8084 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-06 13:21:14.905  INFO 8084 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-06 13:21:14.967  INFO 8084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-06 13:21:14.968  INFO 8084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-06 13:21:15.822  INFO 8084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-06 13:21:15.823  INFO 8084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-06 13:21:15.842  INFO 8084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 JDBC repository interfaces.
+2020-11-06 13:21:15.855  INFO 8084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-06 13:21:15.856  INFO 8084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-06 13:21:15.868  INFO 8084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2020-11-06 13:21:16.726  INFO 8084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-06 13:21:16.735  INFO 8084 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-06 13:21:16.735  INFO 8084 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-06 13:21:16.840  INFO 8084 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-06 13:21:16.841  INFO 8084 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1873 ms
+2020-11-06 13:21:17.587  INFO 8084 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-06 13:21:17.696  INFO 8084 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-06 13:21:18.370  INFO 8084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-06 13:21:18.372  WARN 8084 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-06 13:21:18.497  INFO 8084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-06 13:21:18.824  INFO 8084 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-06 13:21:18.862  INFO 8084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-06 13:21:18.872  INFO 8084 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 4.644 seconds (JVM running for 6.562)
+2020-11-06 13:21:22.806  INFO 8084 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-06 13:21:22.806  INFO 8084 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-06 13:21:22.818  INFO 8084 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-11-06 13:21:22.854  INFO 8084 --- [http-nio-8080-exec-2] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.ArchiveShowController.archives', args=[{}]}
+2020-11-06 13:21:22.894 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.findGroupYear    : ==>  Preparing: select date_format(b.update_time,'%Y') as year from t_blog b group by year order by year desc
+2020-11-06 13:21:22.920 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.findGroupYear    : ==> Parameters: 
+2020-11-06 13:21:22.943 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.findGroupYear    : <==      Total: 1
+2020-11-06 13:21:22.948 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.findByYear       : ==>  Preparing: select * from t_blog b where date_format(b.update_time,'%Y') = ?
+2020-11-06 13:21:22.949 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.findByYear       : ==> Parameters: 2020(String)
+2020-11-06 13:21:23.005 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:23.005 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:21:23.006 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:23.006 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:21:23.007 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:21:23.008 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:21:23.010 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:23.011 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-06 13:21:23.011 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:23.017 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:23.018 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-06 13:21:23.018 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:23.020 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:23.021 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-06 13:21:23.021 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:23.024 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:23.024 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 14(Long)
+2020-11-06 13:21:23.025 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:23.025 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.findByYear       : <==      Total: 8
+2020-11-06 13:21:23.026 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.countBlog        : ==>  Preparing: select count(*) from t_blog
+2020-11-06 13:21:23.026 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.countBlog        : ==> Parameters: 
+2020-11-06 13:21:23.027 DEBUG 8084 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.countBlog        : <==      Total: 1
+2020-11-06 13:21:23.028  INFO 8084 --- [http-nio-8080-exec-2] com.curtis.curtisblog.aspect.LogAspect   : result : archives
+2020-11-06 13:21:38.378  INFO 8084 --- [http-nio-8080-exec-6] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.ArchiveShowController.archives', args=[{}]}
+2020-11-06 13:21:38.379 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findGroupYear    : ==>  Preparing: select date_format(b.update_time,'%Y') as year from t_blog b group by year order by year desc
+2020-11-06 13:21:38.380 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findGroupYear    : ==> Parameters: 
+2020-11-06 13:21:38.380 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findGroupYear    : <==      Total: 1
+2020-11-06 13:21:38.382 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findByYear       : ==>  Preparing: select * from t_blog b where date_format(b.update_time,'%Y') = ?
+2020-11-06 13:21:38.382 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findByYear       : ==> Parameters: 2020(String)
+2020-11-06 13:21:38.385 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:38.386 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:21:38.387 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:38.387 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:21:38.388 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:21:38.390 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:21:38.393 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:38.393 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-06 13:21:38.394 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:38.404 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:38.404 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-06 13:21:38.405 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:38.410 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:38.412 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-06 13:21:38.415 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:38.433 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:21:38.433 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 14(Long)
+2020-11-06 13:21:38.435 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:21:38.439 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findByYear       : <==      Total: 8
+2020-11-06 13:21:38.439 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.countBlog        : ==>  Preparing: select count(*) from t_blog
+2020-11-06 13:21:38.440 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.countBlog        : ==> Parameters: 
+2020-11-06 13:21:38.440 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.countBlog        : <==      Total: 1
+2020-11-06 13:21:38.441  INFO 8084 --- [http-nio-8080-exec-6] com.curtis.curtisblog.aspect.LogAspect   : result : archives
+2020-11-06 13:22:18.731  INFO 8084 --- [http-nio-8080-exec-1] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.TagShowController.tags', args=[1, -1, {}]}
+2020-11-06 13:22:18.737 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==>  Preparing: SELECT tags_id,COUNT(1) AS frequency FROM t_blog_tags GROUP BY tags_id ORDER BY COUNT(1) DESC LIMIT 0,?
+2020-11-06 13:22:18.738 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==> Parameters: 10000(Integer)
+2020-11-06 13:22:18.738 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:22:18.739 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 16(Long)
+2020-11-06 13:22:18.739 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:22:18.739 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:22:18.739 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 8(Long)
+2020-11-06 13:22:18.740 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:22:18.741 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:22:18.741 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 9(Long)
+2020-11-06 13:22:18.741 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:22:18.742 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:22:18.742 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 1(Long)
+2020-11-06 13:22:18.743 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:22:18.743 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:22:18.743 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 2(Long)
+2020-11-06 13:22:18.744 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:22:18.744 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:22:18.745 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 3(Long)
+2020-11-06 13:22:18.745 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:22:18.745 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:22:18.746 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 4(Long)
+2020-11-06 13:22:18.746 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:22:18.746 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogTagsMapper.findTopTags  : <==      Total: 7
+2020-11-06 13:22:18.772 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.B.listBlogByTagId_COUNT          : ==>  Preparing: SELECT count(0) FROM t_blog_tags WHERE tags_id = ?
+2020-11-06 13:22:18.772 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.B.listBlogByTagId_COUNT          : ==> Parameters: 16(Long)
+2020-11-06 13:22:18.773 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.B.listBlogByTagId_COUNT          : <==      Total: 1
+2020-11-06 13:22:18.775 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.listBlogByTagId   : ==>  Preparing: select blogs_id from t_blog_tags where tags_id = ? LIMIT ?
+2020-11-06 13:22:18.775 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.listBlogByTagId   : ==> Parameters: 16(Long), 8(Integer)
+2020-11-06 13:22:18.777 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:22:18.777 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 6(Long)
+2020-11-06 13:22:18.779 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:22:18.780 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 25(Long)
+2020-11-06 13:22:18.780 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:22:18.780 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ======>  Preparing: select * from t_user where id = ?
+2020-11-06 13:22:18.781 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : ======> Parameters: 1(Long)
+2020-11-06 13:22:18.781 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.UserMapper.findUserById     : <======      Total: 1
+2020-11-06 13:22:18.782 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:22:18.783 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:22:18.783 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 8(Long)
+2020-11-06 13:22:18.786 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:22:18.786 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 1(Long)
+2020-11-06 13:22:18.787 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:22:18.787 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:22:18.787 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.listBlogByTagId   : <==      Total: 2
+2020-11-06 13:22:18.788 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:22:18.788 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 6(Long)
+2020-11-06 13:22:18.789 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 5
+2020-11-06 13:22:18.790 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:22:18.790 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 6(Long)
+2020-11-06 13:22:18.790 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 0
+2020-11-06 13:22:18.791 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:22:18.791 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 6(Long)
+2020-11-06 13:22:18.793 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 5
+2020-11-06 13:22:18.794  INFO 8084 --- [http-nio-8080-exec-1] com.curtis.curtisblog.aspect.LogAspect   : result : tags
+2020-11-06 13:22:18.823 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:22:18.823 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 8(Long)
+2020-11-06 13:22:18.824 DEBUG 8084 --- [http-nio-8080-exec-1] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 2
+2020-11-06 13:23:53.705  INFO 8084 --- [http-nio-8080-exec-5] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.TagShowController.tags', args=[1, -1, {}]}
+2020-11-06 13:23:53.707 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==>  Preparing: SELECT tags_id,COUNT(1) AS frequency FROM t_blog_tags GROUP BY tags_id ORDER BY COUNT(1) DESC LIMIT 0,?
+2020-11-06 13:23:53.707 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==> Parameters: 10000(Integer)
+2020-11-06 13:23:53.708 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:23:53.709 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 16(Long)
+2020-11-06 13:23:53.710 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:23:53.710 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:23:53.710 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 8(Long)
+2020-11-06 13:23:53.711 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:23:53.712 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:23:53.712 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 9(Long)
+2020-11-06 13:23:53.714 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:23:53.714 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:23:53.714 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 1(Long)
+2020-11-06 13:23:53.715 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:23:53.716 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:23:53.716 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 2(Long)
+2020-11-06 13:23:53.717 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:23:53.717 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:23:53.717 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 3(Long)
+2020-11-06 13:23:53.718 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:23:53.718 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-06 13:23:53.718 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 4(Long)
+2020-11-06 13:23:53.718 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-06 13:23:53.719 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogTagsMapper.findTopTags  : <==      Total: 7
+2020-11-06 13:23:53.719 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.B.listBlogByTagId_COUNT          : ==>  Preparing: SELECT count(0) FROM t_blog_tags WHERE tags_id = ?
+2020-11-06 13:23:53.719 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.B.listBlogByTagId_COUNT          : ==> Parameters: 16(Long)
+2020-11-06 13:23:53.720 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.B.listBlogByTagId_COUNT          : <==      Total: 1
+2020-11-06 13:23:53.721 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.listBlogByTagId   : ==>  Preparing: select blogs_id from t_blog_tags where tags_id = ? LIMIT ?
+2020-11-06 13:23:53.721 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.listBlogByTagId   : ==> Parameters: 16(Long), 8(Integer)
+2020-11-06 13:23:53.722 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:23:53.722 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 6(Long)
+2020-11-06 13:23:53.724 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:23:53.725 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 25(Long)
+2020-11-06 13:23:53.725 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:23:53.726 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : ======>  Preparing: select * from t_user where id = ?
+2020-11-06 13:23:53.726 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : ======> Parameters: 1(Long)
+2020-11-06 13:23:53.727 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : <======      Total: 1
+2020-11-06 13:23:53.728 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:23:53.729 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:23:53.729 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 8(Long)
+2020-11-06 13:23:53.731 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:23:53.732 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 1(Long)
+2020-11-06 13:23:53.732 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:23:53.733 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:23:53.733 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.listBlogByTagId   : <==      Total: 2
+2020-11-06 13:23:53.734 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:23:53.734 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 6(Long)
+2020-11-06 13:23:53.735 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 5
+2020-11-06 13:23:53.736 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:23:53.736 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 6(Long)
+2020-11-06 13:23:53.736 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 0
+2020-11-06 13:23:53.737 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:23:53.737 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 6(Long)
+2020-11-06 13:23:53.738 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 5
+2020-11-06 13:23:53.739  INFO 8084 --- [http-nio-8080-exec-5] com.curtis.curtisblog.aspect.LogAspect   : result : tags
+2020-11-06 13:23:53.755 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:23:53.755 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 8(Long)
+2020-11-06 13:23:53.756 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 2
+2020-11-06 13:23:55.011  INFO 8084 --- [http-nio-8080-exec-6] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/blog/6', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.IndexController.blog', args=[6, {}]}
+2020-11-06 13:23:55.022 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findBlogById     : ==>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:23:55.022 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findBlogById     : ==> Parameters: 6(Long)
+2020-11-06 13:23:55.025 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:23:55.025 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-06 13:23:55.026 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:23:55.026 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:23:55.027 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:23:55.028 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:23:55.028 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.findBlogById     : <==      Total: 1
+2020-11-06 13:23:55.043 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:23:55.043 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 6(Long)
+2020-11-06 13:23:55.044 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 0
+2020-11-06 13:23:55.044 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:23:55.044 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 6(Long)
+2020-11-06 13:23:55.045 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 5
+2020-11-06 13:23:55.105 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.updateViews      : ==>  Preparing: update t_blog set views = views + 1 where id = ?
+2020-11-06 13:23:55.106 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.updateViews      : ==> Parameters: 6(Long)
+2020-11-06 13:23:55.106 DEBUG 8084 --- [http-nio-8080-exec-6] c.c.c.mapper.BlogMapper.updateViews      : <==    Updates: 1
+2020-11-06 13:23:55.115  INFO 8084 --- [http-nio-8080-exec-6] com.curtis.curtisblog.aspect.LogAspect   : result : blog
+2020-11-06 13:23:55.880  INFO 8084 --- [http-nio-8080-exec-5] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/comments/6', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.CommentController.comments', args=[6, {}]}
+2020-11-06 13:23:55.886 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:23:55.886 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 6(Long)
+2020-11-06 13:23:55.887 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 0
+2020-11-06 13:23:55.888  INFO 8084 --- [http-nio-8080-exec-5] com.curtis.curtisblog.aspect.LogAspect   : result : blog :: commentList
+2020-11-06 13:23:59.436  INFO 8084 --- [http-nio-8080-exec-9] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.ArchiveShowController.archives', args=[{}]}
+2020-11-06 13:23:59.436 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findGroupYear    : ==>  Preparing: select date_format(b.update_time,'%Y') as year from t_blog b group by year order by year desc
+2020-11-06 13:23:59.436 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findGroupYear    : ==> Parameters: 
+2020-11-06 13:23:59.437 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findGroupYear    : <==      Total: 1
+2020-11-06 13:23:59.438 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findByYear       : ==>  Preparing: select * from t_blog b where date_format(b.update_time,'%Y') = ?
+2020-11-06 13:23:59.439 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findByYear       : ==> Parameters: 2020(String)
+2020-11-06 13:23:59.441 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:23:59.442 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:23:59.443 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:23:59.444 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:23:59.444 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:23:59.444 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:23:59.446 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:23:59.446 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 2(Long)
+2020-11-06 13:23:59.447 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:23:59.452 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:23:59.452 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-06 13:23:59.453 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:23:59.455 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:23:59.455 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-06 13:23:59.456 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:23:59.460 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:23:59.460 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 14(Long)
+2020-11-06 13:23:59.460 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:23:59.462 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.findByYear       : <==      Total: 8
+2020-11-06 13:23:59.462 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.countBlog        : ==>  Preparing: select count(*) from t_blog
+2020-11-06 13:23:59.462 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.countBlog        : ==> Parameters: 
+2020-11-06 13:23:59.463 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.BlogMapper.countBlog        : <==      Total: 1
+2020-11-06 13:23:59.463  INFO 8084 --- [http-nio-8080-exec-9] com.curtis.curtisblog.aspect.LogAspect   : result : archives
+2020-11-06 13:24:02.170  INFO 8084 --- [http-nio-8080-exec-8] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/blog/8', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.IndexController.blog', args=[8, {}]}
+2020-11-06 13:24:02.181 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.findBlogById     : ==>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:24:02.182 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.findBlogById     : ==> Parameters: 8(Long)
+2020-11-06 13:24:02.184 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:24:02.184 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:24:02.185 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:24:02.185 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:24:02.185 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:24:02.186 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:24:02.186 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.findBlogById     : <==      Total: 1
+2020-11-06 13:24:02.187 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:24:02.187 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 8(Long)
+2020-11-06 13:24:02.194 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 4
+2020-11-06 13:24:02.195 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:24:02.195 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 8(Long)
+2020-11-06 13:24:02.196 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 2
+2020-11-06 13:24:02.196 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.updateViews      : ==>  Preparing: update t_blog set views = views + 1 where id = ?
+2020-11-06 13:24:02.197 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.updateViews      : ==> Parameters: 8(Long)
+2020-11-06 13:24:02.197 DEBUG 8084 --- [http-nio-8080-exec-8] c.c.c.mapper.BlogMapper.updateViews      : <==    Updates: 1
+2020-11-06 13:24:02.205  INFO 8084 --- [http-nio-8080-exec-8] com.curtis.curtisblog.aspect.LogAspect   : result : blog
+2020-11-06 13:24:02.859  INFO 8084 --- [http-nio-8080-exec-3] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/comments/8', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.CommentController.comments', args=[8, {}]}
+2020-11-06 13:24:02.862 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:24:02.863 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 8(Long)
+2020-11-06 13:24:02.865 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:24:02.865 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 8(Long)
+2020-11-06 13:24:02.869 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:24:02.869 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 1(Long)
+2020-11-06 13:24:02.870 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:24:02.871 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ======>  Preparing: select * from t_user where id = ?
+2020-11-06 13:24:02.871 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ======> Parameters: 1(Long)
+2020-11-06 13:24:02.872 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : <======      Total: 1
+2020-11-06 13:24:02.873 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:24:02.879 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 4
+2020-11-06 13:24:02.898 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==>  Preparing: select t1.* from t_comment t1, t_comment t2 where t1.parent_comment_id = t2.id and t2.id = ?
+2020-11-06 13:24:02.898 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==> Parameters: 1(Long)
+2020-11-06 13:24:02.900 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:24:02.901 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 8(Long)
+2020-11-06 13:24:02.905 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:24:02.905 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 1(Long)
+2020-11-06 13:24:02.905 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:24:02.906 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ======>  Preparing: select * from t_user where id = ?
+2020-11-06 13:24:02.906 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ======> Parameters: 1(Long)
+2020-11-06 13:24:02.907 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : <======      Total: 1
+2020-11-06 13:24:02.907 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:24:02.908 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : ====>  Preparing: select * from t_comment where id = ?
+2020-11-06 13:24:02.908 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : ====> Parameters: 1(Long)
+2020-11-06 13:24:02.910 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : <====      Total: 1
+2020-11-06 13:24:02.911 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : <==      Total: 1
+2020-11-06 13:24:02.912 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==>  Preparing: select t1.* from t_comment t1, t_comment t2 where t1.parent_comment_id = t2.id and t2.id = ?
+2020-11-06 13:24:02.912 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==> Parameters: 2(Long)
+2020-11-06 13:24:02.915 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:24:02.915 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 8(Long)
+2020-11-06 13:24:02.918 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:24:02.918 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 1(Long)
+2020-11-06 13:24:02.919 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:24:02.919 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ======>  Preparing: select * from t_user where id = ?
+2020-11-06 13:24:02.919 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ======> Parameters: 1(Long)
+2020-11-06 13:24:02.920 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : <======      Total: 1
+2020-11-06 13:24:02.920 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:24:02.920 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : ====>  Preparing: select * from t_comment where id = ?
+2020-11-06 13:24:02.920 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : ====> Parameters: 2(Long)
+2020-11-06 13:24:02.922 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : <====      Total: 1
+2020-11-06 13:24:02.922 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : <==      Total: 1
+2020-11-06 13:24:02.922 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==>  Preparing: select t1.* from t_comment t1, t_comment t2 where t1.parent_comment_id = t2.id and t2.id = ?
+2020-11-06 13:24:02.923 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==> Parameters: 5(Long)
+2020-11-06 13:24:02.923 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : <==      Total: 0
+2020-11-06 13:24:02.923 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==>  Preparing: select t1.* from t_comment t1, t_comment t2 where t1.parent_comment_id = t2.id and t2.id = ?
+2020-11-06 13:24:02.924 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==> Parameters: 7(Long)
+2020-11-06 13:24:02.924 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : <==      Total: 0
+2020-11-06 13:24:02.924 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==>  Preparing: select t1.* from t_comment t1, t_comment t2 where t1.parent_comment_id = t2.id and t2.id = ?
+2020-11-06 13:24:02.924 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==> Parameters: 3(Long)
+2020-11-06 13:24:02.926 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : ====>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:24:02.926 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : ====> Parameters: 8(Long)
+2020-11-06 13:24:02.928 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ======>  Preparing: select * from t_type where id = ?
+2020-11-06 13:24:02.928 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : ======> Parameters: 1(Long)
+2020-11-06 13:24:02.929 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.TypeMapper.findTypeById     : <======      Total: 1
+2020-11-06 13:24:02.929 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ======>  Preparing: select * from t_user where id = ?
+2020-11-06 13:24:02.930 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : ======> Parameters: 1(Long)
+2020-11-06 13:24:02.930 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.UserMapper.findUserById     : <======      Total: 1
+2020-11-06 13:24:02.931 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.BlogMapper.findBlogById     : <====      Total: 1
+2020-11-06 13:24:02.931 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : ====>  Preparing: select * from t_comment where id = ?
+2020-11-06 13:24:02.931 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : ====> Parameters: 3(Long)
+2020-11-06 13:24:02.933 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : ======>  Preparing: select * from t_comment where id = ?
+2020-11-06 13:24:02.933 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : ======> Parameters: 1(Long)
+2020-11-06 13:24:02.934 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : <======      Total: 1
+2020-11-06 13:24:02.934 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findParentByParentId           : <====      Total: 1
+2020-11-06 13:24:02.934 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : <==      Total: 1
+2020-11-06 13:24:02.935 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==>  Preparing: select t1.* from t_comment t1, t_comment t2 where t1.parent_comment_id = t2.id and t2.id = ?
+2020-11-06 13:24:02.935 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==> Parameters: 4(Long)
+2020-11-06 13:24:02.935 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : <==      Total: 0
+2020-11-06 13:24:02.936 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==>  Preparing: select t1.* from t_comment t1, t_comment t2 where t1.parent_comment_id = t2.id and t2.id = ?
+2020-11-06 13:24:02.936 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : ==> Parameters: 8(Long)
+2020-11-06 13:24:02.936 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.m.C.findReplyListByCid             : <==      Total: 0
+2020-11-06 13:24:02.936  INFO 8084 --- [http-nio-8080-exec-3] com.curtis.curtisblog.aspect.LogAspect   : result : blog :: commentList
+2020-11-06 13:24:04.654  INFO 8084 --- [http-nio-8080-exec-5] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/blog/6', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.IndexController.blog', args=[6, {}]}
+2020-11-06 13:24:04.656 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ==>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:24:04.656 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : ==> Parameters: 6(Long)
+2020-11-06 13:24:04.658 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:24:04.658 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 25(Long)
+2020-11-06 13:24:04.658 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:24:04.658 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:24:04.658 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:24:04.659 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:24:04.659 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.findBlogById     : <==      Total: 1
+2020-11-06 13:24:04.659 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:24:04.659 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 6(Long)
+2020-11-06 13:24:04.659 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 0
+2020-11-06 13:24:04.660 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:24:04.660 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 6(Long)
+2020-11-06 13:24:04.660 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 5
+2020-11-06 13:24:04.664 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.updateViews      : ==>  Preparing: update t_blog set views = views + 1 where id = ?
+2020-11-06 13:24:04.664 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.updateViews      : ==> Parameters: 6(Long)
+2020-11-06 13:24:04.665 DEBUG 8084 --- [http-nio-8080-exec-5] c.c.c.mapper.BlogMapper.updateViews      : <==    Updates: 1
+2020-11-06 13:24:04.678  INFO 8084 --- [http-nio-8080-exec-5] com.curtis.curtisblog.aspect.LogAspect   : result : blog
+2020-11-06 13:24:05.388  INFO 8084 --- [http-nio-8080-exec-3] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/comments/6', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.CommentController.comments', args=[6, {}]}
+2020-11-06 13:24:05.388 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:24:05.389 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 6(Long)
+2020-11-06 13:24:05.389 DEBUG 8084 --- [http-nio-8080-exec-3] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 0
+2020-11-06 13:24:05.390  INFO 8084 --- [http-nio-8080-exec-3] com.curtis.curtisblog.aspect.LogAspect   : result : blog :: commentList
+2020-11-06 13:24:21.229  INFO 8084 --- [http-nio-8080-exec-4] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/blog/1', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.IndexController.blog', args=[1, {}]}
+2020-11-06 13:24:21.230 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findBlogById     : ==>  Preparing: select * from t_blog where id = ?
+2020-11-06 13:24:21.230 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findBlogById     : ==> Parameters: 1(Long)
+2020-11-06 13:24:21.234 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-06 13:24:21.234 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 1(Long)
+2020-11-06 13:24:21.235 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-06 13:24:21.235 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-06 13:24:21.235 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-06 13:24:21.236 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-06 13:24:21.236 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.findBlogById     : <==      Total: 1
+2020-11-06 13:24:21.236 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:24:21.236 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 1(Long)
+2020-11-06 13:24:21.237 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 0
+2020-11-06 13:24:21.237 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.m.BlogTagsMapper.findByBlogId      : ==>  Preparing: select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = ?)
+2020-11-06 13:24:21.237 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.m.BlogTagsMapper.findByBlogId      : ==> Parameters: 1(Long)
+2020-11-06 13:24:21.237 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.m.BlogTagsMapper.findByBlogId      : <==      Total: 0
+2020-11-06 13:24:21.238 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.updateViews      : ==>  Preparing: update t_blog set views = views + 1 where id = ?
+2020-11-06 13:24:21.238 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.updateViews      : ==> Parameters: 1(Long)
+2020-11-06 13:24:21.239 DEBUG 8084 --- [http-nio-8080-exec-4] c.c.c.mapper.BlogMapper.updateViews      : <==    Updates: 1
+2020-11-06 13:24:21.261  INFO 8084 --- [http-nio-8080-exec-4] com.curtis.curtisblog.aspect.LogAspect   : result : blog
+2020-11-06 13:24:21.994  INFO 8084 --- [http-nio-8080-exec-9] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/comments/1', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.CommentController.comments', args=[1, {}]}
+2020-11-06 13:24:21.995 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.CommentMapper.findByBlogId  : ==>  Preparing: select * from t_comment where blog_id = ? and parent_comment_id is null order by create_time asc
+2020-11-06 13:24:21.996 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.CommentMapper.findByBlogId  : ==> Parameters: 1(Long)
+2020-11-06 13:24:21.997 DEBUG 8084 --- [http-nio-8080-exec-9] c.c.c.mapper.CommentMapper.findByBlogId  : <==      Total: 0
+2020-11-06 13:24:21.997  INFO 8084 --- [http-nio-8080-exec-9] com.curtis.curtisblog.aspect.LogAspect   : result : blog :: commentList

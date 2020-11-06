@@ -6,6 +6,7 @@ import com.curtis.curtisblog.vo.BlogQuery;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 博客的业务层接口
@@ -67,6 +68,18 @@ public interface IBlogService {
      * @return
      */
     List<Blog> listRecommendTopBlog(Integer size);
+
+    /**
+     * 归档博客
+     * @return
+     */
+    Map<String,List<Blog>> archiveBlog();
+
+    /**
+     * 查询博客条数
+     * @return
+     */
+    Long countBlog();
 
     /**
      * 保存博客信息

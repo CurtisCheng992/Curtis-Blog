@@ -18,7 +18,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 博客的业务层接口实现类
@@ -130,6 +132,29 @@ public class BlogServiceImpl implements IBlogService {
     @Override
     public List<Blog> listRecommendTopBlog(Integer size) {
         return this.blogMapper.findRecommendTopBlog(size);
+    }
+
+    /**
+     * 归档博客
+     * @return
+     */
+    @Override
+    public Map<String, List<Blog>> archiveBlog() {
+        List<String> years = this.blogMapper.findGroupYear();
+        Map<String, List<Blog>> map = new HashMap<>();
+        for (String year : years) {
+            map.put(year,this.blogMapper.findByYear(year));
+        }
+        return map;
+    }
+
+    /**
+     * 查询博客条数
+     * @return
+     */
+    @Override
+    public Long countBlog() {
+        return this.blogMapper.countBlog();
     }
 
     /**
