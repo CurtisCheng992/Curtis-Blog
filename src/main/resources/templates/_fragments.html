@@ -53,18 +53,22 @@
             </div>
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">用户故事(User Story)</a>
-                    <a href="#" class="item">关于刻意练习的清单</a>
-                    <a href="#" class="item">失败要趁早</a>
+                <div id="newBlog-container">
+                    <div class="ui inverted link list" th:fragment="newBlogList">
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin" th:each="blog : ${newBlogs}" th:text="${blog.title}">用户故事(User Story)</a>
+                        <!--/*-->
+                        <a href="#" class="item">关于刻意练习的清单</a>
+                        <a href="#" class="item">失败要趁早</a>
+                        <!--*/-->
+                    </div>
                 </div>
             </div>
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
                 <div class="ui inverted link list">
-                    <div class="m-text-thin m-text-lined m-opacity-mini">Email:CurtisCheng992@163.com</div>
-                    <div class="m-text-thin m-text-lined m-opacity-mini">WeChat:ChengWindCheong</div>
-                    <div class="m-text-thin m-text-lined m-opacity-mini">QQ:981333949</div>
+                    <div class="m-text-thin m-text-lined m-opacity-mini" th:text="#{index.email}">Email:CurtisCheng992@163.com</div>
+                    <div class="m-text-thin m-text-lined m-opacity-mini" th:text="#{index.wechat}">WeChat:ChengWindCheong</div>
+                    <div class="m-text-thin m-text-lined m-opacity-mini" th:text="#{index.qq}">QQ:981333949</div>
                 </div>
             </div>
             <div class="seven wide column">
@@ -87,6 +91,11 @@
     <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
     <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
     <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+
+    <script>
+        $('#newBlog-container').load(/*[[@{/footer/newBlog}]]*/"/footer/newBlog");
+    </script>
+
 </th:block>
 
 </body>
