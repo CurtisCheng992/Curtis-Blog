@@ -97,7 +97,7 @@
                     </thead>
                     <tbody>
                     <tr th:each="blog,iterStat : ${pageInfo.list}">
-                        <td th:text="${iterStat.count}">1</td>
+                        <td th:text="${(pageInfo.pageNum-1)*5+iterStat.count}">1</td>
                         <td th:text="${blog.title}">刻意练习清单</td>
                         <td th:text="${blog.type.name}">认证升级</td>
                         <td th:text="${blog.recommend} ? '是':'否'">是</td>
