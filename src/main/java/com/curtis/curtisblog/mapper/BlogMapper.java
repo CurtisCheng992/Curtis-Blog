@@ -19,7 +19,7 @@ public interface BlogMapper {
      * 查询所有博客列表
      * @return
      */
-    @Select("select * from t_blog")
+    @Select("select * from t_blog order by update_time desc")
     @Results(id = "blogMap",
             value = {
                 @Result(id = true, column = "id", property = "id"),
@@ -52,7 +52,7 @@ public interface BlogMapper {
      * 根据查询条件查询博客
      * @return
      */
-    @Select("<script>select * from t_blog where 1=1 <if test=\"title !=null and title != '' \"> and title = #{title} </if><if test=\"typeId !=null \"> and type_id = #{typeId} </if> <if test=\"recommend == true \"> and recommend = #{recommend} </if></script>")
+    @Select("<script>select * from t_blog where 1=1 <if test=\"title !=null and title != '' \"> and title = #{title} </if><if test=\"typeId !=null \"> and type_id = #{typeId} </if> <if test=\"recommend == true \"> and recommend = #{recommend} </if> order by update_time desc</script>")
     @ResultMap("blogMap")
     List<Blog> listBlogBySearch(BlogQuery blogQuery);
 
@@ -94,7 +94,7 @@ public interface BlogMapper {
      * @param query
      * @return
      */
-    @Select("select * from t_blog where title like #{query} or content like #{query}")
+    @Select("select * from t_blog where title like #{query} or content like #{query} order by update_time desc")
     @ResultMap("blogMap")
     List<Blog> findByQuery(String query);
 
@@ -142,7 +142,7 @@ public interface BlogMapper {
      * @return
      */
     @ResultMap("blogMap")
-    @Select("select * from t_blog b where date_format(b.update_time,'%Y') = #{year}")
+    @Select("select * from t_blog b where date_format(b.update_time,'%Y') = #{year} order by update_time asc")
     List<Blog> findByYear(String year);
 
     /**

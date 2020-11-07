@@ -304,7 +304,7 @@
             <div class="ui bottom attached segment animated fadeInUp" th:if="${page.total}>1">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <a th:href="@{/}" class="ui mini teal basic button">首页</a>
+                            <a th:href="@{/types/-1}" class="ui mini teal basic button">首页</a>
                             <a href="#" th:href="@{/(pageNum=${page.hasPreviousPage}?${page.prePage}:1)}" class="ui mini teal basic button">上一页</a>
                             <a href="#" th:href="@{/(pageNum=${page.hasNextPage}?${page.nextPage}:${page.pages})}" class="ui mini teal basic button">下一页</a>
                             <a th:href="@{/(pageNum=${page.pages})}" class="ui mini teal basic button">尾页</a>
