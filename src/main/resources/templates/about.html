@@ -39,7 +39,7 @@
             <div class="ui grid">
                 <div class="eleven wide column animated zoomIn">
                     <div class="ui segment">
-                        <img src="https://picsum.photos/id/1005/800/600" alt="" class="ui rounded image">
+                        <img src="https://picsum.photos/id/180/800/600" alt="" class="ui rounded image">
                     </div>
                 </div>
                 <div class="five wide column animated fadeIn">
@@ -47,34 +47,40 @@
                         <div class="ui header">关于我</div>
                     </div>
                     <div class="ui attached segment">
-                        <p class="m-text">Curtis，一个独立开发者，折腾在0和1世界的小鲜肉，一个终身学习者，势将学习无限循环，希望结识可以共同成长的小伙伴。</p>
-                        <p class="m-text">热爱编程，喜欢折腾，正在探索高效学习编程技术的方法...</p>
+                        <p class="m-text">Curtis,一个Java小菜鸡，折腾在0和1世界的小鲜肉，一个终身学习者，势将学习无限循环，希望结识可以共同成长的小伙伴。</p>
+                        <p class="m-text">热爱编程，喜欢折腾，正在探索高效学习编程技术的方法，希望有朝一日能变成小牛...</p>
                     </div>
                     <div class="ui attached segment">
                         <div class="ui orange basic left pointing label">编程</div>
-                        <div class="ui orange basic left pointing label">写作</div>
+                        <div class="ui orange basic left pointing label">电影</div>
                         <div class="ui orange basic left pointing label">思考</div>
                         <div class="ui orange basic left pointing label">运动</div>
                     </div>
                     <div class="ui attached segment">
                         <div class="ui teal basic left pointing label m-margin-tb-tiny">Java</div>
-                        <div class="ui teal basic left pointing label m-margin-tb-tiny">JavaScript</div>
                         <div class="ui teal basic left pointing label m-margin-tb-tiny">SpringBoot</div>
+                        <div class="ui teal basic left pointing label m-margin-tb-tiny">SpringMVC</div>
+                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Spring</div>
                         <div class="ui teal basic left pointing label m-margin-tb-tiny">MyBatis</div>
                         <div class="ui teal basic left pointing label m-margin-tb-tiny">MySQL</div>
+                        <div class="ui teal basic left pointing label m-margin-tb-tiny">Vue</div>
                     </div>
                     <div class="ui bottom attached segment">
-                        <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+                        <a href="#" class="ui github circular icon button"><i class="github icon"></i></a>
                         <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
                         <a href="#" class="ui qq circular icon button"><i class="qq icon"></i></a>
                     </div>
 
+                    <div class="ui github-curtis flowing popup transition hidden">
+                        <span class="ui " style="width: 120px">https://github.com/CurtisCheng992</span>
+                    </div>
+
                     <div class="ui wechat-qr flowing popup transition hidden">
-                        <img src="../static/images/WeChat.jpg" alt="" class="ui rounded image" style="width: 120px">
+                        <img src="../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" alt="" class="ui rounded image" style="width: 120px">
                     </div>
 
                     <div class="ui qq-qr flowing popup transition hidden">
-                        <img src="../static/images/qq3.png" alt="" class="ui rounded image" style="width: 120px">
+                        <img src="../static/images/qq3.png" th:src="@{/images/qq3.png}" alt="" class="ui rounded image" style="width: 120px">
                     </div>
 
                 </div>
@@ -83,6 +89,10 @@
 
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <!--底部footer-->
@@ -133,10 +143,16 @@
         $('.m-item').toggleClass('m-mobile-hide');
     });
 
+    $('.github').popup({
+        popup : $('.github-curtis'),
+        position : 'bottom center'
+    });
+
     $('.wechat').popup({
         popup : $('.wechat-qr'),
         position : 'bottom center'
     });
+
     $('.qq').popup({
         popup : $('.qq-qr'),
         position : 'bottom center'

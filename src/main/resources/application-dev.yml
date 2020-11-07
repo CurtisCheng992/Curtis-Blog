@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://182.254.148.75:3306/blog?serverTimezone=Asia/Shanghai
     username: root
     password: root
 
