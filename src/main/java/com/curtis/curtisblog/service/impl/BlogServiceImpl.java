@@ -6,6 +6,7 @@ import com.curtis.curtisblog.entity.BlogTags;
 import com.curtis.curtisblog.entity.Tag;
 import com.curtis.curtisblog.mapper.BlogMapper;
 import com.curtis.curtisblog.mapper.BlogTagsMapper;
+import com.curtis.curtisblog.mapper.CommentMapper;
 import com.curtis.curtisblog.service.IBlogService;
 import com.curtis.curtisblog.utils.MarkdownUtils;
 import com.curtis.curtisblog.utils.MyBeanUtils;
@@ -33,6 +34,9 @@ public class BlogServiceImpl implements IBlogService {
 
     @Autowired
     private BlogTagsMapper blogTagsMapper;
+
+    @Autowired
+    private CommentMapper commentMapper;
 
     /**
      * 根据id查询博客
@@ -212,9 +216,10 @@ public class BlogServiceImpl implements IBlogService {
     @Transactional
     @Override
     public void deleteBlog(Long blogId) {
-        Blog blog = blogMapper.findBlogById(blogId);
         //删除博客对应的标签 中间表
         this.blogTagsMapper.deleteAllByBlogId(blogId);
+        //删除博客对应的评论
+        this.commentMapper.deleteCommentByBlogId(blogId);
         //删除博客
         blogMapper.deleteBlog(blogId);
     }

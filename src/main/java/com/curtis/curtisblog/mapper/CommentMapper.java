@@ -41,4 +41,10 @@ public interface CommentMapper {
 
     @Insert("insert into t_comment values (#{comment.id},#{comment.avatar},#{comment.content},#{comment.createTime},#{comment.email},#{comment.nickname},#{comment.blog.id},#{comment.parentComment.id},#{comment.adminComment})")
     void saveComment(@Param("comment") Comment comment);
+
+    @Delete("delete from t_comment where id = #{id}")
+    void deleteCommentById(Long id);
+
+    @Delete("delete from t_comment where blog_id = #{blogId}")
+    void deleteCommentByBlogId(Long blogId);
 }
