@@ -287,8 +287,9 @@
                             </div>
                             <div class="right aligned column">
                                 <div class="ui middle m-inline-block">
-                                    <p style="padding-left: 60px">当前第&nbsp;<b style="font-size: large"><span th:text="${page.pageNum}"></span></b>&nbsp;页，
-                                        总&nbsp;<b style="font-size: large"><span th:text="${page.pages}"></span></b>&nbsp;页，
+                                    <p style="padding-left: 0">第&nbsp;<b style="font-size: large"><span th:text="${page.pageNum}"></span></b>&nbsp;页/
+                                        共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${page.pages}"></span></b>&nbsp;页，
+                                        每页&nbsp;<b style="font-size: large"><span th:text="${page.pageSize}"></span></b>&nbsp;条记录/
                                         共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${page.total}"></span></b>&nbsp;条记录</p>
                                 </div>
                             </div>

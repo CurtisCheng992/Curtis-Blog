@@ -16,6 +16,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Comment implements Serializable {
 
     private Long id; //评论id
@@ -25,7 +26,7 @@ public class Comment implements Serializable {
     private String avatar; //评论者的头像
     private Date createTime; //评论创建时间
 
-    private Blog blog; //所属博客
+    private Long blogId; //所属博客
 
     private List<Comment> replyComments = new ArrayList<>(); //回复评论
 
@@ -81,12 +82,12 @@ public class Comment implements Serializable {
         this.createTime = createTime;
     }
 
-    public Blog getBlog() {
-        return blog;
+    public Long getBlogId() {
+        return blogId;
     }
 
-    public void setBlog(Blog blog) {
-        this.blog = blog;
+    public void setBlogId(Long blogId) {
+        this.blogId = blogId;
     }
 
     public List<Comment> getReplyComments() {
@@ -111,21 +112,5 @@ public class Comment implements Serializable {
 
     public void setAdminComment(boolean adminComment) {
         this.adminComment = adminComment;
-    }
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", email='" + email + '\'' +
-                ", content='" + content + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", createTime=" + createTime +
-                ", blog=" + blog +
-                ", replyComments=" + replyComments +
-                ", parentComment=" + parentComment +
-                ", adminComment=" + adminComment +
-                '}';
     }
 }

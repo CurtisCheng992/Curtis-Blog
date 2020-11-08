@@ -344,18 +344,19 @@
             </div>
 
             <!--footer-->
-            <div class="ui bottom attached segment animated fadeInUp" th:if="${blogTags.total}>1">
+            <div class="ui bottom attached segment animated fadeInUp">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
-                        <a th:href="@{/}" class="ui mini teal basic button">首页</a>
-                        <a href="#" th:href="@{/(pageNum=${blogTags.hasPreviousPage}?${blogTags.prePage}:1)}" class="ui mini teal basic button">上一页</a>
-                        <a href="#" th:href="@{/(pageNum=${blogTags.hasNextPage}?${blogTags.nextPage}:${blogTags.pages})}" class="ui mini teal basic button">下一页</a>
-                        <a th:href="@{/(pageNum=${blogTags.pages})}" class="ui mini teal basic button">尾页</a>
+                        <a th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.firstPage})}" class="ui mini teal basic button">首页</a>
+                        <a href="#" th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.hasPreviousPage}?${blogTags.prePage}:1)}" class="ui mini teal basic button">上一页</a>
+                        <a href="#" th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.hasNextPage}?${blogTags.nextPage}:${blogTags.pages})}" class="ui mini teal basic button">下一页</a>
+                        <a th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.pages})}" class="ui mini teal basic button">尾页</a>
                     </div>
                     <div class="right aligned column">
                         <div class="ui middle m-inline-block">
                             <p style="padding-left: 60px">当前第&nbsp;<b style="font-size: large"><span th:text="${blogTags.pageNum}"></span></b>&nbsp;页，
                                 总&nbsp;<b style="font-size: large"><span th:text="${blogTags.pages}"></span></b>&nbsp;页，
+                                每页&nbsp;<b style="color: #F2711C;font-size: x-large"><span th:text="${blogTags.pageSize}"></span></b>&nbsp;条记录，
                                 共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${blogTags.total}"></span></b>&nbsp;条记录</p>
                         </div>
                     </div>

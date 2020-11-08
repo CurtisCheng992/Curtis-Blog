@@ -14,6 +14,12 @@ import java.util.List;
 @Mapper
 public interface BlogTagsMapper {
 
+    @Results(id = "tagMap",
+            value = {
+                    @Result(column = "id", property = "id"),
+                    @Result(column = "name",property = "name")
+            }
+    )
     @Select("select id, name from t_tag where id in (select tags_id from t_blog_tags where blogs_id = #{blogId})")
     List<Tag> findByBlogId(Long blogId);
 

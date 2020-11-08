@@ -301,18 +301,19 @@
                 <!--*/-->
             </div>
             <!--footer-->
-            <div class="ui bottom attached segment animated fadeInUp" th:if="${page.total}>1">
+            <div class="ui bottom attached segment animated fadeInUp">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <a th:href="@{/types/-1}" class="ui mini teal basic button">首页</a>
-                            <a href="#" th:href="@{/(pageNum=${page.hasPreviousPage}?${page.prePage}:1)}" class="ui mini teal basic button">上一页</a>
-                            <a href="#" th:href="@{/(pageNum=${page.hasNextPage}?${page.nextPage}:${page.pages})}" class="ui mini teal basic button">下一页</a>
-                            <a th:href="@{/(pageNum=${page.pages})}" class="ui mini teal basic button">尾页</a>
+                            <a th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.firstPage})}" class="ui mini teal basic button">首页</a>
+                            <a href="#" th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.hasPreviousPage}?${page.prePage}:1)}" class="ui mini teal basic button">上一页</a>
+                            <a href="#" th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.hasNextPage}?${page.nextPage}:${page.pages})}" class="ui mini teal basic button">下一页</a>
+                            <a th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.pages})}" class="ui mini teal basic button">尾页</a>
                         </div>
                         <div class="right aligned column">
                             <div class="ui middle m-inline-block">
                                 <p style="padding-left: 60px">当前第&nbsp;<b style="font-size: large"><span th:text="${page.pageNum}"></span></b>&nbsp;页，
                                     总&nbsp;<b style="font-size: large"><span th:text="${page.pages}"></span></b>&nbsp;页，
+                                    每页&nbsp;<b style="color: #F2711C;font-size: x-large"><span th:text="${page.pageSize}"></span></b>&nbsp;条记录，
                                     共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${page.total}"></span></b>&nbsp;条记录</p>
                             </div>
                         </div>

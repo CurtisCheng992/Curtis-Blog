@@ -31,6 +31,7 @@ public class TypeShowController {
     @GetMapping("/types/{id}")
     public String types(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
                         @PathVariable Long id, Model model){
+        int pageSize = 5;
         List<TopTypes> topTypes = this.typeService.listTypeTop(10000);
         if ( id == -1 ){
             id = topTypes.get(0).getType().getId();
@@ -38,7 +39,7 @@ public class TypeShowController {
         BlogQuery blogQuery = new BlogQuery();
         blogQuery.setTypeId(id);
         model.addAttribute("topTypes",topTypes);
-        model.addAttribute("page",this.blogService.getBlogPageByQuery(pageNum,8,blogQuery));
+        model.addAttribute("page",this.blogService.getBlogPageByQuery(pageNum,pageSize,blogQuery));
         model.addAttribute("activeTypeId",id);
         return "types";
     }
