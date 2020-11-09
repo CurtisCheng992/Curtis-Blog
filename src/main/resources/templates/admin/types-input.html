@@ -57,14 +57,14 @@
                 <div class="required field">
                     <div class="ui left labeled input">
                         <label class="ui teal basic label">名称</label>
-                        <input type="text" name="name" placeholder="分类名称">
+                        <input type="text" name="name" th:value="*{name}" placeholder="分类名称">
                     </div>
                 </div>
 
                 <div class="ui error message"></div>
                 <div class="ui right aligned container">
                     <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
-                    <button class="ui teal submit button">新增分类</button>
+                    <button class="ui teal submit button">提交</button>
                 </div>
 
             </form>
