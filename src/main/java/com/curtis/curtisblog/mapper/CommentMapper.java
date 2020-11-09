@@ -3,6 +3,7 @@ package com.curtis.curtisblog.mapper;
 import com.curtis.curtisblog.entity.Comment;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
+import org.springframework.data.relational.core.sql.In;
 
 import java.util.List;
 
@@ -38,7 +39,7 @@ public interface CommentMapper {
     @Select("select t1.* from t_comment t1, t_comment t2 where t1.parent_comment_id = t2.id and t2.id = #{id}")
     List<Comment> findReplyListByCid(Long id);
 
-    @Insert("insert into t_comment values (#{comment.id},#{comment.avatar},#{comment.content},#{comment.createTime},#{comment.email},#{comment.nickname},#{comment.blog.id},#{comment.parentComment.id},#{comment.adminComment})")
+    @Insert("insert into t_comment values (#{comment.id},#{comment.avatar},#{comment.content},#{comment.createTime},#{comment.email},#{comment.nickname},#{comment.blogId},#{comment.parentComment.id},#{comment.adminComment})")
     void saveComment(@Param("comment") Comment comment);
 
     @Delete("delete from t_comment where id = #{id}")
@@ -46,4 +47,7 @@ public interface CommentMapper {
 
     @Delete("delete from t_comment where blog_id = #{blogId}")
     void deleteCommentByBlogId(Long blogId);
+
+    @Select("select count(1) from t_comment where blog_id = #{blogId}")
+    Integer countCommentsByBlogId(Long blogId);
 }

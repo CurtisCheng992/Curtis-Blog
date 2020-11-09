@@ -18,6 +18,7 @@
                 <a href="types.html" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
                 <a href="tags.html" class="active m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
                 <a href="archives.html" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>归档</a>
+                <a href="message.html" class="m-item item m-mobile-hide"><i class="paper plane outline icon"></i>留言板</a>
                 <a href="about.html" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
                 <div class="right item m-mobile-hide">
                     <div class="ui input transparent inverted icon">
@@ -354,10 +355,9 @@
                     </div>
                     <div class="right aligned column">
                         <div class="ui middle m-inline-block">
-                            <p style="padding-left: 60px">当前第&nbsp;<b style="font-size: large"><span th:text="${blogTags.pageNum}"></span></b>&nbsp;页，
-                                总&nbsp;<b style="font-size: large"><span th:text="${blogTags.pages}"></span></b>&nbsp;页，
-                                每页&nbsp;<b style="color: #F2711C;font-size: x-large"><span th:text="${blogTags.pageSize}"></span></b>&nbsp;条记录，
-                                共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${blogTags.total}"></span></b>&nbsp;条记录</p>
+                            <p style="padding-left: 0;font-size: large">第&nbsp;&nbsp;<span style="font-weight: bold" th:text="${blogTags.pageNum}"></span>&nbsp;/&nbsp;
+                                <span style="font-weight: bold" th:text="${blogTags.pages}"></span>&nbsp;&nbsp;页,
+                                共&nbsp;&nbsp;<span style="color: #F2711C;font-weight: bold;font-size: x-large" th:text="${blogTags.total}"></span>&nbsp;&nbsp;条记录</p>
                         </div>
                     </div>
                 </div>

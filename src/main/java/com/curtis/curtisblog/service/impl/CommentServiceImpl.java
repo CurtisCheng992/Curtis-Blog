@@ -5,6 +5,7 @@ import com.curtis.curtisblog.mapper.CommentMapper;
 import com.curtis.curtisblog.service.ICommentService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.relational.core.sql.In;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,12 +22,21 @@ public class CommentServiceImpl implements ICommentService {
     @Autowired
     private CommentMapper commentMapper;
 
+    /**
+     * 根据博客id获取评论列表
+     * @param blogId
+     * @return
+     */
     @Override
     public List<Comment> listCommentByBlogId(Long blogId) {
         List<Comment> comments = this.commentMapper.findByBlogId(blogId);
         return eachComment(comments);
     }
 
+    /**
+     * 保存博客
+     * @param comment
+     */
     @Transactional
     @Override
     public void saveComment(Comment comment) {
@@ -38,6 +48,16 @@ public class CommentServiceImpl implements ICommentService {
         }
         comment.setCreateTime(new Date());
         this.commentMapper.saveComment(comment);
+    }
+
+    /**
+     * 根据博客id获取评论总数
+     * @param blogId
+     * @return
+     */
+    @Override
+    public Integer CountCommentsByBlogId(Long blogId) {
+        return this.commentMapper.countCommentsByBlogId(blogId);
     }
 
     /**

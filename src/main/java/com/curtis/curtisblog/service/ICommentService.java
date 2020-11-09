@@ -21,4 +21,11 @@ public interface ICommentService {
      * @param comment
      */
     void saveComment(Comment comment);
+
+    /**
+     * 根据博客id获取评论总数
+     * @param blogId
+     * @return
+     */
+    Integer CountCommentsByBlogId(Long blogId);
 }

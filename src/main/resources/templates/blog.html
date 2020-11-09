@@ -22,6 +22,7 @@
                 <a href="types.html" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
                 <a href="tags.html" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
                 <a href="archives.html" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>归档</a>
+                <a href="message.html" class="m-item item m-mobile-hide"><i class="paper plane outline icon"></i>留言板</a>
                 <a href="about.html" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
                 <div class="right item m-mobile-hide">
                     <div class="ui input transparent inverted icon">
@@ -479,7 +480,10 @@ h5,h6{font-size:1em;}
                 <div id="comment-container" class="ui teal segment">
                     <div th:fragment="commentList">
                         <div class="ui threaded comments" style="max-width: 100%;">
-                            <h3 class="ui dividing header">留言板</h3>
+                            <h3 class="ui dividing header">
+                                评论
+                                <span style="color: #F2711C;font-size: x-large" th:text="|(${commentsCount})|"></span>
+                            </h3>
                             <div class="comment" th:each="comment : ${comments}">
                                 <a class="avatar">
                                     <img src="https://picsum.photos/id/1005/100/100" th:src="@{${comment.avatar}}">
@@ -574,7 +578,7 @@ h5,h6{font-size:1em;}
                     </div>
                 </div>
                 <div id="comment-form" class="ui form">
-                    <input type="hidden" name="blog.id" th:value="${blog.id}">
+                    <input type="hidden" name="blogId" th:value="${blog.id}">
                     <input type="hidden" name="parentComment.id" value="-1">
                     <div class="field">
                         <textarea name="content" placeholder="请输入评论信息..."></textarea>
@@ -775,7 +779,7 @@ h5,h6{font-size:1em;}
     function postData() {
         $("#comment-container").load(/*[[@{/comments}]]*/"",{
             "parentComment.id" : $("[name='parentComment.id']").val(),
-            "blog.id" : $("[name='blog.id']").val(),
+            "blogId" : $("[name='blogId']").val(),
             "nickname": $("[name='nickname']").val(),
             "email"   : $("[name='email']").val(),
             "content" : $("[name='content']").val()
