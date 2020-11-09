@@ -29,7 +29,7 @@ public class TagShowController {
     @GetMapping("/tags/{id}")
     public String tags(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
                         @PathVariable Long id, Model model){
-        int pageSize = 10;
+        int pageSize = 5;  //每页显示条数
         //查出所有标签 返回值有 标签tag和次数frequency
         List<TopTags> topTags = this.tagService.listTagTop(10000);
         if ( id == -1 ){
@@ -37,7 +37,6 @@ public class TagShowController {
         }
         //查出博客的信息，以及该博客的所有标签信息
         PageInfo<BlogTags> blogTags = this.blogService.getBlogPageByTagId(id, pageNum, pageSize);
-        System.out.println(blogTags.getList().get(0));
         model.addAttribute("topTags",topTags);
         model.addAttribute("blogTags",blogTags);
         model.addAttribute("activeTagId",id);

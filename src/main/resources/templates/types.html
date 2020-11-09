@@ -308,10 +308,10 @@
             <div class="ui bottom attached segment animated fadeInUp">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
-                            <a th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.firstPage})}" class="ui mini teal basic button">首页</a>
-                            <a href="#" th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.hasPreviousPage}?${page.prePage}:1)}" class="ui mini teal basic button">上一页</a>
-                            <a href="#" th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.hasNextPage}?${page.nextPage}:${page.pages})}" class="ui mini teal basic button">下一页</a>
-                            <a th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.pages})}"  class="ui mini teal basic button">尾页</a>
+                            <a th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.firstPage})}" class="ui mini teal basic button" th:classappend="${page.isFirstPage } ? 'disabled'">首页</a>
+                            <a href="#" th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.hasPreviousPage}?${page.prePage}:1)}" class="ui mini teal basic button" th:classappend="${page.isFirstPage } ? 'disabled'">上一页</a>
+                            <a href="#" th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.hasNextPage}?${page.nextPage}:${page.pages})}" class="ui mini teal basic button" th:classappend="${page.isLastPage } ? 'disabled'">下一页</a>
+                            <a th:href="@{/types/{id}(id=${activeTypeId},pageNum=${page.pages})}"  class="ui mini teal basic button" th:classappend="${page.isLastPage } ? 'disabled'">尾页</a>
                         </div>
                         <div class="right aligned column">
                             <div class="ui middle m-inline-block">

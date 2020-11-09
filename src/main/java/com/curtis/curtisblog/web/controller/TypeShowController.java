@@ -31,7 +31,7 @@ public class TypeShowController {
     @GetMapping("/types/{id}")
     public String types(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
                         @PathVariable Long id, Model model){
-        int pageSize = 5;
+        int pageSize = 5;   //每页显示条数
         List<TopTypes> topTypes = this.typeService.listTypeTop(10000);
         if ( id == -1 ){
             id = topTypes.get(0).getType().getId();

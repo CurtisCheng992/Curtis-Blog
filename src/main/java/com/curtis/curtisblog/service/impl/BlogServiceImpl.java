@@ -106,26 +106,7 @@ public class BlogServiceImpl implements IBlogService {
     @Override
     public PageInfo<BlogTags> getBlogPageByTagId(Long tagId, int pageNum, int pageSize) {
         PageHelper.startPage(pageNum,pageSize);
-        List<BlogTags> blogs = blogTagsMapper.listBlogByTagId(tagId);
-        //根据更新时间对博客进行排序
-        Collections.sort(blogs, new Comparator<BlogTags>() {
-            @Override
-            public int compare(BlogTags o1, BlogTags o2) {
-                //按照时间进行降序排列
-                int flag = 0;
-                if ((null != o1.getBlog().getUpdateTime())&&(null != o2.getBlog().getUpdateTime())){
-                    flag = DateUtils.truncatedCompareTo(o1.getBlog().getUpdateTime(),o2.getBlog().getUpdateTime(),Calendar.SECOND);
-                }
-                if (flag == 1){
-                    return -1;
-                }else if(flag == 0){
-                    return 0;
-                }else{
-                    return 1;
-                }
-            }
-        });
-
+        List<BlogTags> blogs = blogMapper.listBlogByTagId(tagId);
         PageInfo<BlogTags> blogPageInfo = new PageInfo<>(blogs);
         return blogPageInfo;
     }

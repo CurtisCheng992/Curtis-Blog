@@ -1,6 +1,7 @@
 package com.curtis.curtisblog.mapper;
 
 import com.curtis.curtisblog.entity.Blog;
+import com.curtis.curtisblog.entity.BlogTags;
 import com.curtis.curtisblog.entity.TopTypes;
 import com.curtis.curtisblog.vo.BlogQuery;
 import org.apache.ibatis.annotations.*;
@@ -55,7 +56,6 @@ public interface BlogMapper {
     @Select("<script>select * from t_blog where 1=1 <if test=\"title !=null and title != '' \"> and title = #{title} </if><if test=\"typeId !=null \"> and type_id = #{typeId} </if> <if test=\"recommend == true \"> and recommend = #{recommend} </if> order by update_time desc</script>")
     @ResultMap("blogMap")
     List<Blog> listBlogBySearch(BlogQuery blogQuery);
-
 
     /**
      * 根据id查询博客
@@ -151,4 +151,8 @@ public interface BlogMapper {
      */
     @Select("select count(*) from t_blog")
     Long countBlog();
+
+    @ResultMap("blogMap")
+    @Select("select * from t_blog where id in (select blogs_id from t_blog_tags where tags_id = #{tagId}) order by update_time desc")
+    List<BlogTags> listBlogByTagId(Long tagId);
 }

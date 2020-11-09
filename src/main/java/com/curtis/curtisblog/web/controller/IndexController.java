@@ -36,10 +36,10 @@ public class IndexController {
     @GetMapping("/")
     public String index(@RequestParam(required = false,defaultValue = "1",value = "pageNum")int pageNum,
                         Model model){
-        Integer pageSize = 10;
-        Integer topTypeSize = 6;
-        Integer topTagSize = 10;
-        Integer topRecommendBlogSize = 8;
+        Integer pageSize = 10;      //每页显示条数
+        Integer topTypeSize = 6;    //靠前分类显示条数
+        Integer topTagSize = 10;    //靠前标签显示条数
+        Integer topRecommendBlogSize = 8; //靠前推荐博客显示条数
         model.addAttribute("page",this.blogService.getBlogPage(pageNum,pageSize));
         model.addAttribute("types",this.typeService.listTypeTop(topTypeSize));
         model.addAttribute("tags",this.tagService.listTagTop(topTagSize));

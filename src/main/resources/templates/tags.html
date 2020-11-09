@@ -82,30 +82,30 @@
                     <div class="ui middle aligned mobile reversed stackable grid">
                         <div class="eleven wide column">
                             <h3 class="ui header">
-                                <div class="ui basic orange label" th:text="${blogTag.blog.flag}">原创</div>
-                                <a href="#" th:href="@{/blog/{id}(id=${blogTag.blog.id})}" target="_blank" class="m-black" th:text="${blogTag.blog.title}">你真的理解什么是财富自由吗？</a>
+                                <div class="ui basic orange label" th:text="${blogTag.flag}">原创</div>
+                                <a href="#" th:href="@{/blog/{id}(id=${blogTag.id})}" target="_blank" class="m-black" th:text="${blogTag.title}">你真的理解什么是财富自由吗？</a>
                             </h3>
-                            <p class="m-text" th:text="|${blogTag.blog.description}......|">正确做好任何一件事的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已...</p>
+                            <p class="m-text" th:text="|${blogTag.description}......|">正确做好任何一件事的前提是清晰、正确的理解目标。而事实是，我们很多人很多时候根本没有对目标正确的定义，甚至根本从来就没有想过，只是大家都那么做而已...</p>
                             <div class="ui grid">
                                 <div class="row">
                                     <div class="eleven wide column">
                                         <div class="ui mini horizontal link list">
                                             <div class="item">
-                                                <img src="https://picsum.photos/id/1005/100/100" th:src="@{${blogTag.blog.user.avatar}}" alt="" class="ui avatar image">
+                                                <img src="https://picsum.photos/id/1005/100/100" th:src="@{${blogTag.user.avatar}}" alt="" class="ui avatar image">
                                                 <div class="content">
-                                                    <a href="#" class="header" th:text="${blogTag.blog.user.nickname}">Curtis</a>
+                                                    <a href="#" class="header" th:text="${blogTag.user.nickname}">Curtis</a>
                                                 </div>
                                             </div>
                                             <div class="item">
-                                                <i class="calendar icon"></i><span th:text="${#dates.format(blogTag.blog.updateTime,'yyyy-MM-dd')}">2020-10-12</span>
+                                                <i class="calendar icon"></i><span th:text="${#dates.format(blogTag.updateTime,'yyyy-MM-dd')}">2020-10-12</span>
                                             </div>
                                             <div class="item">
-                                                <i class="eye icon"></i><span th:text="${blogTag.blog.views}">2432</span>
+                                                <i class="eye icon"></i><span th:text="${blogTag.views}">2432</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blogTag.blog.type.name}">认知升级</a>
+                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blogTag.type.name}">认知升级</a>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -117,8 +117,8 @@
                         </div>
 
                         <div class="five wide column">
-                            <a href="#" th:href="@{/blog/{id}(id=${blogTag.blog.id})}" target="_blank">
-                                <img src="https://picsum.photos/id/1026/800/450" th:src="@{${blogTag.blog.firstPicture}}" alt="" class="ui rounded image">
+                            <a href="#" th:href="@{/blog/{id}(id=${blogTag.id})}" target="_blank">
+                                <img src="https://picsum.photos/id/1026/800/450" th:src="@{${blogTag.firstPicture}}" alt="" class="ui rounded image">
                             </a>
                         </div>
                     </div>
@@ -351,10 +351,10 @@
             <div class="ui bottom attached segment animated fadeInUp">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
-                        <a th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.firstPage})}" class="ui mini teal basic button">首页</a>
-                        <a href="#" th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.hasPreviousPage}?${blogTags.prePage}:1)}" class="ui mini teal basic button">上一页</a>
-                        <a href="#" th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.hasNextPage}?${blogTags.nextPage}:${blogTags.pages})}" class="ui mini teal basic button">下一页</a>
-                        <a th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.pages})}" class="ui mini teal basic button">尾页</a>
+                        <a th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.firstPage})}" class="ui mini teal basic button" th:classappend="${blogTags.isFirstPage } ? 'disabled'">首页</a>
+                        <a href="#" th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.hasPreviousPage}?${blogTags.prePage}:1)}" class="ui mini teal basic button" th:classappend="${blogTags.isFirstPage } ? 'disabled'">上一页</a>
+                        <a href="#" th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.hasNextPage}?${blogTags.nextPage}:${blogTags.pages})}" class="ui mini teal basic button" th:classappend="${blogTags.isLastPage } ? 'disabled'">下一页</a>
+                        <a th:href="@{/tags/{id}(id=${activeTagId},pageNum=${blogTags.pages})}" class="ui mini teal basic button" th:classappend="${blogTags.isLastPage } ? 'disabled'">尾页</a>
                     </div>
                     <div class="right aligned column">
                         <div class="ui middle m-inline-block">
