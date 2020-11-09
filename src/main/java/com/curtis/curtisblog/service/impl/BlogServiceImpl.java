@@ -104,10 +104,10 @@ public class BlogServiceImpl implements IBlogService {
      * @return
      */
     @Override
-    public PageInfo<BlogTags> getBlogPageByTagId(Long tagId, int pageNum, int pageSize) {
+    public PageInfo<Blog> getBlogPageByTagId(Long tagId, int pageNum, int pageSize) {
         PageHelper.startPage(pageNum,pageSize);
-        List<BlogTags> blogs = blogMapper.listBlogByTagId(tagId);
-        PageInfo<BlogTags> blogPageInfo = new PageInfo<>(blogs);
+        List<Blog> blogs = blogMapper.listBlogByTagId(tagId);
+        PageInfo<Blog> blogPageInfo = new PageInfo<>(blogs);
         return blogPageInfo;
     }
 

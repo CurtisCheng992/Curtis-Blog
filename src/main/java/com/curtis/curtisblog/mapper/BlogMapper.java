@@ -154,5 +154,5 @@ public interface BlogMapper {
 
     @ResultMap("blogMap")
     @Select("select * from t_blog where id in (select blogs_id from t_blog_tags where tags_id = #{tagId}) order by update_time desc")
-    List<BlogTags> listBlogByTagId(Long tagId);
+    List<Blog> listBlogByTagId(Long tagId);
 }

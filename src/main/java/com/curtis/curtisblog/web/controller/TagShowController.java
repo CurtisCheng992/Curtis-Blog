@@ -1,5 +1,6 @@
 package com.curtis.curtisblog.web.controller;
 
+import com.curtis.curtisblog.entity.Blog;
 import com.curtis.curtisblog.entity.BlogTags;
 import com.curtis.curtisblog.entity.TopTags;
 import com.curtis.curtisblog.service.IBlogService;
@@ -36,9 +37,9 @@ public class TagShowController {
             id = topTags.get(0).getTag().getId();
         }
         //查出博客的信息，以及该博客的所有标签信息
-        PageInfo<BlogTags> blogTags = this.blogService.getBlogPageByTagId(id, pageNum, pageSize);
+        PageInfo<Blog> blogs = this.blogService.getBlogPageByTagId(id, pageNum, pageSize);
         model.addAttribute("topTags",topTags);
-        model.addAttribute("blogTags",blogTags);
+        model.addAttribute("blogs",blogs);
         model.addAttribute("activeTagId",id);
         return "tags";
     }

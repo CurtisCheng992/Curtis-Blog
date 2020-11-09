@@ -51,7 +51,7 @@ public interface IBlogService {
      * @param pageSize
      * @return
      */
-    PageInfo<BlogTags> getBlogPageByTagId(Long tagId, int pageNum, int pageSize);
+    PageInfo<Blog> getBlogPageByTagId(Long tagId, int pageNum, int pageSize);
 
     /**
      * 查询博客的分页信息
