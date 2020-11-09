@@ -105,7 +105,7 @@
                         <td th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm:ss')}">2020-10-11 09:45</td>
                         <td>
                             <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">编辑</a>
-                            <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red basic button">删除</a>
+                            <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red basic button" onclick="return confirm('确定要删除此博客吗?')">删除</a>
                         </td>
                     </tr>
                     </tbody>
@@ -113,12 +113,12 @@
                     <tr>
                         <th colspan="7" style="text-align: left">
                             <div class="ui mini pagination menu" th:if="${pageInfo.total}>1">
-                                <a onclick="page(this)" th:attr="data-page=1" class="item">首页</a>
+                                <a onclick="page(this)" th:attr="data-page=1" class="item" th:classappend="${pageInfo.isFirstPage } ? 'disabled'">首页</a>
                                 <!--<a onclick="page(this)" th:attr="data-page=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1" class="item" th:unless="${pageInfo.isFirstPage}">上一页</a>-->
-                                <a onclick="page(this)" th:attr="data-page=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1" class="item">上一页</a>
-                                <a onclick="page(this)" th:attr="data-page=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages}" class="item">下一页</a>
+                                <a onclick="page(this)" th:attr="data-page=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1" class="item" th:unless="${pageInfo.isFirstPage}">上一页</a>
+                                <a onclick="page(this)" th:attr="data-page=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages}" class="item" th:unless="${pageInfo.isLastPage}">下一页</a>
                                 <!--<a onclick="page(this)" th:attr="data-page=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages}" th:unless="${pageInfo.isLastPage}" class="item">下一页</a>-->
-                                <a onclick="page(this)" th:attr="data-page=${pageInfo.pages}" class="item">尾页</a>
+                                <a onclick="page(this)" th:attr="data-page=${pageInfo.pages}" th:classappend="${pageInfo.isLastPage } ? 'disabled'" class="item">尾页</a>
                             </div>
                             <div class="ui middle m-inline-block">
                                 <p style="padding-left: 60px">当前第&nbsp;<b style="font-size: large"><span th:text="${pageInfo.pageNum}"></span></b>&nbsp;页，
