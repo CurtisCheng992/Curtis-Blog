@@ -55,7 +55,7 @@
                                         <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${message.adminMessage}">博主</div>
                                     </a>
                                     <div class="metadata">
-                                        <span class="date" th:text="${#dates.format(message.createTime,'yyyy-MM-dd HH:mm')}">今天下午 5:42</span>
+                                        <span class="date" th:text="${#dates.format(message.createTime,'yyyy-MM-dd HH:mm:ss')}">今天下午 5:42</span>
                                     </div>
                                     <div class="text" th:text="${message.content}">太赞了！ </div>
                                     <div class="actions">
