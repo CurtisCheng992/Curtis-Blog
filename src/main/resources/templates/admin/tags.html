@@ -67,7 +67,7 @@
                         <td th:text="${tag.name}">刻意练习清单</td>
                         <td>
                             <a href="#" th:href="@{/admin/tags/{id}/input(id=${tag.id})}" class="ui mini teal basic button">编辑</a>
-                            <a href="#" th:href="@{/admin/tags/{id}/delete(id=${tag.id})}" class="ui mini red basic button" onclick="return confirm('确定要删除此标签吗?')">删除</a>
+                            <a href="#" th:href="@{/admin/tags/{id}/delete(id=${tag.id})}" class="ui mini red basic button" onclick="return confirm('注意：删除该标签同时会删除该标签下的所有博客！！！确定要删除此标签吗?')">删除</a>
                         </td>
                     </tr>
                 </tbody>

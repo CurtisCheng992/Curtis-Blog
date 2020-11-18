@@ -6,4 +6,13 @@ spring:
   messages:
     basename: i18n/messages
 
+fdfs:
+  so-timeout: 1501 #超时时间
+  connect-timeout: 601 #连接超时时间
+  thumb-image: #缩略图
+    width: 100
+    height: 100
+  tracker-list: #tracker地址
+    - 182.254.148.75:22122
+
 comment.avatar: /images/avatar.png
