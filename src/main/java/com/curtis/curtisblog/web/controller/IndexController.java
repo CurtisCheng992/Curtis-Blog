@@ -1,5 +1,6 @@
 package com.curtis.curtisblog.web.controller;
 
+import com.curtis.curtisblog.entity.Blog;
 import com.curtis.curtisblog.service.IBlogService;
 import com.curtis.curtisblog.service.ITagService;
 import com.curtis.curtisblog.service.ITypeService;
@@ -69,7 +70,9 @@ public class IndexController {
      */
     @GetMapping("/blog/{id}")
     public String blog(@PathVariable Long id, Model model){
-        model.addAttribute("blog",this.blogService.getAndConvert(id));
+        Blog blog = this.blogService.getAndConvert(id);
+        model.addAttribute("blog", blog);
+        model.addAttribute("commentsCount", blog.getComments().size());
         return "blog";
     }
 
