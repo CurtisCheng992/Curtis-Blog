@@ -1,0 +1,206 @@
+2020-11-14 14:51:07.130  INFO 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 15196 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-14 14:51:07.136 DEBUG 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-14 14:51:07.136  INFO 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-14 14:51:07.331  INFO 15196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-14 14:51:07.332  INFO 15196 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-14 14:51:11.562  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-14 14:51:11.564  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-14 14:51:11.646  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 0 JDBC repository interfaces.
+2020-11-14 14:51:11.718  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-14 14:51:11.719  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-14 14:51:11.799  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2020-11-14 14:51:13.704  INFO 15196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-14 14:51:13.765  INFO 15196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-14 14:51:13.766  INFO 15196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-14 14:51:13.962  INFO 15196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-14 14:51:13.962  INFO 15196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6630 ms
+2020-11-14 14:51:15.649  INFO 15196 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-14 14:51:15.905  INFO 15196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-14 14:51:17.220  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-14 14:51:17.222  WARN 15196 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-14 14:51:20.840  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-14 14:51:21.984  INFO 15196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-14 14:51:22.075  INFO 15196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-14 14:51:22.110  INFO 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 16.456 seconds (JVM running for 19.688)
+2020-11-14 14:51:22.272  INFO 15196 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-14 14:51:22.272  INFO 15196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-14 14:51:22.290  INFO 15196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-11-14 14:51:28.843  INFO 15196 --- [http-nio-8080-exec-2] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.IndexController.index', args=[1, {}]}
+2020-11-14 14:51:29.089 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.m.BlogMapper.listAllBlog_COUNT     : ==>  Preparing: SELECT count(0) FROM t_blog
+2020-11-14 14:51:29.141 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.m.BlogMapper.listAllBlog_COUNT     : ==> Parameters: 
+2020-11-14 14:51:29.286 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.m.BlogMapper.listAllBlog_COUNT     : <==      Total: 1
+2020-11-14 14:51:29.291 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.listAllBlog      : ==>  Preparing: select * from t_blog order by update_time desc LIMIT ?
+2020-11-14 14:51:29.293 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.listAllBlog      : ==> Parameters: 10(Integer)
+2020-11-14 14:51:30.247 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:30.248 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 29(Long)
+2020-11-14 14:51:30.366 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:30.367 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-14 14:51:30.367 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-14 14:51:30.587 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-14 14:51:30.593 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:30.593 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-14 14:51:30.738 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:30.745 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:30.746 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 28(Long)
+2020-11-14 14:51:30.796 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:30.799 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:30.799 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 8(Long)
+2020-11-14 14:51:30.959 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:30.962 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.listAllBlog      : <==      Total: 10
+2020-11-14 14:51:30.971 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.findTopTypes     : ==>  Preparing: SELECT type_id,COUNT(1) AS frequency FROM t_blog GROUP BY type_id ORDER BY COUNT(1) DESC LIMIT 0,?
+2020-11-14 14:51:30.971 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.findTopTypes     : ==> Parameters: 6(Integer)
+2020-11-14 14:51:31.033 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:31.034 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 29(Long)
+2020-11-14 14:51:31.074 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:31.075 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:31.075 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 28(Long)
+2020-11-14 14:51:31.161 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:31.161 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:31.161 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 8(Long)
+2020-11-14 14:51:31.342 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:31.343 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:31.343 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-14 14:51:31.411 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:31.412 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogMapper.findTopTypes     : <==      Total: 4
+2020-11-14 14:51:31.417 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==>  Preparing: SELECT tags_id,COUNT(1) AS frequency FROM t_blog_tags GROUP BY tags_id ORDER BY COUNT(1) DESC LIMIT 0,?
+2020-11-14 14:51:31.418 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogTagsMapper.findTopTags  : ==> Parameters: 10(Integer)
+2020-11-14 14:51:31.495 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:31.495 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 8(Long)
+2020-11-14 14:51:31.639 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:31.640 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:31.640 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 3(Long)
+2020-11-14 14:51:31.714 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:31.715 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:31.716 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 4(Long)
+2020-11-14 14:51:31.794 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:31.795 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:31.795 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 5(Long)
+2020-11-14 14:51:31.871 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:31.873 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:31.873 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 6(Long)
+2020-11-14 14:51:31.945 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:31.946 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:31.946 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 15(Long)
+2020-11-14 14:51:32.020 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:32.021 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:32.022 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 16(Long)
+2020-11-14 14:51:32.113 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:32.113 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:32.113 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 17(Long)
+2020-11-14 14:51:32.162 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:32.163 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:32.164 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 18(Long)
+2020-11-14 14:51:32.236 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:32.237 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====>  Preparing: select * from t_tag where id = ?
+2020-11-14 14:51:32.237 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : ====> Parameters: 1(Long)
+2020-11-14 14:51:32.327 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TagMapper.findTagById       : <====      Total: 1
+2020-11-14 14:51:32.327 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.BlogTagsMapper.findTopTags  : <==      Total: 10
+2020-11-14 14:51:32.329 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.m.BlogMapper.findRecommendTopBlog  : ==>  Preparing: SELECT * FROM t_blog WHERE recommend=b'1' ORDER BY update_time DESC LIMIT 0, ?
+2020-11-14 14:51:32.329 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.m.BlogMapper.findRecommendTopBlog  : ==> Parameters: 8(Integer)
+2020-11-14 14:51:32.782 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:32.782 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 29(Long)
+2020-11-14 14:51:32.849 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:32.849 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-14 14:51:32.850 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-14 14:51:32.910 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-14 14:51:32.912 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:32.912 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-14 14:51:32.973 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:32.989 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:32.989 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 28(Long)
+2020-11-14 14:51:33.050 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:33.054 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:33.054 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 8(Long)
+2020-11-14 14:51:33.152 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:33.152 DEBUG 15196 --- [http-nio-8080-exec-2] c.c.c.m.BlogMapper.findRecommendTopBlog  : <==      Total: 8
+2020-11-14 14:51:33.153  INFO 15196 --- [http-nio-8080-exec-2] com.curtis.curtisblog.aspect.LogAspect   : result : index
+2020-11-14 14:51:35.643  INFO 15196 --- [http-nio-8080-exec-6] com.curtis.curtisblog.aspect.LogAspect   : Request : {url='http://127.0.0.1:8080/footer/newBlog', ip='127.0.0.1', classMethod='com.curtis.curtisblog.web.controller.IndexController.newBlogs', args=[{}]}
+2020-11-14 14:51:35.745 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.m.BlogMapper.findRecommendTopBlog  : ==>  Preparing: SELECT * FROM t_blog WHERE recommend=b'1' ORDER BY update_time DESC LIMIT 0, ?
+2020-11-14 14:51:35.746 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.m.BlogMapper.findRecommendTopBlog  : ==> Parameters: 3(Integer)
+2020-11-14 14:51:35.886 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:35.887 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 29(Long)
+2020-11-14 14:51:35.961 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:35.963 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====>  Preparing: select * from t_user where id = ?
+2020-11-14 14:51:35.963 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : ====> Parameters: 1(Long)
+2020-11-14 14:51:36.048 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.mapper.UserMapper.findUserById     : <====      Total: 1
+2020-11-14 14:51:36.054 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====>  Preparing: select * from t_type where id = ?
+2020-11-14 14:51:36.054 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : ====> Parameters: 26(Long)
+2020-11-14 14:51:36.122 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.mapper.TypeMapper.findTypeById     : <====      Total: 1
+2020-11-14 14:51:36.122 DEBUG 15196 --- [http-nio-8080-exec-6] c.c.c.m.BlogMapper.findRecommendTopBlog  : <==      Total: 3
+2020-11-14 14:51:36.123  INFO 15196 --- [http-nio-8080-exec-6] com.curtis.curtisblog.aspect.LogAspect   : result : _fragments :: newBlogList
+2020-11-14 14:52:35.088  INFO 15196 --- [Thread-40] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-14 14:52:35.090  INFO 15196 --- [Thread-40] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-11-14 14:52:35.096  INFO 15196 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-14 14:52:35.102  INFO 15196 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-14 14:53:03.670  INFO 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 15196 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-14 14:53:03.671 DEBUG 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-14 14:53:03.671  INFO 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-14 14:53:03.845  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-14 14:53:03.845  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-14 14:53:03.846  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JDBC repository interfaces.
+2020-11-14 14:53:03.848  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-14 14:53:03.848  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-14 14:53:03.849  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 Redis repository interfaces.
+2020-11-14 14:53:03.874  WARN 15196 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.curtis.curtisblog]' package. Please check your configuration.
+2020-11-14 14:53:04.026  INFO 15196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-14 14:53:04.026  INFO 15196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-14 14:53:04.026  INFO 15196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-14 14:53:04.052  INFO 15196 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-11-14 14:53:04.052  INFO 15196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 378 ms
+2020-11-14 14:53:04.119  INFO 15196 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-14 14:53:04.140  INFO 15196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-14 14:53:04.240  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-11-14 14:53:04.240  WARN 15196 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-14 14:53:04.885  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-11-14 14:53:04.991  INFO 15196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-14 14:53:05.005  INFO 15196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-14 14:53:05.009  INFO 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 1.383 seconds (JVM running for 122.587)
+2020-11-14 14:53:05.011  INFO 15196 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-14 14:53:14.774  INFO 15196 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-11-14 14:53:14.788  INFO 15196 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-11-14 14:53:14.788  INFO 15196 --- [Thread-47] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-14 14:53:15.068  INFO 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 15196 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-14 14:53:15.069 DEBUG 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-14 14:53:15.069  INFO 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-14 14:53:15.386  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-14 14:53:15.386  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-14 14:53:15.396  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 JDBC repository interfaces.
+2020-11-14 14:53:15.399  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-14 14:53:15.400  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-14 14:53:15.408  INFO 15196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2020-11-14 14:53:15.688  INFO 15196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-14 14:53:15.689  INFO 15196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-14 14:53:15.689  INFO 15196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-14 14:53:15.736  INFO 15196 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-11-14 14:53:15.736  INFO 15196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 663 ms
+2020-11-14 14:53:16.180  INFO 15196 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-14 14:53:16.269  INFO 15196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-14 14:53:16.637  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-11-14 14:53:16.637  WARN 15196 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-14 14:53:17.107  INFO 15196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-11-14 14:53:17.478  INFO 15196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-14 14:53:17.506  INFO 15196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-14 14:53:17.513  INFO 15196 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 2.495 seconds (JVM running for 135.091)
+2020-11-14 14:53:17.515  INFO 15196 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-14 14:53:17.638  INFO 15196 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-14 14:53:17.639  INFO 15196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-14 14:53:17.656  INFO 15196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-11-14 14:53:19.441  INFO 3596 --- [main] c.c.c.CurtisBlogApplicationTests         : Starting CurtisBlogApplicationTests on CurtisCheng with PID 3596 (started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-14 14:53:19.443 DEBUG 3596 --- [main] c.c.c.CurtisBlogApplicationTests         : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-14 14:53:19.443  INFO 3596 --- [main] c.c.c.CurtisBlogApplicationTests         : The following profiles are active: dev
+2020-11-14 14:53:20.682  INFO 3596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-14 14:53:20.698  INFO 3596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-14 14:53:20.724  INFO 3596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 JDBC repository interfaces.
+2020-11-14 14:53:20.741  INFO 3596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-14 14:53:20.743  INFO 3596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-14 14:53:20.763  INFO 3596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2020-11-14 14:53:23.602  INFO 3596 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-14 14:53:23.791  INFO 3596 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-14 14:53:25.082  INFO 3596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-14 14:53:25.086  WARN 3596 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-14 14:53:28.144  INFO 3596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-14 14:53:28.753  INFO 3596 --- [main] c.c.c.CurtisBlogApplicationTests         : Started CurtisBlogApplicationTests in 9.966 seconds (JVM running for 12.095)
+2020-11-14 14:53:29.600  INFO 3596 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-14 14:53:29.602  INFO 3596 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-11-14 14:53:29.606  INFO 3596 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-14 14:53:29.763  INFO 3596 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

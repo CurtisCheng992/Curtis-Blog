@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>图片管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css">
+</head>
+<body>
+
+    <!--导航-->
+    <nav th:replace="admin/_fragments :: menu(4)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui header teal item">管理后台</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>博客</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+                <div class="right menu m-mobile-hide m-item">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img class="ui avatar image" src="https://picsum.photos/id/1005/100/100">
+                            Curtis Cheng
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">注销</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!--二级导航-->
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" th:href="@{/admin/images/upload}" class="item">上传</a>
+                <a href="#" th:href="@{/admin/images}" class="teal active item">列表</a>
+            </div>
+        </div>
+    </div>
+
+    <!--中间内容-->
+    <div class="m-container-large m-padded-tb-massive animated fadeIn">
+        <div class="ui container">
+            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">提示：</div>
+                <p th:text="${message}">恭喜你，操作成功！</p>
+            </div>
+            <table class="ui compact teal table" style="text-align: center">
+                <thead>
+                    <tr>
+                        <th style="width: 46px"></th>
+                        <th style="width: 190px">描述</th>
+                        <th style="width: 600px">链接</th>
+                        <th style="width: 190px">文件名</th>
+                        <th style="width: 170px">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="image, iterStat : ${pageInfo.list}">
+                        <td th:text="${(pageInfo.pageNum-1)*5+iterStat.count}">12</td>
+                        <td th:text="${image.description}">JISOO图</td>
+                        <!--<td th:text="${image.link}">http://182.254.148.75/group1/M00/00/00/rBEABF-3RVaAF9CYAAGxb3lI0NI586.jpg</td>-->
+                        <td><a href="#" target="_blank" th:href="@{${image.link}}" th:text="${image.link}">http://182.254.148.75/group1/M00/00/00/rBEABF-3RVaAF9CYAAGxb3lI0NI586.jpg</a></td>
+                        <td th:text="${image.fileName}">JISOO.jpg</td>
+                        <td>
+                            <a href="#" th:href="@{/admin/images/{id}/edit(id=${image.id})}" class="ui mini teal basic button">编辑</a>
+                            <a href="#" th:href="@{/admin/images/{id}/delete(id=${image.id})}" class="ui mini red basic button" onclick="return confirm('确定要删除此图片吗?')">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5" style="text-align: left">
+                            <div class="ui mini pagination menu" th:if="${pageInfo.total}>1">
+                                <a th:href="@{/admin/images}" class="item" th:classappend="${pageInfo.isFirstPage } ? 'disabled'">首页</a>
+                                <a th:href="@{/admin/images(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" class="item" th:unless="${pageInfo.isFirstPage}">上一页</a>
+                                <a th:href="@{/admin/images(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}" th:unless="${pageInfo.isLastPage}" class="item">下一页</a>
+                                <a th:href="@{/admin/images(pageNum=${pageInfo.pages})}" th:classappend="${pageInfo.isLastPage } ? 'disabled'" class="item">尾页</a>
+                            </div>
+                            <div class="ui middle m-inline-block">
+                                <p style="padding-left: 60px">当前第&nbsp;<b style="font-size: large"><span th:text="${pageInfo.pageNum}"></span></b>&nbsp;页，
+                                    总&nbsp;<b style="font-size: large"><span th:text="${pageInfo.pages}"></span></b>&nbsp;页，
+                                    共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${pageInfo.total}"></span></b>&nbsp;条记录</p>
+                            </div>
+                            <a href="#" th:href="@{/admin/images/upload}" class="ui right floated mini teal basic button">上传</a>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--底部footer-->
+    <footer th:replace="admin/_fragments :: footer" class="ui inverted segment vertical m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui divided inverted stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../../static/images/WeChat.jpg" class="ui rounded image" style="width: 110px" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事(User Story)</a>
+                        <a href="#" class="item">关于刻意练习的清单</a>
+                        <a href="#" class="item">失败要趁早</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email:CurtisCheng992@163.com</a>
+                        <a href="#" class="item">WeChat:ChengWindCheong</a>
+                        <a href="#" class="item">QQ:981333949</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客，会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 Designed By Curtis</p>
+        </div>
+
+    </footer>
+
+    <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <!--/*/</th:block>/*/-->
+
+<script>
+    $('.menu.toggle').click(function (){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.dropdown').dropdown({
+        on : 'hover'
+    });
+
+    //消息提示关闭初始化
+    $('.message .close')
+        .on('click',function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
+</script>
+</body>
+</html>
