@@ -50,4 +50,15 @@ public interface CommentMapper {
 
     @Select("select count(1) from t_comment where blog_id = #{blogId}")
     Integer countCommentsByBlogId(Long blogId);
+
+    @Select("select * from t_comment")
+    @ResultMap("commentMap")
+    List<Comment> listAllComments();
+
+    @Select("select * from t_comment where id = #{id}")
+    @ResultMap("commentMap")
+    Comment findById(@Param("id") Long id);
+
+    @Update("update t_comment set nickname = #{nickname}, email = #{email}, content = #{content} where id = #{id}")
+    void updateById(@Param("id") Long id, @Param("nickname") String nickname, @Param("email") String email, @Param("content") String content);
 }

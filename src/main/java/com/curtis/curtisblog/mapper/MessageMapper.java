@@ -31,6 +31,10 @@ public interface MessageMapper {
     List<Message> listAllMessage();
 
     @ResultMap("messageMap")
+    @Select("select * from t_message order by create_time asc")
+    List<Message> listAllMessages();
+
+    @ResultMap("messageMap")
     @Select("select * from t_message where id = #{parentMessageId}")
     Message findParentByParentId(Long parentMessageId);
 
@@ -43,4 +47,14 @@ public interface MessageMapper {
 
     @Select("select count(1) from t_message")
     Integer countMessage();
+
+    @Delete("delete from t_message where id = #{id}")
+    void deleteById(@Param("id") Long id);
+
+    @ResultMap("messageMap")
+    @Select("select * from t_message where id = #{id}")
+    Message findById(Long id);
+
+    @Update("update t_message set nickname = #{nickname}, email = #{email}, content = #{content} where id = #{id}")
+    void updateMessageById(@Param("id") Long id, @Param("nickname") String nickname, @Param("email") String email, @Param("content") String content);
 }

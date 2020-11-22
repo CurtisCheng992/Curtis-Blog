@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
  * 评论的控制器
  */
 @Controller
-public class CommentController {
+public class CommentShowController {
 
     @Autowired
     private ICommentService commentService;

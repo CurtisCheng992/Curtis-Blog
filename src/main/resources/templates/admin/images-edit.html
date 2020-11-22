@@ -10,7 +10,7 @@
 <body>
 
     <!--导航-->
-    <nav th:replace="admin/_fragments :: menu(4)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <nav th:replace="admin/_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h2 class="ui header teal item">管理后台</h2>
@@ -110,24 +110,14 @@
                     </div>
                 </div>
 
-                <!--&lt;!&ndash;图片预览&ndash;&gt;-->
-                <!--<div class="ui small rounded image">-->
-                    <!--<img th:src="@{${image.link}}" title="" style="">-->
-                <!--</div>-->
-
                 <!-- 表单校验不通过的信息 -->
-                <!--<div class="ui negative message" :class="{hidden : msg.length === 0}" v-text="msg"></div>-->
                 <div class="ui error message"></div>
 
                 <!-- 返回、保存、发布按钮 -->
                 <div class="ui right aligned container">
                     <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
-                    <!--<button type="button" class="ui teal button" :class="{disabled : isUpload}"-->
-                            <!--@click="upload($event)">-->
-                        <!--<span v-if="isUpload">上传中...</span>-->
-                        <!--<span v-else>上传</span>-->
-                    <!--</button>-->
-                    <button class="ui teal submit button" onclick="upload($event)">上传</button>
+
+                    <button class="ui teal submit button">修改</button>
                 </div>
             </form>
 
@@ -208,24 +198,6 @@
             }
         }
     });
-
-    function upload(event) {
-        event.preventDefault();
-        let formData = new FormData();
-
-        formData.append('file', $("#file").val());
-        formData.append('description', $("#description").val());
-
-        // let config = {
-        //     headers: {
-        //         'Content-Type': 'multipart/form-data'
-        //     }
-        // };
-        // $.post("http://127.0.0.1:8080/upload", formData, config);
-        $.post("http://127.0.0.1:8080/upload", formData, function (resp) {
-            console.log(resp);
-        });
-    }
 </script>
 </body>
 </html>

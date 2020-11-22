@@ -3,30 +3,14 @@
 <head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>图片上传</title>
+    <title>编辑图片描述</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="../../static/css/me.css">
-    <style type="text/css">
-        #box{
-            width: 300px;
-            height: 300px;
-            border: 2px solid #858585;
-        }
-        #imgshow{
-            width: 100%;
-            height: 100%;
-        }
-        #pox{
-            width: 70px;
-            height: 24px;
-            overflow: hidden;
-        }
-    </style>
 </head>
 <body>
 
     <!--导航-->
-    <nav th:replace="admin/_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <nav th:replace="admin/_fragments :: menu(4)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h2 class="ui header teal item">管理后台</h2>
@@ -55,8 +39,8 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" th:href="@{/admin/images/upload}" class="teal active item">图片上传</a>
-                <a href="#" th:href="@{/admin/images}" class="item">图片管理</a>
+                <a href="#" th:href="@{/admin/messages}" class="item">留言管理</a>
+                <a href="#" th:href="@{/admin/comments}" class="teal active item">评论管理</a>
             </div>
         </div>
     </div>
@@ -65,66 +49,72 @@
     <div class="m-container-small m-padded-tb-big animated fadeIn">
         <div class="ui container">
 
-            <!--操作提示-->
-            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
-                <i class="close icon"></i>
-                <div class="header">提示：</div>
-                <p th:text="${message}">恭喜你，操作成功！</p>
-            </div>
-
-            <form class="ui form" enctype="multipart/form-data" method="post" action="/admin/images/upload">
+            <form class="ui form" enctype="multipart/form-data" method="post" action="/admin/comments/edit" th:action="@{/admin/comments/{id}/edit(id=${comment.id})}">
                 <!--图片描述-->
                 <div class="field">
                     <div class="ui left labeled action input">
-                        <label class="ui compact teal basic label">图片描述</label>
-                        <input type="text" id="description" name="description">
+                        <label class="ui compact teal basic label">&emsp;昵称&emsp;</label>
+                        <input type="text" id="nickname" name="nickname" th:value="${comment.nickname}">
                     </div>
                 </div>
 
-                <!--图片上传-->
                 <div class="field">
                     <div class="ui left labeled action input">
-                        <label class="ui compact teal basic label">选择图片</label>
-                        <input type="file" id="filed" name="file" accept="image/*">
+                        <label class="ui compact teal basic label">电子邮箱</label>
+                        <input type="text" id="email" name="email" th:value="${comment.email}">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact teal basic label">留言内容</label>
+                        <input type="text" id="content" name="content" th:value="${comment.content}">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact basic label">博客id</label>
+                        <input type="text" id="blogId" readonly name="blogId" th:value="${comment.blogId}">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact basic label">更新时间</label>
+                        <input type="text" id="createTime" readonly name="createTime" th:value="${#dates.format(comment.createTime,'yyyy年MM月dd日 HH:mm:ss')}">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact basic label">管理员&emsp;</label>
+                        <input type="text" id="adminComment" readonly name="adminComment" th:value="${comment.adminComment}==true ? '是' : '否'">
                     </div>
                 </div>
 
                 <!--图片预览-->
                 <div class="field">
                     <div class="ui left labeled action input">
-                        <label class="ui compact basic label">图片预览</label>
-                        <div class="ui small rounded bordered image">
-                            <img id="imgshow" scr="#" alt="" title="" style="">
+                        <label class="ui compact basic label">&emsp;头像&emsp;</label>
+                        <div class="ui mini rounded bordered image">
+                            <img th:src="@{${comment.avatar}}" title="" style="">
                         </div>
                     </div>
                 </div>
 
-                <!-- 表单校验不通过的信息 -->
-                <!--<div class="ui negative message" :class="{hidden : msg.length === 0}" v-text="msg"></div>-->
                 <div class="ui error message"></div>
 
                 <!-- 返回、保存、发布按钮 -->
                 <div class="ui right aligned container">
                     <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
-                    <!--<button type="button" class="ui teal button" :class="{disabled : isUpload}"-->
-                            <!--@click="upload($event)">-->
-                        <!--<span v-if="isUpload">上传中...</span>-->
-                        <!--<span v-else>上传</span>-->
-                    <!--</button>-->
-                    <button class="ui teal submit button">上传</button>
+                    <button class="ui teal submit button">修改</button>
                 </div>
             </form>
+
         </div>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <br>
@@ -192,13 +182,6 @@
 
     $('.ui.form').form({
         fields : {
-            description : {
-                identifier : 'description',
-                rules : [{
-                    type : 'empty',
-                    prompt : '请输入图片描述'
-                }]
-            },
             file : {
                 identifier : 'file',
                 rules : [{
@@ -208,26 +191,6 @@
             }
         }
     });
-
-    //在input file内容改变的时候触发事件
-    $('#filed').change(function(){
-        //获取input file的files文件数组;
-        //$('#filed')获取的是jQuery对象，.get(0)转为原生对象;
-        //这边默认只能选一个，但是存放形式仍然是数组，所以取第一个元素使用[0];
-        var file = $('#filed').get(0).files[0];
-        //创建用来读取此文件的对象
-        var reader = new FileReader();
-        //使用该对象读取file文件
-        reader.readAsDataURL(file);
-        //读取文件成功后执行的方法函数
-        reader.onload=function(e){
-            //读取成功后返回的一个参数e，整个的一个进度事件
-            console.log(e);
-            //选择所要显示图片的img，要赋值给img的src就是e中target下result里面
-            //的base64编码格式的地址
-            $('#imgshow').get(0).src = e.target.result;
-        }
-    })
 
 </script>
 </body>

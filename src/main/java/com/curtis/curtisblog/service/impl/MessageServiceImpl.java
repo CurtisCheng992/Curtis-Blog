@@ -3,6 +3,8 @@ package com.curtis.curtisblog.service.impl;
 import com.curtis.curtisblog.entity.Message;
 import com.curtis.curtisblog.mapper.MessageMapper;
 import com.curtis.curtisblog.service.IMessageService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,6 +49,46 @@ public class MessageServiceImpl implements IMessageService {
     @Override
     public Integer countMessage() {
         return this.messageMapper.countMessage();
+    }
+
+    /**
+     * 分页查询留言信息
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    @Override
+    public PageInfo<Message> getMessagePage(int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum,pageSize);
+        List<Message> messages = messageMapper.listAllMessages();
+        PageInfo<Message> messagePageInfo = new PageInfo<>(messages);
+        return messagePageInfo;
+    }
+
+    /**
+     * 根据留言id删除留言
+     * @param id
+     */
+    @Transactional
+    @Override
+    public void deleteMessageById(Long id) {
+        this.messageMapper.deleteById(id);
+    }
+
+    /**
+     * 根据留言id查询一条留言
+     * @param id
+     * @return
+     */
+    @Override
+    public Message getMessageById(Long id) {
+        return this.messageMapper.findById(id);
+    }
+
+    @Transactional
+    @Override
+    public void updateMessageById(Long id, String nickname, String email, String content) {
+        this.messageMapper.updateMessageById(id,nickname,email,content);
     }
 
     /**

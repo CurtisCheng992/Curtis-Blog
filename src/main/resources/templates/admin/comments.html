@@ -3,30 +3,14 @@
 <head th:replace="admin/_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>图片上传</title>
+    <title>图片管理</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="../../static/css/me.css">
-    <style type="text/css">
-        #box{
-            width: 300px;
-            height: 300px;
-            border: 2px solid #858585;
-        }
-        #imgshow{
-            width: 100%;
-            height: 100%;
-        }
-        #pox{
-            width: 70px;
-            height: 24px;
-            overflow: hidden;
-        }
-    </style>
 </head>
 <body>
 
     <!--导航-->
-    <nav th:replace="admin/_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <nav th:replace="admin/_fragments :: menu(4)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h2 class="ui header teal item">管理后台</h2>
@@ -55,77 +39,71 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" th:href="@{/admin/images/upload}" class="teal active item">图片上传</a>
-                <a href="#" th:href="@{/admin/images}" class="item">图片管理</a>
+                <a href="#" th:href="@{/admin/messages}" class="item">留言管理</a>
+                <a href="#" th:href="@{/admin/comments}" class="teal active item">评论管理</a>
             </div>
         </div>
     </div>
 
     <!--中间内容-->
-    <div class="m-container-small m-padded-tb-big animated fadeIn">
+    <div class="m-container-large m-padded-tb-massive animated fadeIn">
         <div class="ui container">
-
-            <!--操作提示-->
             <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
                 <i class="close icon"></i>
                 <div class="header">提示：</div>
                 <p th:text="${message}">恭喜你，操作成功！</p>
             </div>
+            <table class="ui compact teal table" style="text-align: center">
+                <thead>
+                    <tr>
+                        <th style="width: 46px"></th>
+                        <th style="width: 110px">昵称</th>
+                        <th style="width: 180px">电子邮箱</th>
+                        <th style="width: 400px">留言内容</th>
+                        <th style="width: 60px">博客id</th>
+                        <th style="width: 160px">留言时间</th>
+                        <th style="width: 80px">管理员</th>
+                        <th style="width: 170px">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="comment, iterStat : ${pageInfo.list}">
+                        <td th:text="${(pageInfo.pageNum-1)*5+iterStat.count}">12</td>
+                        <td th:text="${comment.nickname}">CurtisCheng</td>
+                        <td th:text="${comment.email}">CurtisCheng992@163.com</td>
+                        <td th:text="${comment.content}">秒啊</td>
+                        <td th:text="${comment.blogId}">12</td>
+                        <td th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm:ss')}">2020-11-22 11:28:30</td>
+                        <td th:text="${comment.adminComment}==true ? '是' : '否'">否</td>
+                        <td>
+                            <a href="#" th:href="@{/admin/comments/{id}/edit(id=${comment.id})}" class="ui mini teal basic button">编辑</a>
+                            <a href="#" th:href="@{/admin/comments/{id}/delete(id=${comment.id})}" class="ui mini red basic button" onclick="return confirm('确定要删除此评论吗?')">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="8" style="text-align: left">
+                            <div class="ui mini pagination menu" th:if="${pageInfo.total}>1">
+                                <a th:href="@{/admin/comments}" class="item" th:classappend="${pageInfo.isFirstPage } ? 'disabled'">首页</a>
+                                <a th:href="@{/admin/comments(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" class="item" th:unless="${pageInfo.isFirstPage}">上一页</a>
+                                <a th:href="@{/admin/comments(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}" th:unless="${pageInfo.isLastPage}" class="item">下一页</a>
+                                <a th:href="@{/admin/comments(pageNum=${pageInfo.pages})}" th:classappend="${pageInfo.isLastPage } ? 'disabled'" class="item">尾页</a>
+                            </div>
+                            <div class="ui middle m-inline-block">
+                                <p style="padding-left: 60px">当前第&nbsp;<b style="font-size: large"><span th:text="${pageInfo.pageNum}"></span></b>&nbsp;页，
+                                    总&nbsp;<b style="font-size: large"><span th:text="${pageInfo.pages}"></span></b>&nbsp;页，
+                                    共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${pageInfo.total}"></span></b>&nbsp;条记录</p>
+                            </div>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
 
-            <form class="ui form" enctype="multipart/form-data" method="post" action="/admin/images/upload">
-                <!--图片描述-->
-                <div class="field">
-                    <div class="ui left labeled action input">
-                        <label class="ui compact teal basic label">图片描述</label>
-                        <input type="text" id="description" name="description">
-                    </div>
-                </div>
 
-                <!--图片上传-->
-                <div class="field">
-                    <div class="ui left labeled action input">
-                        <label class="ui compact teal basic label">选择图片</label>
-                        <input type="file" id="filed" name="file" accept="image/*">
-                    </div>
-                </div>
-
-                <!--图片预览-->
-                <div class="field">
-                    <div class="ui left labeled action input">
-                        <label class="ui compact basic label">图片预览</label>
-                        <div class="ui small rounded bordered image">
-                            <img id="imgshow" scr="#" alt="" title="" style="">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 表单校验不通过的信息 -->
-                <!--<div class="ui negative message" :class="{hidden : msg.length === 0}" v-text="msg"></div>-->
-                <div class="ui error message"></div>
-
-                <!-- 返回、保存、发布按钮 -->
-                <div class="ui right aligned container">
-                    <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
-                    <!--<button type="button" class="ui teal button" :class="{disabled : isUpload}"-->
-                            <!--@click="upload($event)">-->
-                        <!--<span v-if="isUpload">上传中...</span>-->
-                        <!--<span v-else>上传</span>-->
-                    <!--</button>-->
-                    <button class="ui teal submit button">上传</button>
-                </div>
-            </form>
         </div>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <br>
@@ -188,47 +166,7 @@
             $(this)
                 .closest('.message')
                 .transition('fade');
-    });
-
-    $('.ui.form').form({
-        fields : {
-            description : {
-                identifier : 'description',
-                rules : [{
-                    type : 'empty',
-                    prompt : '请输入图片描述'
-                }]
-            },
-            file : {
-                identifier : 'file',
-                rules : [{
-                    type : 'empty',
-                    prompt : '请选择图片'
-                }]
-            }
-        }
-    });
-
-    //在input file内容改变的时候触发事件
-    $('#filed').change(function(){
-        //获取input file的files文件数组;
-        //$('#filed')获取的是jQuery对象，.get(0)转为原生对象;
-        //这边默认只能选一个，但是存放形式仍然是数组，所以取第一个元素使用[0];
-        var file = $('#filed').get(0).files[0];
-        //创建用来读取此文件的对象
-        var reader = new FileReader();
-        //使用该对象读取file文件
-        reader.readAsDataURL(file);
-        //读取文件成功后执行的方法函数
-        reader.onload=function(e){
-            //读取成功后返回的一个参数e，整个的一个进度事件
-            console.log(e);
-            //选择所要显示图片的img，要赋值给img的src就是e中target下result里面
-            //的base64编码格式的地址
-            $('#imgshow').get(0).src = e.target.result;
-        }
-    })
-
+        });
 </script>
 </body>
 </html>

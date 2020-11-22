@@ -3,6 +3,8 @@ package com.curtis.curtisblog.service.impl;
 import com.curtis.curtisblog.entity.Comment;
 import com.curtis.curtisblog.mapper.CommentMapper;
 import com.curtis.curtisblog.service.ICommentService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.relational.core.sql.In;
@@ -58,6 +60,53 @@ public class CommentServiceImpl implements ICommentService {
     @Override
     public Integer CountCommentsByBlogId(Long blogId) {
         return this.commentMapper.countCommentsByBlogId(blogId);
+    }
+
+    /**
+     * 查询分页评论信息
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    @Override
+    public PageInfo<Comment> getCommentPage(int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum,pageSize);
+        List<Comment> comments = this.commentMapper.listAllComments();
+        PageInfo<Comment> commentPageInfo = new PageInfo<>(comments);
+        return commentPageInfo;
+    }
+
+    /**
+     * 根据评论id删除评论
+     * @param id
+     */
+    @Transactional
+    @Override
+    public void deleteCommentById(Long id) {
+        this.commentMapper.deleteCommentById(id);
+    }
+
+    /**
+     * 根据评论id查询评论信息
+     * @param id
+     * @return
+     */
+    @Override
+    public Comment getCommentById(Long id) {
+        return this.commentMapper.findById(id);
+    }
+
+    /**
+     * 根据评论id修改评论信息
+     * @param id
+     * @param nickname
+     * @param email
+     * @param content
+     */
+    @Transactional
+    @Override
+    public void updateCommentById(Long id, String nickname, String email, String content) {
+        this.commentMapper.updateById(id,nickname,email,content);
     }
 
     /**

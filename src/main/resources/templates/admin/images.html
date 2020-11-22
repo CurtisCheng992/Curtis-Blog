@@ -10,7 +10,7 @@
 <body>
 
     <!--导航-->
-    <nav th:replace="admin/_fragments :: menu(4)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <nav th:replace="admin/_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h2 class="ui header teal item">管理后台</h2>
@@ -94,7 +94,7 @@
                                     总&nbsp;<b style="font-size: large"><span th:text="${pageInfo.pages}"></span></b>&nbsp;页，
                                     共&nbsp;<b style="font-size: large"><span style="color: #F2711C;font-size: x-large" th:text="${pageInfo.total}"></span></b>&nbsp;条记录</p>
                             </div>
-                            <a href="#" th:href="@{/admin/images/upload}" class="ui right floated mini teal basic button">上传</a>
+                            <a href="#" th:href="@{/admin/images/upload}" class="ui right floated mini teal basic button">上传图片</a>
                         </th>
                     </tr>
                 </tfoot>
