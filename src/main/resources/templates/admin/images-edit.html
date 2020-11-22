@@ -46,7 +46,7 @@
     </div>
 
     <!--中间内容-->
-    <div class="m-container m-padded-tb-massive animated fadeIn">
+    <div class="m-container-small m-padded-tb-big animated fadeIn">
         <div class="ui container">
 
             <!--操作提示-->
@@ -64,6 +64,56 @@
                         <input type="text" id="description" name="description" th:value="${image.description}">
                     </div>
                 </div>
+
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact basic label">图片名称</label>
+                        <input type="text" id="fileName" readonly name="fileName" th:value="${image.fileName}">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact basic label">图片链接</label>
+                        <input type="text" id="link" readonly name="link" th:value="${image.link}">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact basic label">图片大小</label>
+                        <input type="text" id="fileSize" readonly name="fileSize" th:value="${image.fileSize}">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact basic label">上传时间</label>
+                        <input type="text" id="uploadTime" readonly name="uploadTime" th:value="${#dates.format(image.uploadTime,'yyyy年MM月dd日 HH:mm:ss')}">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact basic label">更新时间</label>
+                        <input type="text" id="updateTime" readonly name="updateTime" th:value="${#dates.format(image.updateTime,'yyyy年MM月dd日 HH:mm:ss')}">
+                    </div>
+                </div>
+
+                <!--图片预览-->
+                <div class="field">
+                    <div class="ui left labeled action input">
+                        <label class="ui compact basic label">图片预览</label>
+                        <div class="ui small rounded bordered image">
+                            <img th:src="@{${image.link}}" title="" style="">
+                        </div>
+                    </div>
+                </div>
+
+                <!--&lt;!&ndash;图片预览&ndash;&gt;-->
+                <!--<div class="ui small rounded image">-->
+                    <!--<img th:src="@{${image.link}}" title="" style="">-->
+                <!--</div>-->
 
                 <!-- 表单校验不通过的信息 -->
                 <!--<div class="ui negative message" :class="{hidden : msg.length === 0}" v-text="msg"></div>-->
@@ -84,16 +134,6 @@
         </div>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <br>

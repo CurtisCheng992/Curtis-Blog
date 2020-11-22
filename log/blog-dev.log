@@ -5588,3 +5588,467 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 2020-11-22 14:07:34.964 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
 2020-11-22 14:07:34.966 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
 2020-11-22 14:07:34.996 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 14:09:20.760  INFO 19220 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-22 14:09:20.761  INFO 19220 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-11-22 14:09:20.763  INFO 19220 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-22 14:09:20.772  INFO 19220 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-22 14:09:21.168  INFO 19220 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 19220 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-22 14:09:21.169 DEBUG 19220 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-22 14:09:21.169  INFO 19220 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-22 14:09:21.577  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-22 14:09:21.578  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-22 14:09:21.578  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JDBC repository interfaces.
+2020-11-22 14:09:21.584  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-22 14:09:21.584  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-22 14:09:21.585  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 Redis repository interfaces.
+2020-11-22 14:09:21.633  WARN 19220 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.curtis.curtisblog]' package. Please check your configuration.
+2020-11-22 14:09:21.639  INFO 19220 --- [restartedMain] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2020-11-22 14:09:21.651  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2020-11-22 14:09:21.651  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-11-22 14:09:21.651  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-11-22 14:09:21.651  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:21.651  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:21.651  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2020-11-22 14:09:21.651  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application-dev.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:21.651  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:21.651  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:21.660  INFO 19220 --- [restartedMain] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2020-11-22 14:09:21.679  INFO 19220 --- [restartedMain] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2020-11-22 14:09:21.679  INFO 19220 --- [restartedMain] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2020-11-22 14:09:21.918  INFO 19220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-22 14:09:21.919  INFO 19220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-22 14:09:21.919  INFO 19220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-22 14:09:21.974  INFO 19220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-22 14:09:21.974  INFO 19220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 798 ms
+2020-11-22 14:09:22.000 ERROR 19220 --- [restartedMain] o.a.catalina.session.StandardManager     : Exception loading sessions from persistent storage
+
+java.lang.ClassNotFoundException: com.curtis.curtisblog.entity.User
+	at org.springframework.boot.web.embedded.tomcat.TomcatEmbeddedWebappClassLoader.loadClass(TomcatEmbeddedWebappClassLoader.java:72)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1188)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.catalina.util.CustomObjectInputStream.resolveClass(CustomObjectInputStream.java:159)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1868)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1751)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2042)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1573)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.apache.catalina.session.StandardSession.doReadObject(StandardSession.java:1587)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:1040)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:218)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:162)
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:354)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5156)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.curtis.curtisblog.CurtisBlogApplication.main(CurtisBlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2020-11-22 14:09:22.131  INFO 19220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-22 14:09:22.158  INFO 19220 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-22 14:09:22.214  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2020-11-22 14:09:22.214  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2020-11-22 14:09:22.214  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2020-11-22 14:09:22.214  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2020-11-22 14:09:22.214  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2020-11-22 14:09:22.215  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2020-11-22 14:09:22.215  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2020-11-22 14:09:22.215  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2020-11-22 14:09:22.365  INFO 19220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-11-22 14:09:22.365  WARN 19220 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-22 14:09:22.819  INFO 19220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-11-22 14:09:23.012  INFO 19220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-22 14:09:23.030  INFO 19220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-22 14:09:23.039  INFO 19220 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 1.961 seconds (JVM running for 422.463)
+2020-11-22 14:09:23.042  INFO 19220 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-22 14:09:28.256  INFO 19220 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-11-22 14:09:28.267  INFO 19220 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-11-22 14:09:28.267  INFO 19220 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-22 14:09:28.614  INFO 19220 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 19220 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-22 14:09:28.614 DEBUG 19220 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-22 14:09:28.614  INFO 19220 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-22 14:09:29.064  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-22 14:09:29.064  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-22 14:09:29.078  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 JDBC repository interfaces.
+2020-11-22 14:09:29.083  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-22 14:09:29.083  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-22 14:09:29.090  INFO 19220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2020-11-22 14:09:29.136  INFO 19220 --- [restartedMain] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2020-11-22 14:09:29.145  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2020-11-22 14:09:29.145  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-11-22 14:09:29.145  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-11-22 14:09:29.145  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:29.145  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:29.145  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2020-11-22 14:09:29.145  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application-dev.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:29.145  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:29.146  INFO 19220 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 14:09:29.151  INFO 19220 --- [restartedMain] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2020-11-22 14:09:29.175  INFO 19220 --- [restartedMain] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2020-11-22 14:09:29.175  INFO 19220 --- [restartedMain] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2020-11-22 14:09:29.359  INFO 19220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-22 14:09:29.359  INFO 19220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-22 14:09:29.359  INFO 19220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-22 14:09:29.385  INFO 19220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-22 14:09:29.385  INFO 19220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 765 ms
+2020-11-22 14:09:29.439  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2020-11-22 14:09:29.439  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2020-11-22 14:09:29.439  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2020-11-22 14:09:29.439  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2020-11-22 14:09:29.439  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2020-11-22 14:09:29.439  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2020-11-22 14:09:29.439  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2020-11-22 14:09:29.439  INFO 19220 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2020-11-22 14:09:29.789  INFO 19220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-22 14:09:29.832  INFO 19220 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-22 14:09:30.165  INFO 19220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-11-22 14:09:30.165  WARN 19220 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-22 14:09:30.639  INFO 19220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-11-22 14:09:30.853  INFO 19220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-22 14:09:30.872  INFO 19220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-22 14:09:30.876  INFO 19220 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 2.339 seconds (JVM running for 430.3)
+2020-11-22 14:09:30.877  INFO 19220 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-22 16:13:55.499  INFO 19220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-22 16:13:55.501  INFO 19220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-22 16:13:55.518  INFO 19220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-11-22 16:13:57.977 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-11-22 16:13:57.978 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.m.U.findByUsernameAndPassword      : ==> Parameters: curtis(String), 6fd8358dd2c59de335efde0e1f92b1f1(String)
+2020-11-22 16:13:58.015 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-11-22 16:13:59.379 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:13:59.379 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:13:59.414 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:13:59.415 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:13:59.415 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:13:59.451 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:14:26.309 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.TagMapper.listAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_tag
+2020-11-22 16:14:26.309 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.TagMapper.listAll_COUNT     : ==> Parameters: 
+2020-11-22 16:14:26.344 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.TagMapper.listAll_COUNT     : <==      Total: 1
+2020-11-22 16:14:26.345 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.curtisblog.mapper.TagMapper.listAll  : ==>  Preparing: select * from t_tag LIMIT ?
+2020-11-22 16:14:26.345 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.curtisblog.mapper.TagMapper.listAll  : ==> Parameters: 5(Integer)
+2020-11-22 16:14:26.379 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.curtisblog.mapper.TagMapper.listAll  : <==      Total: 5
+2020-11-22 16:15:29.472 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:15:29.472 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:15:29.507 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:15:29.508 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:15:29.508 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:15:29.546 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:18:03.764 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:18:03.764 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:18:03.799 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:18:03.799 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:18:03.800 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:18:03.835 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:18:05.614 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:18:05.615 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:18:05.651 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:18:24.599 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:18:24.599 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:18:24.634 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:18:24.635 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:18:24.635 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:18:24.670 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:20:21.973 DEBUG 19220 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:20:21.973 DEBUG 19220 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:20:22.008 DEBUG 19220 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:20:32.976 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:20:32.976 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:20:33.011 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:26:17.706 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:26:17.707 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:26:17.742 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:26:58.013 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:26:58.013 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:26:58.048 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:27:21.006 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:27:21.007 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:27:21.042 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:28:53.711 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:28:53.712 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:28:53.749 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:30:19.812 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:30:19.812 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:30:19.848 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:30:51.179 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:30:51.179 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:30:51.215 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:31:22.677 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:31:22.678 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:31:22.716 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:34:12.530 DEBUG 19220 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:34:12.530 DEBUG 19220 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:34:12.565 DEBUG 19220 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:34:34.041 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:34:34.041 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:34:34.076 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:35:19.994 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:35:19.994 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:35:20.029 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:36:06.771 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:36:06.771 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:36:06.806 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:36:38.405 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:36:38.405 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:36:38.440 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:36:44.141 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:36:44.141 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:36:44.176 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:36:44.177 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:36:44.178 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:36:44.212 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:36:48.167 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:36:48.168 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:36:48.203 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:37:41.704 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:37:41.704 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:37:41.738 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:38:08.034 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:38:08.035 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:38:08.072 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:38:16.732 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:38:16.733 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:38:16.770 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:39:28.292 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:39:28.292 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:39:28.326 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:39:59.374 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:39:59.375 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:39:59.408 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:40:39.999 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:40:39.999 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:40:40.033 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:40:51.234 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:40:51.235 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:40:51.267 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:40:57.629 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:40:57.630 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:40:57.663 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:41:19.769 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:41:19.770 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:41:19.803 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:41:34.892 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:41:34.892 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:41:34.927 DEBUG 19220 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:41:47.974 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:41:47.975 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:41:48.008 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:42:14.003 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:42:14.003 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:42:14.041 DEBUG 19220 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:42:26.593 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:42:26.594 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:42:26.629 DEBUG 19220 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:42:38.315 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:42:38.316 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:42:38.351 DEBUG 19220 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:42:57.028 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:42:57.028 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:42:57.062 DEBUG 19220 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:43:05.416 DEBUG 19220 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:43:05.417 DEBUG 19220 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:43:05.449 DEBUG 19220 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:43:28.914 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:43:28.914 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:43:28.948 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:53:53.541 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:53:53.541 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:53:53.574 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:53:53.575 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:53:53.575 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:53:53.608 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:56:37.152 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:56:37.152 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:56:37.186 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:56:37.188 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:56:37.188 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:56:37.222 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:56:39.086 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:56:39.087 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 2(Long)
+2020-11-22 16:56:39.120 DEBUG 19220 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:56:43.203 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:56:43.203 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 14(Long)
+2020-11-22 16:56:43.236 DEBUG 19220 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:56:45.611 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:56:45.611 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:56:45.645 DEBUG 19220 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:56:47.966 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:56:47.966 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:56:48.005 DEBUG 19220 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:57:05.868  INFO 6064 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Starting CurtisBlogApplication on CurtisCheng with PID 6064 (D:\IdeaProjects\curtis-blog\target\classes started by CurtisCheng in D:\IdeaProjects\curtis-blog)
+2020-11-22 16:57:05.872 DEBUG 6064 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-11-22 16:57:05.872  INFO 6064 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : The following profiles are active: dev
+2020-11-22 16:57:05.956  INFO 6064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-22 16:57:05.956  INFO 6064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-22 16:57:07.158  INFO 6064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-22 16:57:07.159  INFO 6064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-22 16:57:07.179  INFO 6064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 JDBC repository interfaces.
+2020-11-22 16:57:07.195  INFO 6064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-22 16:57:07.196  INFO 6064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-11-22 16:57:07.210  INFO 6064 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2020-11-22 16:57:07.445  INFO 6064 --- [restartedMain] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2020-11-22 16:57:07.511  INFO 6064 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2020-11-22 16:57:07.512  INFO 6064 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-11-22 16:57:07.512  INFO 6064 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2020-11-22 16:57:07.513  INFO 6064 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 16:57:07.513  INFO 6064 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 16:57:07.513  INFO 6064 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2020-11-22 16:57:07.513  INFO 6064 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application-dev.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 16:57:07.513  INFO 6064 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 16:57:07.513  INFO 6064 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2020-11-22 16:57:07.542  INFO 6064 --- [restartedMain] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2020-11-22 16:57:07.756  INFO 6064 --- [restartedMain] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2020-11-22 16:57:07.757  INFO 6064 --- [restartedMain] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2020-11-22 16:57:08.420  INFO 6064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-22 16:57:08.438  INFO 6064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-22 16:57:08.438  INFO 6064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-22 16:57:08.584  INFO 6064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-22 16:57:08.585  INFO 6064 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2629 ms
+2020-11-22 16:57:08.748  INFO 6064 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2020-11-22 16:57:08.755  INFO 6064 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2020-11-22 16:57:08.755  INFO 6064 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2020-11-22 16:57:08.755  INFO 6064 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2020-11-22 16:57:08.755  INFO 6064 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2020-11-22 16:57:08.756  INFO 6064 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2020-11-22 16:57:08.756  INFO 6064 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2020-11-22 16:57:08.757  INFO 6064 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2020-11-22 16:57:10.386  INFO 6064 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-22 16:57:10.498  INFO 6064 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-22 16:57:11.099  INFO 6064 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-22 16:57:11.100  WARN 6064 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-11-22 16:57:11.743  INFO 6064 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-22 16:57:12.103  INFO 6064 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-22 16:57:12.186  INFO 6064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-22 16:57:12.210  INFO 6064 --- [restartedMain] c.c.curtisblog.CurtisBlogApplication     : Started CurtisBlogApplication in 7.123 seconds (JVM running for 10.17)
+2020-11-22 16:57:26.542  INFO 6064 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-22 16:57:26.542  INFO 6064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-22 16:57:26.557  INFO 6064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-11-22 16:57:28.600 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.m.U.findByUsernameAndPassword      : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-11-22 16:57:28.628 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.m.U.findByUsernameAndPassword      : ==> Parameters: curtis(String), 6fd8358dd2c59de335efde0e1f92b1f1(String)
+2020-11-22 16:57:28.687 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.m.U.findByUsernameAndPassword      : <==      Total: 1
+2020-11-22 16:57:30.965 DEBUG 6064 --- [http-nio-8080-exec-3] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:57:30.965 DEBUG 6064 --- [http-nio-8080-exec-3] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:57:31.001 DEBUG 6064 --- [http-nio-8080-exec-3] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:57:31.003 DEBUG 6064 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:57:31.003 DEBUG 6064 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:57:31.042 DEBUG 6064 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:57:33.487 DEBUG 6064 --- [http-nio-8080-exec-5] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:57:33.487 DEBUG 6064 --- [http-nio-8080-exec-5] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:57:33.521 DEBUG 6064 --- [http-nio-8080-exec-5] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:57:33.522 DEBUG 6064 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?, ?
+2020-11-22 16:57:33.522 DEBUG 6064 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer), 5(Integer)
+2020-11-22 16:57:33.560 DEBUG 6064 --- [http-nio-8080-exec-5] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 3
+2020-11-22 16:57:47.289 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:57:47.289 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:57:47.324 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:57:47.325 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:57:47.325 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:57:47.361 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:57:49.052 DEBUG 6064 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:57:49.052 DEBUG 6064 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:57:49.088 DEBUG 6064 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:57:57.631 DEBUG 6064 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:57:57.631 DEBUG 6064 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:57:57.666 DEBUG 6064 --- [http-nio-8080-exec-7] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:07.408 DEBUG 6064 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:07.408 DEBUG 6064 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:58:07.448 DEBUG 6064 --- [http-nio-8080-exec-3] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:17.036 DEBUG 6064 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:17.037 DEBUG 6064 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:58:17.073 DEBUG 6064 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:18.784 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:58:18.784 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:58:18.819 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:58:18.820 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:58:18.820 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:58:18.856 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:58:25.912 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:25.913 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 2(Long)
+2020-11-22 16:58:25.949 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:29.452 DEBUG 6064 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:29.453 DEBUG 6064 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 18(Long)
+2020-11-22 16:58:29.488 DEBUG 6064 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:32.888 DEBUG 6064 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:32.889 DEBUG 6064 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 19(Long)
+2020-11-22 16:58:32.925 DEBUG 6064 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:36.379 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:58:36.379 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:58:36.414 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:58:36.415 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?, ?
+2020-11-22 16:58:36.415 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer), 5(Integer)
+2020-11-22 16:58:36.451 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 3
+2020-11-22 16:58:37.668 DEBUG 6064 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:37.669 DEBUG 6064 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 20(Long)
+2020-11-22 16:58:37.705 DEBUG 6064 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:45.185 DEBUG 6064 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:45.185 DEBUG 6064 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 22(Long)
+2020-11-22 16:58:45.221 DEBUG 6064 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:48.006 DEBUG 6064 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:48.007 DEBUG 6064 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 23(Long)
+2020-11-22 16:58:48.043 DEBUG 6064 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:56.725 DEBUG 6064 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:56.725 DEBUG 6064 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 23(Long)
+2020-11-22 16:58:56.764 DEBUG 6064 --- [http-nio-8080-exec-2] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:58:59.802 DEBUG 6064 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:58:59.802 DEBUG 6064 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 20(Long)
+2020-11-22 16:58:59.840 DEBUG 6064 --- [http-nio-8080-exec-9] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:59:03.273 DEBUG 6064 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:59:03.273 DEBUG 6064 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 22(Long)
+2020-11-22 16:59:03.309 DEBUG 6064 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:59:06.256 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:59:06.256 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 23(Long)
+2020-11-22 16:59:06.291 DEBUG 6064 --- [http-nio-8080-exec-10] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:59:10.099 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==>  Preparing: SELECT count(0) FROM t_images
+2020-11-22 16:59:10.100 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.m.ImageMapper.listAllImages_COUNT  : ==> Parameters: 
+2020-11-22 16:59:10.134 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.m.ImageMapper.listAllImages_COUNT  : <==      Total: 1
+2020-11-22 16:59:10.135 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.listAllImages   : ==>  Preparing: select * from t_images LIMIT ?
+2020-11-22 16:59:10.136 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.listAllImages   : ==> Parameters: 5(Integer)
+2020-11-22 16:59:10.172 DEBUG 6064 --- [http-nio-8080-exec-8] c.c.c.mapper.ImageMapper.listAllImages   : <==      Total: 5
+2020-11-22 16:59:11.441 DEBUG 6064 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:59:11.442 DEBUG 6064 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 1(Long)
+2020-11-22 16:59:11.477 DEBUG 6064 --- [http-nio-8080-exec-4] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:59:15.862 DEBUG 6064 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:59:15.862 DEBUG 6064 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 2(Long)
+2020-11-22 16:59:15.898 DEBUG 6064 --- [http-nio-8080-exec-6] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
+2020-11-22 16:59:20.095 DEBUG 6064 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==>  Preparing: select * from t_images where id = ?
+2020-11-22 16:59:20.095 DEBUG 6064 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : ==> Parameters: 14(Long)
+2020-11-22 16:59:20.131 DEBUG 6064 --- [http-nio-8080-exec-1] c.c.c.mapper.ImageMapper.findById        : <==      Total: 1
