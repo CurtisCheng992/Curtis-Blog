@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -49,9 +50,18 @@ public class ImagesUtils {
 
             System.out.println("http://182.254.148.75/" + storePath.getFullPath());
 
+            //生成文件大小
+            long fileSize = file.getSize();
+            // 首先先将.getSize()获取的Long转为String 然后将String转为Float并除以1024 （因为1KB=1024B）
+            Float size = Float.parseFloat(String.valueOf(fileSize)) / 1024;
+            BigDecimal b = new BigDecimal(size);
+            // 2表示2位 ROUND_HALF_UP表明四舍五入，
+            size = b.setScale(2, BigDecimal.ROUND_HALF_UP).floatValue();
+            // 此时size就是保留两位小数的浮点数
+
             // 生成url地址
             String url = "http://182.254.148.75/" + storePath.getFullPath();
-            String result = url + "@" + originalFilename;
+            String result = url + "@" + originalFilename + "@" +size + " KB";
             return  result;
 
         } catch (IOException e) {

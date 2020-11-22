@@ -5,6 +5,11 @@ spring:
     active: dev
   messages:
     basename: i18n/messages
+  servlet:
+    multipart:
+      max-file-size: 5MB # 单个文件大小
+      max-request-size: 5MB  # 设置总上传的数据大小
+      enabled: true #开启
 
 fdfs:
   so-timeout: 1501 #超时时间
@@ -16,3 +21,8 @@ fdfs:
     - 182.254.148.75:22122
 
 comment.avatar: /images/avatar.png
+
+server:
+  tomcat:
+    connection-timeout: 20000
+    max-http-form-post-size: 5MB

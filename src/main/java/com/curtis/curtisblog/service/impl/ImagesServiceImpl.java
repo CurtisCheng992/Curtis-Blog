@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -82,10 +83,14 @@ public class ImagesServiceImpl implements IImagesService {
         String[] split = result.split("@");
         String link = split[0];
         String fileName = split[1];
+        String fileSize = split[2];
         Image image = new Image();
         image.setLink(link);
         image.setDescription(description);
         image.setFileName(fileName);
+        image.setUploadTime(new Date());
+        image.setUpdateTime(new Date());
+        image.setFileSize(fileSize);
         this.imageMapper.saveImage(image);
         return link;
     }
@@ -107,6 +112,7 @@ public class ImagesServiceImpl implements IImagesService {
     @Transactional
     @Override
     public void updateImagesDescription(Long id, String description) {
-        this.imageMapper.updateImagesDescriptionById(id,description);
+        Date updateTime = new Date();
+        this.imageMapper.updateImagesDescriptionById(id,description,updateTime);
     }
 }

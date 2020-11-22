@@ -39,8 +39,8 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" th:href="@{/admin/images/upload}" class="item">上传</a>
-                <a href="#" th:href="@{/admin/images}" class="teal active item">列表</a>
+                <a href="#" th:href="@{/admin/images/upload}" class="item">图片上传</a>
+                <a href="#" th:href="@{/admin/images}" class="teal active item">图片管理</a>
             </div>
         </div>
     </div>
@@ -57,9 +57,11 @@
                 <thead>
                     <tr>
                         <th style="width: 46px"></th>
-                        <th style="width: 190px">描述</th>
-                        <th style="width: 600px">链接</th>
-                        <th style="width: 190px">文件名</th>
+                        <th style="width: 145px">描述</th>
+                        <th style="width: 410px">链接</th>
+                        <th style="width: 145px">文件名</th>
+                        <th style="width: 100px">文件大小</th>
+                        <th style="width: 190px">更新时间</th>
                         <th style="width: 170px">操作</th>
                     </tr>
                 </thead>
@@ -70,6 +72,8 @@
                         <!--<td th:text="${image.link}">http://182.254.148.75/group1/M00/00/00/rBEABF-3RVaAF9CYAAGxb3lI0NI586.jpg</td>-->
                         <td><a href="#" target="_blank" th:href="@{${image.link}}" th:text="${image.link}">http://182.254.148.75/group1/M00/00/00/rBEABF-3RVaAF9CYAAGxb3lI0NI586.jpg</a></td>
                         <td th:text="${image.fileName}">JISOO.jpg</td>
+                        <td th:text="${image.fileSize}">108 KB</td>
+                        <td th:text="${#dates.format(image.updateTime,'yyyy-MM-dd HH:mm:ss')}">2020-11-22 11:28:30</td>
                         <td>
                             <a href="#" th:href="@{/admin/images/{id}/edit(id=${image.id})}" class="ui mini teal basic button">编辑</a>
                             <a href="#" th:href="@{/admin/images/{id}/delete(id=${image.id})}" class="ui mini red basic button" onclick="return confirm('确定要删除此图片吗?')">删除</a>
@@ -78,7 +82,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th colspan="5" style="text-align: left">
+                        <th colspan="7" style="text-align: left">
                             <div class="ui mini pagination menu" th:if="${pageInfo.total}>1">
                                 <a th:href="@{/admin/images}" class="item" th:classappend="${pageInfo.isFirstPage } ? 'disabled'">首页</a>
                                 <a th:href="@{/admin/images(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" class="item" th:unless="${pageInfo.isFirstPage}">上一页</a>
